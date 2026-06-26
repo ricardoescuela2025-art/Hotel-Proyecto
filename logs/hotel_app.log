@@ -6,3 +6,80 @@
 2026-06-26 13:50:17,605 | INFO | Sistema de logs inicializado para el proyecto Hotel
 2026-06-26 13:50:18,857 | INFO | Sistema de logs inicializado para el proyecto Hotel
 2026-06-26 13:50:22,571 | INFO | Solicitud GET /
+2026-06-26 13:57:43,400 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-06-26 13:57:45,300 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-06-26 13:58:20,698 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-06-26 13:58:21,759 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-06-26 13:58:29,747 | INFO | Solicitud GET /
+2026-06-26 13:58:29,827 | INFO | Respuesta GET / -> 200
+2026-06-26 13:58:29,899 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-06-26 13:58:30,215 | INFO | Respuesta GET /static/img/viajerodos.svg -> 200
+2026-06-26 13:58:30,295 | INFO | Solicitud GET /favicon.ico
+2026-06-26 13:58:30,297 | INFO | Respuesta GET /favicon.ico -> 404
+2026-06-26 13:59:44,033 | INFO | Solicitud POST /registrar_usuario
+2026-06-26 13:59:44,040 | INFO | Intento de registro para ricardo.guerrero2@gmail.com
+2026-06-26 13:59:59,247 | ERROR | Error de conexión a la base de datos
+Traceback (most recent call last):
+  File "c:\Users\A515-55\Desktop\Hotel-Proyecto\app.py", line 40, in obtener_conexion
+    return pyodbc.connect(
+           ~~~~~~~~~~~~~~^
+        "Driver={ODBC Driver 17 for SQL Server};"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        "Trusted_Connection=yes;"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+pyodbc.OperationalError: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: El sistema no puede encontrar el archivo especificado.\r\n (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+2026-06-26 13:59:59,251 | ERROR | Error al registrar usuario: ricardo.guerrero2@gmail.com
+Traceback (most recent call last):
+  File "c:\Users\A515-55\Desktop\Hotel-Proyecto\app.py", line 75, in registrar_usuario
+    raise Exception("No se pudo establecer conexión con la base de datos")
+Exception: No se pudo establecer conexión con la base de datos
+2026-06-26 13:59:59,253 | INFO | Respuesta POST /registrar_usuario -> 302
+2026-06-26 13:59:59,266 | INFO | Solicitud GET /
+2026-06-26 13:59:59,268 | INFO | Respuesta GET / -> 200
+2026-06-26 13:59:59,354 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-06-26 13:59:59,371 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-06-26 14:00:43,654 | INFO | Solicitud POST /login
+2026-06-26 14:00:43,656 | INFO | Intento de login para ricardo.bernalguerrero21@gmail.com
+2026-06-26 14:00:58,665 | ERROR | Error de conexión a la base de datos
+Traceback (most recent call last):
+  File "c:\Users\A515-55\Desktop\Hotel-Proyecto\app.py", line 40, in obtener_conexion
+    return pyodbc.connect(
+           ~~~~~~~~~~~~~~^
+        "Driver={ODBC Driver 17 for SQL Server};"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        "Trusted_Connection=yes;"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+pyodbc.OperationalError: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: El sistema no puede encontrar el archivo especificado.\r\n (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+2026-06-26 14:00:58,668 | ERROR | Login fallido por error de conexión: ricardo.bernalguerrero21@gmail.com
+2026-06-26 14:00:58,668 | INFO | Respuesta POST /login -> 302
+2026-06-26 14:00:58,684 | INFO | Solicitud GET /
+2026-06-26 14:00:58,686 | INFO | Respuesta GET / -> 200
+2026-06-26 14:00:58,755 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-06-26 14:00:58,759 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-06-26 14:01:08,171 | INFO | Solicitud POST /login
+2026-06-26 14:01:08,173 | INFO | Intento de login para ricardo.bernalguerrero2@gmail.com
+2026-06-26 14:01:23,192 | ERROR | Error de conexión a la base de datos
+Traceback (most recent call last):
+  File "c:\Users\A515-55\Desktop\Hotel-Proyecto\app.py", line 40, in obtener_conexion
+    return pyodbc.connect(
+           ~~~~~~~~~~~~~~^
+        "Driver={ODBC Driver 17 for SQL Server};"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        "Trusted_Connection=yes;"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+pyodbc.OperationalError: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: El sistema no puede encontrar el archivo especificado.\r\n (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+2026-06-26 14:01:23,193 | ERROR | Login fallido por error de conexión: ricardo.bernalguerrero2@gmail.com
+2026-06-26 14:01:23,194 | INFO | Respuesta POST /login -> 302
+2026-06-26 14:01:23,201 | INFO | Solicitud GET /
+2026-06-26 14:01:23,202 | INFO | Respuesta GET / -> 200
+2026-06-26 14:01:23,252 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-06-26 14:01:23,278 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304

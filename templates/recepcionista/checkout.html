@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión Hotelera - Check Out Dinámico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <style>
+        /* --- Variables de Color (Consolidadas) --- */
+        :root {
+            --bg-main: #141f33;
+            --bg-panel: #202e48;
+            --bg-dark-light: #384d6b;
+            --accent-blue: #3a8dff;
+            --text-light: #f0f0f0;
+            --text-muted: #a5b0c3;
+            --highlight-color: #00bcd4;
+            --header-link-color: #a0b3e5;
+            --table-header: #142851;
+            --table-row-select: rgba(0, 123, 255, 0.4);
+        }
+
+        /* --- Estructura Base --- */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-main);
+            display: flex;
+            min-height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            font-size: 13px;
+        }
+
+        .app-screen {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* ------------------- NAVIGATION BAR ------------------- */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: linear-gradient(180deg, #1f335b, rgba(31,51,91,0.9)); 
+            border-bottom: 2px solid var(--table-header);
+            flex-shrink: 0;
+        }
+
+        .brand { display: flex; align-items: center; gap: 12px; }
+
+        .logo {
+            font-weight: 800;
+            font-size: 22px;
+            background: linear-gradient(90deg, var(--text-light), var(--accent-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo-text { 
+            color: var(--header-link-color); 
+            font-size: 12px; 
+            letter-spacing: 1px; 
+        }
+
+        #main-nav { display: flex; gap: 8px; margin-left: 18px; align-items: center; }
+
+        #main-nav a {
+            color: var(--header-link-color);
+            text-decoration: none;
+            padding: 8px 14px;
+            font-weight: 700;
+            font-size: 12px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        #main-nav a.active {
+            background: var(--accent-blue);
+            color: var(--text-light);
+            padding: 8px 18px;
+        }
+
+        .header-info { 
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+            color: var(--header-link-color); 
+            font-size: 13px; 
+        }
+
+        /* ------------------- MAIN CONTENT ------------------- */
+        .main-content {
+            display: flex;
+            flex-grow: 1;
+            overflow: hidden;
+        }
+
+        /* Sección Izquierda (Tabla) */
+        .section-left {
+            flex: 2;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid #1a253a;
+            overflow: hidden;
+        }
+
+        .section-title { color: var(--text-muted); font-size: 1.1em; margin: 0 0 15px 0; font-weight: 400; text-transform: uppercase; }
+        .sub-filter { margin-bottom: 15px; flex-shrink: 0; }
+        .filter-tab { background: transparent; color: var(--text-muted); border: none; padding: 5px 12px; margin-right: 10px; cursor: pointer; border-radius: 3px; font-size: 0.9em; }
+        .filter-tab.active { background-color: var(--bg-dark-light); color: var(--text-light); }
+
+        .table-wrapper { flex-grow: 1; overflow-y: auto; min-height: 0; }
+        .departures-table { width: 100%; border-collapse: collapse; text-align: left; }
+        .departures-table th { background-color: var(--bg-main); color: var(--text-muted); padding: 10px 15px; font-weight: 400; text-transform: uppercase; font-size: 0.8em; position: sticky; top: 0; }
+        .departures-table td { padding: 10px 15px; border-bottom: 1px solid #1a253a; color: var(--text-light); font-weight: 300; }
+        .departures-table tr:hover { background-color: var(--bg-dark-light); cursor: pointer; }
+        .departures-table tr.selected-row { background-color: var(--table-row-select); color: var(--text-light); font-weight: bold; }
+        .action-btn-blue { 
+            background-color: var(--highlight-color); 
+            color: white; 
+            border: none; 
+            padding: 12px 30px; 
+            font-size: 1em; 
+            font-weight: bold; 
+            cursor: pointer; 
+            border-radius: 3px; 
+            margin-top: 15px; 
+            text-transform: uppercase; 
+            align-self: flex-start; 
+            flex-shrink: 0;
+        }
+
+        /* Sección Derecha (Detalle de Pago) */
+        .section-right {
+            flex: 1.2;
+            padding: 20px;
+            background-color: var(--bg-panel);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .charge-section {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding-right: 10px; /* Espacio para el scrollbar */
+        }
+
+        .charge-title { color: var(--text-light); font-size: 0.9em; margin-top: 15px; margin-bottom: 10px; font-weight: 500; text-transform: uppercase; }
+
+        /* Estilos de Inputs */
+        .input-group { margin-bottom: 15px; }
+        .input-group label { display: block; color: var(--text-muted); font-size: 0.8em; margin-bottom: 5px; font-weight: 500; }
+        .input-group input {
+            width: 100%;
+            padding: 8px 10px;
+            background-color: var(--bg-dark-light);
+            border: none;
+            color: var(--text-light);
+            font-size: 0.9em;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        
+        .input-group.two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        /* Contenedor de la entrada de cálculo (Cantidad y Precio) */
+        .charge-input-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; /* Cantidad, Precio, Subtotal */
+            gap: 5px;
+            align-items: center;
+        }
+
+        .charge-input-row label {
+            grid-column: 1 / 4;
+        }
+
+        .charge-input-row input {
+            text-align: right;
+            padding: 6px 8px;
+        }
+        
+        .charge-input-row .sub-total,
+        .total-charge-row input {
+            background-color: #1a253a !important;
+            color: var(--highlight-color);
+            font-weight: 500;
+        }
+
+        .room-type-selector {
+    background-color: var(--bg-dark-light);
+    border: none;
+    padding: 6px 8px;
+    color: var(--text-light);
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+.extra-charge {
+    background-color: #1a253a !important;
+    color: var(--highlight-color);
+    font-weight: 500;
+}
+
+        /* Total a Pagar */
+        .total-section { padding-top: 15px; border-top: 1px solid var(--bg-dark-light); flex-shrink: 0; }
+        .total-title { color: var(--text-light); font-size: 1em; margin-bottom: 10px; font-weight: 500; }
+
+        .total-amount-box {
+            background-color: var(--accent-blue);
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            border-radius: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .currency-symbol { font-size: 0.7em; margin-right: 5px; align-self: flex-start; }
+
+        /* Botones de Pago */
+        .payment-actions { display: flex; gap: 10px; margin-top: 20px; flex-shrink: 0; }
+        .btn-action { background-color: var(--bg-dark-light); color: var(--text-muted); border: none; padding: 10px 10px; font-size: 0.85em; cursor: pointer; border-radius: 3px; text-transform: uppercase; flex-grow: 1; }
+        .btn-checkout { background-color: var(--accent-blue); color: white; border: none; padding: 10px 15px; font-size: 0.9em; font-weight: bold; cursor: pointer; border-radius: 3px; text-transform: uppercase; flex-grow: 1; }
+    </style>
+</head>
+<body>
+    <div class="app-screen">
+         <header class="navbar">
+            <div style="display:flex; align-items:center;">
+                <div class="brand">
+                    <div class="logo">NÁYARA</div>
+                    <div class="logo-text">Hotel</div>
+                </div>
+                <nav id="main-nav">
+                    <a href="/recepcionista/home" class="nav-item" data-section="reservas">RESERVAS</a>
+                    <a href="/recepcionista/checkin" class="nav-item" data-section="checkin">CHECK-IN</a>
+                    <a href="/recepcionista/checkout" class="nav-item active" data-section="checkout">CHECK-OUT</a>
+                    <a href="/recepcionista/reportes/listado" class="nav-item" data-section="reportes">REPORTES</a>
+                    <a href="/logout" class="nav-item" data-section="reportes">SALIR</a>
+                </nav>
+            </div>
+
+            <div class="header-info">
+                <div style="text-align:right;">
+                    <div style="font-size:13px; font-weight:700;">{{ nombre }}</div>
+                    <div class="date-time">303 23:59 | 29-05-18</div>
+                </div>
+                <span class="material-icons-outlined">search</span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="section-left">
+                <h2 class="section-title">SALIDAS PENDIENTES</h2>
+                
+                <div class="sub-filter">
+                    <button class="filter-tab active">HOSPEDADAS HOY</button>
+                    <button class="filter-tab">RESERVADAS</button>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="departures-table">
+                        <thead>
+                            <tr>
+                                <th>NOMBRE HUÉSPED</th>
+                                <th>HABITACIÓN</th>
+                                <th>PRECIO</th>
+                                <th>RESERVA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for s in salidas %}
+                            <tr>
+                                <td>{{ s[0] }}</td>   <!-- nombre -->
+                                <td>{{ s[1] }}</td>   <!-- num habitación -->
+                                <td>{{ s[2] }}</td>   <!-- precio -->
+                                <td>{{ s[5] }}</td>   <!-- reserva_id -->
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <button class="action-btn-blue">ASIGNAR HAB</button>
+            </section>
+
+            <section class="section-right">
+                <h2 class="section-title">DETALLE DE PENDIENTES</h2>
+                <input type="hidden" name="reserva_id" value="{{ detalle.id }}">
+        <input type="hidden" name="habitacion_numero" value="{{ detalle.numero_habitacion }}">
+
+                <div class="charge-section">
+                    
+                    <h3 class="charge-title">DATOS DEL HUÉSPED</h3>
+
+                    <div class="input-group">
+                        <label>NOMBRE</label>
+                        <input type="text" value="{{ detalle.nombre }}" readonly>
+                    </div>
+                    <div class="input-group">
+                        <label>APELLIDOS</label>
+                        <input type="text" value="DKE" readonly>
+                    </div>
+
+                    <div class="input-group two-col">
+                        <div class="sub-input">
+                            <label>FECHA DE ENTRADA</label>
+                            <input type="date" name="fecha_entrada" value="{{ detalle.entrada }}" readonly>
+                        </div>
+                        <div class="sub-input">
+                            <label>FECHA DE SALIDA</label>
+                            <input type="date" name="fecha_salida" value="{{ detalle.salida }}" readonly>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>CORREO ELECTRÓNICO</label>
+                        <input type="email" name="correo" value="{{ detalle.correo }}" readonly>
+                    </div>
+
+                    <h3 class="charge-title">DETALLE DE CARGOS</h3>
+                    
+                    <h3 class="charge-title">HABITACIONES</h3>
+                    
+                    <div class="input-group charge-input-row">
+                        <label>Habitación (1 persona) - (Precio/Noche)</label>
+                        <input type="number" class="quantity-input hab1-cantidad" value="0" min="0">
+                        <input type="number" class="unit-price hab1-precio-base" value="80.00" step="0.01">
+                        <select id="hab1-tipo" class="room-type-selector">
+                            <option value="normal">Normal</option>
+                            <option value="suite">Suite</option>
+                            <option value="deluxe">Deluxe</option>
+                            
+                        </select>
+                        <input type="number" id="hab1-extra" class="extra-charge" value="0.00" readonly>
+                        <input type="text" class="sub-total hab1-total" readonly>
+                    </div>
+                    
+                    <div class="input-group charge-input-row">
+                        <label>Habitación (2 personas) - (Precio/Noche)</label>
+                        <input type="number" class="quantity-input hab1-cantidad" value="0" min="0">
+                        <input type="number" class="unit-price hab1-precio-base" value="80.00" step="0.01">
+                        <select id="hab1-tipo" class="room-type-selector">
+                            <option value="normal">Normal</option>
+                            <option value="suite">Suite</option>
+                            <option value="deluxe">Deluxe</option>
+                            
+                        </select>
+                        <input type="number" id="hab1-extra" class="extra-charge" value="0.00" readonly>
+                        <input type="text" class="sub-total hab1-total" readonly>
+                    </div>
+
+                    <div class="input-group charge-input-row">
+                        <label>Habitación (3 personas) - (Precio/Noche)</label>
+                        <input type="number" class="quantity-input hab1-cantidad" value="0" min="0">
+                        <input type="number" class="unit-price hab1-precio-base" value="80.00" step="0.01">
+                        <select id="hab1-tipo" class="room-type-selector">
+                            <option value="normal">Normal</option>
+                            <option value="suite">Suite</option>
+                            <option value="deluxe">Deluxe</option>
+                            
+                        </select>
+                        <input type="number" id="hab1-extra" class="extra-charge" value="0.00" readonly>
+                        <input type="text" class="sub-total hab1-total" readonly>
+                    </div>
+
+                    <div class="input-group charge-input-row">
+                        <label>Habitación (4 personas) - (Precio/Noche)</label>
+                        <input type="number" class="quantity-input hab1-cantidad" value="0" min="0">
+                        <input type="number" class="unit-price hab1-precio-base" value="80.00" step="0.01">
+                        <select id="hab1-tipo" class="room-type-selector">
+                            <option value="normal">Normal</option>
+                            <option value="suite">Suite</option>
+                            <option value="deluxe">Deluxe</option>
+                            
+                        </select>
+                        <input type="number" id="hab1-extra" class="extra-charge" value="0.00" readonly>
+                        <input type="text" class="sub-total hab1-total" readonly>
+                    </div>
+                    
+
+                    
+                    <h3 class="charge-title">SERVICIOS ADICIONALES</h3>
+                    
+                    <div class="input-group charge-input-row">
+                        <label>Desayuno/Cena (Unidades)</label>
+                        <input type="number" class="quantity-input" value="0" min="0">
+                        <input type="number" class="unit-price" value="25.00" step="0.01">
+                        <input type="text" class="sub-total" value="50.00 USD" readonly>
+                    </div>
+                    
+                    <div class="input-group charge-input-row">
+                        <label>Atelier Cargo (Unidades)</label>
+                        <input type="number" class="quantity-input" value="0" min="0">
+                        <input type="number" class="unit-price" value="20.00" step="0.01">
+                        <input type="text" class="sub-total" value="20.00 USD" readonly>
+                    </div>
+
+                    <div class="input-group total-charge-row">
+                        <label>Monto</label>
+                        <input type="text" id="total-cargos" value="$270.00 USD" readonly>
+                    </div>
+                </div>
+
+                <div class="total-section">
+                    <h3 class="total-title">TOTAL A PAGAR</h3>
+                    <div class="total-amount-box">
+                        <span class="currency-symbol">$$</span><span id="total-a-pagar">330.32</span> USD
+                    </div>
+                </div>
+
+                <div class="payment-actions">
+                    <button class="btn-action">▲ IMPRIMIR FACTURA</button>
+                    <button class="btn-action">FACTURA</button>
+                    <button class="btn-checkout">CHECK-OUT</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const TASA_IMPUESTO = 1.2234;
+    const totalCargosInput = document.getElementById("total-cargos");
+    const totalAPagarSpan = document.getElementById("total-a-pagar");
+
+    const cargosHabitacion = {
+        normal: 0,
+        suite: 40,
+        deluxe: 80
+    };
+
+    /* -------------------------------
+       RECALCULAR TODAS LAS FILAS
+       ------------------------------- */
+    function recalculateTotals() {
+        let totalGeneral = 0;
+
+        document.querySelectorAll(".charge-input-row").forEach(row => {
+
+            const cantidad = parseFloat(row.querySelector(".quantity-input")?.value) || 0;
+            const precioBase = parseFloat(row.querySelector(".unit-price")?.value) || 0;
+            const select = row.querySelector(".room-type-selector");
+            const extraInput = row.querySelector(".extra-charge");
+            const subTotalInput = row.querySelector(".sub-total");
+
+            let extra = 0;
+
+            if (select) {
+                extra = cargosHabitacion[select.value] || 0;
+                if (extraInput) extraInput.value = extra.toFixed(2);
+            }
+
+            const subtotal = (precioBase + extra) * cantidad;
+            subTotalInput.value = subtotal.toFixed(2) + " USD";
+
+            totalGeneral += subtotal;
+        });
+
+        // Total antes de impuestos
+        totalCargosInput.value = `$${totalGeneral.toFixed(2)} USD`;
+
+        // Total final
+        totalAPagarSpan.textContent = (totalGeneral * TASA_IMPUESTO).toFixed(2);
+    }
+
+    /* -------------------------------
+       LISTENERS PARA TODA LA TABLA
+       ------------------------------- */
+    document.querySelectorAll(".charge-input-row").forEach(row => {
+        row.querySelectorAll("input, select").forEach(el => {
+            el.addEventListener("input", recalculateTotals);
+            el.addEventListener("change", recalculateTotals);
+        });
+    });
+
+    recalculateTotals();
+});
+</script>
+
+
+
+
+</body>
+</html>

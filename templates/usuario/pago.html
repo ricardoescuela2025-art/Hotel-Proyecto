@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Payment Gateway Form Design using HTML and CSS | Codehal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+nav img {
+    width: 100px; /* ajusta al tamaño que quieras */
+    height: auto;
+}
+.logo{
+    
+    cursor: pointer;
+}
+
+
+.navbar-white{
+    background: rgb(27, 75, 75);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1f242d;
+    padding: 25px;
+}
+
+.container1 form {
+    width: 700px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.register-btn{
+    background-color: #fff;
+    color: #000;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.container{
+    padding: 0 7%;
+}
+
+.header h1{
+    font-size: 4vw;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    padding-top: 22%;
+}
+
+form .row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.row .column {
+    flex: 1 1 250px;
+}
+
+.column .title {
+    font-size: 20px;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.column .input-box {
+    margin: 15px 0;
+}
+
+.input-box span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.column .flex {
+    display: flex;
+    gap: 15px;
+}
+
+.flex .input-box {
+    margin-top: 5px;
+}
+
+.input-box img {
+    height: 50px;
+    margin-top: 5px;
+}
+
+form .btn {
+    width: 100%;
+    padding: 12px;
+    background: #8175d3;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 17px;
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+form .btn:hover {
+    background: #6a5acd;
+}
+    </style>
+</head>
+
+<body>
+    <nav id="navBar" class="navbar-white">
+        <img src="/static/img/nayarane.jpeg" alt="logo">
+    </nav>
+
+    
+        
+
+        <!-- FORMULARIO YA CORREGIDO -->
+        <form action="/procesar_pago" method="POST">
+
+           
+
+            <div class="row">
+                <div class="column">
+                    <h3 class="title">Billing Address</h3>
+
+                    <div class="input-box">
+                        <span>Nombre Completo :</span>
+                        <input type="text" name="nombre" placeholder="Jacob Aiden" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span>Correo :</span>
+                        <input type="email" name="correo" placeholder="example@example.com" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span>Dirección</span>
+                        <input type="text" placeholder="Room - Street - Locality">
+                    </div>
+
+                    <div class="input-box">
+                        <span>CDMX :</span>
+                        <input type="text" placeholder="Berlin">
+                    </div>
+
+                    <div class="flex">
+                        <div class="input-box">
+                            <span>Estado :</span>
+                            <input type="text" placeholder="Germany">
+                        </div>
+                        <div class="input-box">
+                            <span>Codigo Postal :</span>
+                            <input type="number" placeholder="123 456">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3 class="title">Payment</h3>
+
+                    <div class="input-box">
+                        <span>Cards Accepted :</span>
+                        <img src="/static/img/images.png" alt="" >
+                    </div>
+
+                    <div class="input-box">
+                        <span>Nombre de quien esta la tarjeta :</span>
+                        <input type="text" name="metodo" placeholder="Mr. Jacob Aiden" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span>Numero :</span>
+                        <input type="number" placeholder="1111 2222 3333 4444">
+                    </div>
+
+                    <div class="input-box">
+                        <span>Mes de Vencimiento :</span>
+                        <input type="text" placeholder="August">
+                    </div>
+
+                    <div class="flex">
+                        <div class="input-box">
+                            <span>Año de Vencimiento :</span>
+                            <input type="number" placeholder="2025">
+                        </div>
+                        <div class="input-box">
+                            <span>CVV :</span>
+                            <input type="number" placeholder="123">
+                        </div>
+                    </div>
+
+                    <!-- RESERVA Y MONTO PARA CONEXIÓN -->
+                    <div class="input-box">
+                        <span>ID Reserva :</span>
+                        <input type="number" name="reserva" placeholder="Ej: 12" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span>Monto a pagar :</span>
+                        <input type="number" name="monto" placeholder="Ej: 1500" required>
+                    </div>
+
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Submit</button>
+            
+        </form>
+
+        {% if error %}
+        <div style="background:#ffdddd;padding:12px;border-left:5px solid red;color:#a00;font-size:16px;margin-top:20px;">
+            {{ error }}
+        </div>
+        {% endif %}
+
+            
+        </form>
+        
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>NÁYARA</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/317f6374b7.js" crossorigin="anonymous"></script>
+
+        <style>*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', 'sans-serif';
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(/static/img/mihotel.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+}
+
+nav img {
+    width: 80px; /* ajusta al tamaño que quieras */
+    height: auto;
+}
+
+
+.logo{
+    width: 140px;
+    cursor: pointer;
+}
+
+.nav-links li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 30px;
+}
+
+.nav-links li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.register-btn{
+    background-color: #fff;
+    color: #000;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.container{
+    padding: 0 7%;
+}
+
+.header h1{
+    font-size: 4vw;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    padding-top: 22%;
+}
+
+.search-bar{
+    background: #fff;
+    width: 70%;
+    margin: 30px auto;
+    padding: 6px 10px 6px 30px;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.search-bar form{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-bar form input{
+    display: block;
+    border-radius: 0;
+    outline: none;
+    background: transparent;
+}
+
+.search-bar form button{
+    background: #d3b219;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.search-bar form button i{
+    width: 15px;
+    margin-top: 5px;
+    color: #fff;
+}
+
+.location-input{
+    flex: 1;
+
+}
+
+.search-bar form label{
+    font-weight: 600;
+}
+
+/*---------exclusivo---------*/
+
+.sub-title{
+    margin: 50px 0 20px;
+    font-size: 2.2vw;
+    font-weight: 500;
+    color: #333;
+}
+
+.exclusives{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    grid-gap: 30px;
+}
+
+.exclusives div img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.exclusives div{
+    position: relative;
+}
+
+.exclusives div span{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #d3b219;
+    font-size: 16px;
+}
+
+
+/*-------Trending corrige esto-------*/
+
+.trending{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    grid-gap: 30px;
+    margin-bottom: 30px;
+}
+
+.trending div img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.trending h3{
+    font-size: 600;
+    margin-top: 10px;
+}
+
+/*-------cta corrige esto-------*/
+
+.cta1{
+    margin: 80px 0;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(/static/img/piscina.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 5%;
+    color: #fff;
+    
+}
+.cta2{
+    margin: 80px 0;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(/static/img/agua.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 5%;
+    color: #fff;
+}
+
+.cta1 h3{
+    font-size: 80px;
+    line-height: 5.3vw;
+    font-weight: 500;
+}
+.cta2 h3{
+    font-size: 80px;
+    line-height: 5.3vw;
+    font-weight: 500;
+}
+
+.cta1 p{
+    font-size: 18px;
+    margin: 10px;
+}
+
+.cta2 p{
+    font-size: 18px;
+    margin: 10px;
+}
+.cta-btn{
+    background: #ff5361;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    margin-top:20px;
+    display: inline-block;
+}
+
+/*-----------stories------------*/
+
+.stories{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    grid-gap: 30px;
+    margin-bottom: 30px;
+}
+
+.stories div img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.stories div{
+    position: relative;
+    text-align: center;
+}
+
+.stories p{
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 26px;
+}
+
+.start-btn{
+    text-decoration: none;
+    background: #ff5361;
+    color: #fff;
+    width: 80%;
+    max-width: 350px;
+    display: block;
+    text-align: center;
+    margin: 60px auto;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 20px;
+}
+
+.report-form-container {
+                max-width: 800px;
+                margin: 40px auto;
+                padding: 40px;
+                background: #ffffff;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                border: 1px solid #eee;
+            }
+
+            .report-form-container h2 {
+                color: #333;
+                margin-bottom: 30px;
+                font-weight: 700;
+                text-align: center;
+                font-size: 1.8rem;
+            }
+
+            .form-group {
+                margin-bottom: 20px;
+            }
+
+            .form-group label {
+                display: block;
+                font-weight: 600;
+                color: #555;
+                margin-bottom: 8px;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                font-size: 16px;
+                transition: border-color 0.3s, box-shadow 0.3s;
+                background-color: #f9f9f9;
+            }
+
+            .form-group input:focus,
+            .form-group select:focus,
+            .form-group textarea:focus {
+                border-color: #f59e0b;
+                box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
+                outline: none;
+            }
+            
+            .form-group textarea {
+                resize: vertical;
+                min-height: 120px;
+            }
+
+            .submit-btn {
+                width: 100%;
+                padding: 15px;
+                background-color: #f59e0b;
+                color: white;
+                border: none;
+                border-radius: 10px;
+                font-size: 18px;
+                font-weight: 700;
+                cursor: pointer;
+                transition: background-color 0.3s, transform 0.2s;
+            }
+
+            .submit-btn:hover {
+                background-color: #d97706;
+                transform: translateY(-2px);
+            }
+            
+           
+
+/*--------about-msg-------*/
+.about-msg{
+    text-align: center;
+    margin: 80px 0;
+    color: #333;
+    font-size: 17px;
+}
+
+.about-msg h2{
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+/*--------Pie de pagina-------*/
+
+.footer{
+    margin: 80px 0 10px;
+    text-align: center;
+}
+
+.footer a{
+    text-decoration: none;
+    color: #999;
+    font-size: 22px;
+    margin: 0 10px;
+}
+
+.footer hr{
+    background: #999;
+    height: 1px;
+    width: 100%;
+    border: 0;
+    margin: 20px 0;
+}
+
+.footer p{
+    padding-bottom: 15px;
+}
+
+.active{
+position: relative;
+}
+
+.active::after{
+    content: '';
+    background: #fff;
+    width: 25px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -12px;
+    border-radius: 2px;
+}
+
+nav .fa-bars{
+    display: none;
+}
+
+/*-------resposivo-------*/
+
+@media only screen and (max-width: 700px){
+    .logo{
+        position: fixed;
+        top: 4%;
+        left: 7%;
+    }
+
+    nav{
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        display: inline-block;
+        width: 100%;
+        padding: 100px 7% 0;
+        background: #000;
+        text-align: right;
+        max-height: 100px;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+
+    nav .nav-links li{
+        margin: 10px 0;
+        display: block;
+    }
+
+    .register-btn{
+        margin: 15px 0 30px;
+        display: inline-block;
+    }
+
+    nav .fa-bars{
+        display: block;
+        position: fixed;
+        top: 4%;
+        right: 7%;
+        color: #fff;
+        font-size: 28px;
+    }
+
+    .active::after{
+        left: -40px;
+        transform: translate(0,50%);
+        bottom: 50%;
+    }
+
+    .hidemenu{
+        max-height: 300px;
+    }
+
+    .header h1{
+        padding-top: 200px;
+        font-size: 7vw;
+    }
+
+    .search-bar{
+        width: 90%;
+        margin: 30px auto;
+        padding: 20px 10px 30px;
+        border-radius: 5px;
+        position: relative;
+    }
+
+    .search-bar form{
+        display: block;
+    }
+
+    .search-bar form input{
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .search-bar form button{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+
+    .sub-title{
+        font-size: 6vw;
+    }
+
+    .cta{
+        padding: 15% 5%;
+    }
+    .cta h3{
+        font-size: 7vw;
+        line-height: 8vw;
+    }
+
+    .cta p{
+        font-size: 14px;
+    }
+
+    .cta-btn{
+        padding: 6px 15px;
+        border-radius: 4px;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .stories p{
+        font-size: 22px
+    }
+
+    .about-msg{
+        font-size: 15px;
+    }
+
+}
+
+/*----------Pagina dos---------*/
+
+.navbar-white{
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-white .nav-links li a{
+    color: #000;
+}
+
+.navbar-white .register-btn{
+    background: #ff5361;
+    color: #fff;
+}
+
+nav.navbar-white .fa-bars{
+    color: #000;
+}
+
+.navbar-white .active::after{
+    background: #ff5361;
+}
+.list-container{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.left-col{
+    flex-basis: 70%;
+}
+.right-col{
+    flex-basis: 25%;
+}
+
+.left-col h1{
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.house{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    border-top: 1px solid #ccc;
+}
+
+.house img{
+    flex-basis: 40%;
+}
+
+.house-info{
+    flex-basis: 58%;
+    color: #555;
+}
+
+.house-img img{
+    width: 100%;
+    border-radius: 12px;
+}
+
+.house-info h3{
+    font-weight: 600;
+    color: #333;
+    font-size: 22px;
+    margin: 4px 0;
+}
+
+.house-info i{
+    color: #ff5361;
+    font-size: 18px;
+    margin: 10px 1px;
+}
+
+.house-price{
+    text-align: right;
+}
+
+.house-price h4{
+    font-size: 20px;
+}
+
+.house-price h4 span{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidebar{
+    border-radius: 1px solid #999;
+    padding: 20px 30px;
+    margin-top: 30px;
+}
+
+.sidebar h2{
+    font-weight: 500;
+}
+
+.sidebar h3{
+    font-weight: 500;
+    margin: 20px 0 10px;
+}
+.filter{
+    display: flex;
+    align-items: center;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.filter p{
+    flex: 1;
+}
+
+.filter input{
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.sidebar-link{
+    text-align: right;
+    margin: 20px 0;
+}
+
+.sidebar-link a{
+    text-decoration: none;
+}
+
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.pagination img{
+    width: 15px;
+    margin: 10px 20px;
+}
+
+.right-arrow{
+    transform: rotate(180deg);
+}
+
+.pagination span{
+    margin: 10px 8px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.pagination .current{
+    background: #555;
+    color: #000;
+}
+
+/*-------Responsivo-------*/
+
+@media only screen and (max-whidth: 700px){
+    .list-container{
+        margin-top: 150px;
+    }
+    .left-col, .right-col, .house-img, .house-info{
+        flex-basis: 100%;
+    }
+    .left-col h1{
+        font-size: 22px;
+    }
+    .house-info h3{
+        font-size: 10px;
+    }
+    .house-info i{
+        font-size: 16px;
+    }
+    .pagination span{
+        margin: 10px 2px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+    }
+}
+
+/*--------------Pagina tres-------------*/
+
+.house-details{
+    padding: 0 12%;
+}
+
+.house-title h1{
+    font-weight: 600;
+}
+
+.house-title .row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.house-title span{
+    margin: 0 20px;
+}
+
+.house-title i{
+    color: #ff5361;
+    font-size: 14px;
+}
+
+.gallery{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: 'first first . .' 'first first . .';
+    margin: 20px 0;
+}
+
+.gallery div img{
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.gallery-img-1{
+    grid-area: first;
+}
+
+.small-details h2{
+    font-weight: 500;
+}
+
+.small-details h4{
+    text-align: right;
+    font-size: 22px;
+}
+
+.line{
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 0 50px;
+}
+
+.check-form{
+    margin: 30px 0;
+    background: #fff;
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+.check-form label{
+    display: block;
+}
+
+.check-form div{
+    padding: 20px;
+}
+
+.check-form input{
+    background: transparent;
+    border: 0;
+    outline: none;
+}
+
+.check-form button{
+    background: #ff5361;
+    border: 0;
+    outline: none;
+    color: #fff;
+    padding: 18px;
+    width: 350px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.guest-field{
+    flex: 1;
+}
+
+.details-list{
+    list-style: none;
+    margin: 50px 0;
+}
+
+.details-list li{
+    margin-left: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #555;
+    position: relative;
+}
+
+.details-list li span{
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.details-list li i{
+    position: absolute;
+    top: 5px;
+    left: -40px;
+}
+
+.home-desc{
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+.map{
+    margin: 50px 0;
+}
+
+.map iframe{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.map h3{
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.map b{
+    display: block;
+    margin-bottom: 16px;
+}
+
+.host{
+    display: flex;
+    align-items: center;
+}
+
+.host-img{
+    width: 80px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+.host h2{
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.host i{
+    color: #ff5361;
+}
+
+.contact-host{
+    display: inline-block;
+    margin: 40px 0 40px 120px;
+    text-decoration: none;
+    color: #555;
+    padding: 15px 50px;
+    border: 1px solid #ff5361;
+    border-radius: 8px;
+}
+
+/*--------Responsive-------*/
+
+@media only screen and (max-width: 700px){
+    .house-details{
+        margin-top: 150px;
+    }
+
+    .row p{
+      margin-top: 10px;  
+    }
+
+    .gallery{
+        grid-template-areas: 'first first' '. .' '. .';
+    }
+
+    .small-details h2{
+        font-size: 20px;
+        margin-top: 24px;
+    }
+
+    .small-details h4{
+        text-align: left;
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    .check-form{
+        padding: 10px 30px;
+    }
+
+    .check-form div{
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    .check-form input{
+        border-bottom: 1px solid #ccc;
+        width: 100%;
+        padding-bottom: 5px;
+    }
+
+    .check-form button{
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        border-radius: 4px;
+    }
+
+    .host{
+        display: block;
+        line-height: 28px;
+    }
+
+    .contact-host{
+        margin: 40px 0;
+    }
+}</style>
+    </head>
+    <body>
+        <div class="header">
+            <nav id="navBar">
+                <img src="/static/img/nayarane.jpeg" alt="logo">
+                <ul class="nav-links">
+                    <li><a href="/usuario/reservar" class="active">Inicio</a></li>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="togglebtn()"></i>
+            </nav>
+            <div class="container">
+                <h1>Sobre Nosotros</h1>
+                
+            </div>
+        </div>
+        <div class="container">
+            <h2 class="sub-title">Sucursales</h2>
+            <div class="trending">
+                <div>
+                    <img src="/static/img/piscina.jpg">
+                    <h3>Cenotes</h3>
+                </div>
+                <div>
+                    <img src="/static/img/agua.jpg">
+                    <h3>Paisajes</h3>
+                </div>
+                <div>
+                    <img src="/static/img/tiburon.jpg">
+                    <h3>Piscinas</h3>
+                </div>
+                <div>
+                    <img src="/static/img/evento.jpg">
+                    <h3>Eventos</h3>
+                </div>
+            </div>
+            <div class="cta1">
+                <h3>Sobre <br>Nosotros</h3>
+                <p>En Hotel GRAND HOTEL, combinamos lujo, comodidad y hospitalidad para ofrecerte una experiencia inolvidable. Ubicado en el corazón de Cancún, nuestro hotel es el destino perfecto tanto para quienes buscan relajarse como para quienes desean vivir aventuras únicas.
+                    Desde nuestras elegantes habitaciones hasta nuestro servicio personalizado, cada detalle está diseñado para tu bienestar. Ya sea que viajes por negocios, en pareja o en familia, en Hotel GP te sentirás como en casa desde el primer momento.
+                    Nuestra misión es brindar experiencias excepcionales, superando tus expectativas con un servicio cálido, atento y profesional.</p>
+            </div>
+            
+
+            <div class="cta2">
+                <h3>Nuestros <br>Valores</h3>
+                <p>En Hotel GRAND HOTEL, nos guiamos por valores que definen cada aspecto de nuestro servicio: la hospitalidad, que nos impulsa a recibir a cada huésped con calidez y respeto; la excelencia, que se refleja en nuestro compromiso por superar expectativas; la calidad, presente en cada rincón de nuestras instalaciones; la sostenibilidad, como parte de nuestro cuidado por el medio ambiente; la innovación, que nos permite adaptarnos a las nuevas necesidades de los viajeros; y la seguridad, que garantiza una estadía tranquila y confiable para todos.</p>
+            </div>
+
+            <h2 class="sub-title">Reportes de Habitaciones</h2>
+
+<div class="report-form-container">
+                <h2>Envía una Incidencia</h2>
+                <form id="reportForm">
+                    <div class="form-group">
+                        <label for="roomNumber">Número de Habitación</label>
+                        <input type="text" id="roomNumber" placeholder="Ej. 101, 25A" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="incidentType">Tipo de Incidencia</label>
+                        <select id="incidentType" required>
+                            <option value="" disabled selected>Selecciona el tipo de problema</option>
+                            <option value="plumbing">Fontanería (Fuga, Drenaje)</option>
+                            <option value="electrical">Eléctrico (Luz, Enchufes)</option>
+                            <option value="cleaning">Limpieza o Mantenimiento</option>
+                            <option value="noise">Ruido excesivo</option>
+                            <option value="other">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Descripción Detallada del Problema</label>
+                        <textarea id="description" rows="5" placeholder="Por favor, describe la incidencia con el mayor detalle posible (Ubicación, urgencia, etc.)." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fa-solid fa-paper-plane mr-2"></i> Enviar Reporte
+                    </button>
+                </form>
+                <!-- Simple confirmation message area (replaces alert()) -->
+                <p id="reportMessage" class="text-center mt-4" style="color: #4f46e5; display: none; font-weight: 600;"></p>
+            </div>
+
+            <div class="about-msg">
+                <h2>Atención</h2>
+                <p>Esta empresa en totalmente falsa, es un proyecto hecho por: MariaFernanda Landin Cuevas</p>
+            </div>
+            
+            <div class="footer">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <hr>
+                <p>Nayara © 2025, MariaFernanda Landin Cuevas & Ricardo Bernal Guerrero</p>
+            </div>
+        </div>
+        <script>
+            var navBar= document.getElementById("navBar");
+
+            function togglebtn(){
+                navBar.classList.toggle("hidemenu");
+            }
+        </script>
+        <script>
+document.getElementById("reportForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const data = {
+        roomNumber: document.getElementById("roomNumber").value,
+        incidentType: document.getElementById("incidentType").value,
+        description: document.getElementById("description").value
+    };
+
+    const response = await fetch("/enviar_reporte", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+
+    // Mostrar mensaje bonito
+    const message = document.getElementById("reportMessage");
+    message.textContent = result.message;
+    message.style.display = "block";
+
+    // Limpiar formulario
+    document.getElementById("reportForm").reset();
+});
+</script>
+
+    </body>
+</html>

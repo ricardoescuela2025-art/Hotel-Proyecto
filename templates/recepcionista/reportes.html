@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nayara</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    
+    <style>
+        /* --- VARIABLES DE COLOR --- */
+        :root {
+            --bg-dark: #0b111a;       /* Fondo oscuro profundo */
+            --card-bg: #1a253a;       /* Fondo tarjetas */
+            --accent-cyan: #22d3ee;   /* Cian brillante */
+            --text-main: #ffffff;     /* Texto blanco */
+            --text-muted: #94a3b8;    /* Texto secundario */
+            --border-color: #2d3b55;  /* Bordes sutiles */
+            --bg-main: #141f33;
+            --bg-panel: #202e48;
+            --bg-dark-light: #384d6b;
+            --accent-blue: #3a8dff;
+            --text-light: #f0f0f0;
+            --text-muted: #a5b0c3;
+            --highlight-color: #00bcd4;
+            --header-link-color: #a0b3e5;
+            --table-header: #142851;
+            --table-row-select: rgba(0, 123, 255, 0.4);
+        }
+
+        /* --- RESET --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; 
+        }
+
+        /* --- CABECERA (HEADER) --- */
+       .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: linear-gradient(180deg, #1f335b, rgba(31,51,91,0.9)); 
+            border-bottom: 2px solid var(--table-header);
+            flex-shrink: 0;
+        }
+
+        .brand { display: flex; align-items: center; gap: 12px; }
+
+        .logo {
+            font-weight: 800;
+            font-size: 22px;
+            background: linear-gradient(90deg, var(--text-light), var(--accent-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo-text { 
+            color: var(--header-link-color); 
+            font-size: 12px; 
+            letter-spacing: 1px; 
+        }
+
+        #main-nav { display: flex; gap: 8px; margin-left: 18px; align-items: center; }
+
+        #main-nav a {
+            color: var(--header-link-color);
+            text-decoration: none;
+            padding: 8px 14px;
+            font-weight: 700;
+            font-size: 12px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        #main-nav a.active {
+            background: var(--accent-blue);
+            color: var(--text-light);
+            padding: 8px 18px;
+        }
+
+        .header-info { 
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+            color: var(--header-link-color); 
+            font-size: 13px; 
+        }
+
+
+        /* --- CONTENIDO PRINCIPAL --- */
+        .main-content {
+            flex: 1;
+            overflow-y: auto;
+            position: relative;
+            padding: 40px;
+        }
+
+        /* Contenedor centrado */
+        .container-width {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* --- GRID DE TARJETAS --- */
+        .grid {
+            display: grid;
+            /* Columnas adaptables */
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
+            gap: 25px;
+            padding-bottom: 40px; /* Margen inferior estándar */
+        }
+
+        /* --- DISEÑO DE TARJETA --- */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            border-color: var(--accent-cyan);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #e2e8f0;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .avatar {
+            width: 36px;
+            height: 36px;
+            background-color: #475569;
+            border-radius: 50%;
+            background-image: url('/static/img/usuario.jpg'); 
+            background-size: cover;
+        }
+        
+        .user-text h4 {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--text-main);
+        }
+        
+        .user-text span {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* Línea decorativa neón */
+        .tech-line {
+            height: 2px;
+            width: 40px;
+            background: var(--accent-cyan);
+            margin-top: auto;
+            opacity: 0.6;
+            box-shadow: 0 0 8px var(--accent-cyan);
+        }
+
+        /* Imágenes aleatorias para variedad visual */
+        .card:nth-child(2) .avatar { background-image: url('/static/img/usuario.jpg'); }
+        .card:nth-child(3) .avatar { background-image: url('https://i.pravatar.cc/150?img=12'); }
+        .card:nth-child(4) .avatar { background-image: url('https://i.pravatar.cc/150?img=32'); }
+        .card:nth-child(5) .avatar { background-image: url('https://i.pravatar.cc/150?img=59'); }
+        .card:nth-child(6) .avatar { background-image: url('https://i.pravatar.cc/150?img=11'); }
+
+    </style>
+</head>
+<body>
+
+     <header class="navbar">
+            <div style="display:flex; align-items:center;">
+                <div class="brand">
+                    <div class="logo">NÁYARA</div>
+                    <div class="logo-text">Hotel</div>
+                </div>
+                <nav id="main-nav">
+                    <a href="/recepcionista/home" class="nav-item" data-section="reservas">RESERVAS</a>
+                    <a href="/recepcionista/checkin" class="nav-item" data-section="checkin">CHECK-IN</a>
+                    <a href="/recepcionista/checkout" class="nav-item" data-section="checkout">CHECK-OUT</a>
+                    <a href="/recepcionista/reportes/listado" class="nav-item active" data-section="reportes">REPORTES</a>
+                    <a href="/logout" class="nav-item" data-section="reportes">SALIR</a>
+                </nav>
+            </div>
+
+            <div class="header-info">
+                <div style="text-align:right;">
+                    <div style="font-size:13px; font-weight:700;">{{ nombre }}</div>
+                    <div class="date-time">303 23:59 | 29-05-18</div>
+                </div>
+                <span class="material-icons-outlined">search</span>
+            </div>
+        </header>
+
+    <main class="main-content">
+        <div class="container-width">
+            <div class="grid">
+                {% for r in reportes %}
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            {{ r.incident_type }} - Habitación {{ r.room_number }}
+                        </div>
+                    </div>
+
+                    <div class="user-info">
+                        <div class="avatar"></div>
+                        <div class="user-text">
+                            <h4>Reporte #{{ r.id }}</h4>
+                            <span>{{ r.created_at }}</span>
+                        </div>
+                    </div>
+
+                    <p class="card-desc">
+                        {{ r.description }}
+                    </p>
+
+                    <div class="tech-line"></div>
+                </div>
+                {% endfor %}
+            </div>
+
+
+        </div>
+    </main>
+
+</body>
+</html>

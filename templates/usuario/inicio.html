@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HOTEL GP</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <script src="https://kit.fontawesome.com/317f6374b7.js" crossorigin="anonymous"></script>
+
+        <script>
+            function actualizarAccionFormulario(event) {
+                event.preventDefault(); // Previene envío inmediato del formulario
+    
+                const numeroPersonas = document.getElementById("numPersonas").value.trim();
+                const formulario = document.getElementById("formReserva");
+    
+                if (!isNaN(numeroPersonas) && numeroPersonas !== "") {
+                    // **[OPCIONAL] Validación extra para Personas**
+                    // Si el número es 1, 2, o cualquier otro (asumiendo 3+ para 'eleción3.php')
+                    const num = parseInt(numeroPersonas);
+                    if (num === 1) {
+                        formulario.action = "/";
+                    } else if (num === 2) {
+                        formulario.action = "/";
+                    } else {
+                        // Aplica para 0, 3, 4, etc. 
+                        formulario.action = "/";
+                    }
+                    formulario.submit(); // Envía el formulario
+                } else {
+                    alert("Por favor ingresa un número válido de personas.");
+                }
+            }
+
+            // Función para el menú móvil
+            function togglebtn(){
+                var navBar= document.getElementById("navBar");
+                navBar.classList.toggle("hidemenu");
+            }
+        </script>
+        
+        <style>
+            /* ------------------------- Estilos CSS ------------------------- */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'poppins', 'sans-serif';
+            }
+
+            .header {
+                min-height: 100vh;
+                width: 100%;
+                /* NOTA: Asegúrate de tener esta imagen en tu ruta /static/img/mihotel.jpeg */
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/static/img/mihotel.jpeg); 
+                background-size: cover;
+                background-position: center;
+            }
+
+            nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px 7%;
+            }
+
+            .logo {
+                width: 70px;
+                cursor: pointer;
+            }
+
+            .nav-links li {
+                list-style: none;
+                display: inline-block;
+                margin: 10px 30px;
+            }
+
+            .nav-links li a {
+                text-decoration: none;
+                color: #fff;
+            }
+
+            .register-btn {
+                background-color: #fff;
+                color: #000;
+                padding: 8px 20px;
+                border-radius: 20px;
+                text-decoration: none;
+                font-size: 14px;
+            }
+
+            .container {
+                padding: 0 7%;
+            }
+
+
+            .header h1 {
+                font-size: 4vw;
+                font-weight: 500;
+                color: #fff;
+                text-align: center;
+                padding-top: 22%;
+            }
+
+            .search-bar {
+                background: #fff;
+                width: 70%;
+                margin: 30px auto;
+                padding: 6px 10px 6px 30px;
+                border-radius: 50px;
+                font-size: 20px;
+            }
+
+            .search-bar form {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .search-bar form input {
+                display: block;
+                border: 0; /* Aseguramos que no hay borde por defecto en los inputs */
+                border-radius: 0;
+                outline: none;
+                background: transparent;
+                padding: 0; /* Ajustamos el padding */
+                margin-left: 10px;
+            }
+
+            .search-bar form button {
+                background: #d3b219;
+                width: 55px;
+                height: 55px;
+                border-radius: 50%;
+                border: 0;
+                outline: none;
+                cursor: pointer;
+                /* El botón debería estar a la derecha en el flujo flex */
+            }
+
+            .search-bar form button i {
+                width: 15px;
+                margin-top: 5px;
+                color: #fff;
+            }
+
+            .location-input {
+                flex: 1;
+                /* Agregamos una separación visual entre inputs */
+                border-right: 1px solid #ccc;
+                padding: 10px; 
+            }
+            /* Quitamos el borde derecho del último input */
+            .search-bar form .location-input:last-of-type {
+                border-right: none;
+            }
+
+
+            .search-bar form label {
+                font-weight: 600;
+            }
+
+
+            /*---------exclusivo---------*/
+
+            .sub-title {
+                margin: 50px 0 20px;
+                font-size: 2.2vw;
+                font-weight: 500;
+                color: #333;
+            }
+
+            .exclusives {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-gap: 30px;
+            }
+
+            .exclusives div img {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            .exclusives div {
+                position: relative;
+            }
+
+            .exclusives div span {
+                position: absolute;
+                bottom: 10%; /* Ajustado para mejor visibilidad */
+                left: 0;
+                right: 0;
+                text-align: center;
+                color: #fff; /* Cambiado a blanco para contraste en la imagen */
+                font-size: 16px;
+                padding: 10px;
+                background: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente para el texto */
+                border-radius: 0 0 10px 10px; /* Bordes inferiores redondeados */
+            }
+            
+            .exclusives div a {
+                text-decoration: none; /* Quitar subrayado al enlace */
+                display: block; /* Para que el enlace ocupe todo el div */
+            }
+
+            .exclusives div span h3 {
+                color: #d3b219; /* Mantenemos el color para el título */
+                margin: 0;
+                font-size: 1.2em;
+            }
+            .exclusives div span p {
+                color: #fff;
+                margin: 5px 0 0;
+                font-size: 0.9em;
+            }
+
+
+            /*-------Trending (Sucursales)-------*/
+
+            .trending {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-gap: 30px;
+                margin-bottom: 30px;
+            }
+
+            .trending div img {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            .trending h3 {
+                font-weight: 600;
+                margin-top: 10px;
+                color: #333; /* Color de texto para que se vea */
+            }
+
+            /*-------cta (Llamada a la acción)-------*/
+
+            .cta {
+                margin: 80px 0;
+                /* NOTA: Asegúrate de tener esta imagen en tu ruta img/mihotel.jpg */
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/static/img/agua.jpg); 
+                background-size: cover;
+                background-position: center;
+                border-radius: 10px;
+                padding: 5%;
+                color: #fff;
+            }
+
+            .cta h3 {
+                font-size: 4vw;
+                line-height: 5.3vw;
+                font-weight: 500;
+            }
+
+            .cta p {
+                font-size: 18px;
+                margin: 10px 0; /* Ajustado el margen */
+            }
+
+            .cta-btn {
+                background: rgb(27, 75, 75);
+                color: #fff;
+                text-decoration: none;
+                padding: 12px 30px;
+                border-radius: 8px;
+                margin-top: 20px;
+                display: inline-block;
+                transition: background 0.3s;
+            }
+            .cta-btn:hover {
+                background: rgb(27, 75, 75);
+            }
+
+            /*-----------stories (No utilizado en este HTML pero mantenido) ------------*/
+            .stories {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-gap: 30px;
+                margin-bottom: 30px;
+            }
+
+            .stories div img {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            .stories div {
+                position: relative;
+                text-align: center;
+            }
+
+            .stories p {
+                width: 80%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #fff;
+                font-size: 26px;
+            }
+
+            .start-btn {
+                text-decoration: none;
+                background: rgb(27, 75, 75);
+                color: #fff;
+                width: 80%;
+                max-width: 350px;
+                display: block;
+                text-align: center;
+                margin: 60px auto;
+                padding: 15px;
+                border-radius: 30px;
+                font-size: 20px;
+            }
+
+            /*--------about-msg-------*/
+            .about-msg {
+                text-align: center;
+                margin: 80px 0;
+                color: #333;
+                font-size: 17px;
+            }
+
+            .about-msg h2 {
+                font-size: 28px;
+                margin-bottom: 30px;
+                font-weight: 500;
+            }
+
+            /*--------Pie de pagina-------*/
+
+            .footer {
+                margin: 80px 0 10px;
+                text-align: center;
+            }
+
+            .footer a {
+                text-decoration: none;
+                color: #999;
+                font-size: 22px;
+                margin: 0 10px;
+            }
+
+            .footer hr {
+                background: #999;
+                height: 1px;
+                width: 100%;
+                border: 0;
+                margin: 20px 0;
+            }
+
+            .footer p {
+                padding-bottom: 15px;
+                color: #999; /* Asegura que el texto del copyright sea visible */
+            }
+
+            .active {
+                position: relative;
+            }
+
+            .active::after {
+                content: '';
+                background: #fff;
+                width: 25px;
+                height: 2px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -12px;
+                border-radius: 2px;
+            }
+
+            nav .fa-bars {
+                display: none;
+            }
+
+            /*-------resposivo (Mobile)-------*/
+
+            @media only screen and (max-width: 700px) {
+                
+                /* Mantenemos el logo a la izquierda y el icono de menú a la derecha en la parte superior */
+                nav {
+                    display: block;
+                    width: 100%;
+                    padding: 20px 7%;
+                    background: transparent;
+                }
+                
+                .logo {
+                    position: absolute;
+                    top: 20px;
+                    left: 7%;
+                }
+                
+                nav .fa-bars {
+                    display: block;
+                    position: absolute;
+                    top: 20px;
+                    right: 7%;
+                    color: #fff;
+                    font-size: 28px;
+                    z-index: 110;
+                    cursor: pointer;
+                }
+                
+                /* Menú que se despliega */
+                .nav-links {
+                    position: fixed;
+                    top: 0;
+                    right: 0; /* Oculto a la derecha */
+                    width: 250px;
+                    height: 100vh;
+                    background: #000;
+                    z-index: 100;
+                    padding-top: 80px;
+                    transition: transform 0.5s ease-in-out;
+                    transform: translateX(100%); /* Oculto */
+                }
+                
+                .hidemenu {
+                    transform: translateX(0); /* Mostrar */
+                }
+
+                nav .nav-links li {
+                    margin: 20px;
+                    display: block;
+                    text-align: left;
+                }
+
+                .register-btn {
+                    margin: 15px 20px 30px;
+                    display: inline-block;
+                }
+
+                .active::after {
+                    left: 0;
+                    transform: none;
+                    bottom: -5px;
+                }
+
+                .header h1 {
+                    padding-top: 200px;
+                    font-size: 7vw;
+                }
+
+                /* Barra de búsqueda móvil */
+                .search-bar {
+                    width: 90%;
+                    margin: 30px auto;
+                    padding: 20px 10px 30px;
+                    border-radius: 5px;
+                    position: relative;
+                }
+
+                .search-bar form {
+                    display: block;
+                }
+                
+                /* Resetear el borde para móviles */
+                .location-input {
+                    border-right: none;
+                    padding: 0;
+                }
+
+                .search-bar form input {
+                    border-bottom: 1px solid #ddd;
+                    width: 100%;
+                    margin-bottom: 20px;
+                    margin-top: 10px;
+                    padding-bottom: 10px;
+                }
+
+                .search-bar form button {
+                    position: static; /* Cambiamos a flujo normal */
+                    display: block;
+                    margin: 20px auto 0;
+                    transform: none;
+                    width: 80%;
+                    height: 45px;
+                    border-radius: 5px;
+                }
+
+                .sub-title {
+                    font-size: 6vw;
+                }
+
+                .cta {
+                    padding: 15% 5%;
+                }
+
+                .cta h3 {
+                    font-size: 7vw;
+                    line-height: 8vw;
+                }
+
+                .cta p {
+                    font-size: 14px;
+                }
+
+                .cta-btn {
+                    padding: 6px 15px;
+                    border-radius: 4px;
+                    margin-top: 10px;
+                    font-size: 14px;
+                }
+
+                .stories p {
+                    font-size: 22px
+                }
+
+                .about-msg {
+                    font-size: 15px;
+                }
+                
+                /* Ocultar el menú al inicio si quieres que solo se vea el icono */
+                .nav-links:not(.hidemenu) {
+                    transform: translateX(100%); 
+                }
+                
+                /* --- Estilos para otras páginas (no visibles en la index.html) --- */
+                
+                /* Ajustes para la página de lista de habitaciones */
+                 @media only screen and (max-whidth: 700px) {
+                    .list-container {
+                        margin-top: 150px;
+                    }
+
+                    .left-col,
+                    .right-col,
+                    .house-img,
+                    .house-info {
+                        flex-basis: 100%;
+                    }
+                 }
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <nav id="navBar">
+                <img src="/static/img/nayarane.jpeg" alt="logo" class="logo">
+                <ul class="nav-links">
+                    <li><a href="/" class="active">Iniciar Sesión</a></li>
+                     
+                    <li><a href="/usuario/reportes">Reportes</a></li> </ul>
+                
+            </nav>
+            <div class="container">
+                <h1>Alojamiento de Lujo</h1> <div class="search-bar">
+                    <form id="formReserva" method="get" onsubmit="actualizarAccionFormulario(event)">
+                        
+                        <div class="location-input">
+                            <label>Llegada</label>
+                            <input type="date" name="fechaLlegada">
+                        </div>
+                        <div class="location-input">
+                            <label>Salida</label>
+                            <input type="date" name="fechaSalida">
+                        </div>
+                        <div class="location-input">
+                            <label>Personas</label>
+                            <input type="number" id="numPersonas" placeholder="Número de personas" min="1"> </div>
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2 class="sub-title">Cuartos Exclusivos</h2>
+            <div class="exclusives">
+                <div>
+                    <a href="eleción.php"> <img src="/static/img/habitacion2.jpg" alt="Cuarto XION">
+                        <span>
+                            <h3>Cuarto XION</h3>
+                            <p>$2500 la noche</p>
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <a href="eleción2.php">
+                        <img src="/static/img/habitacion2.webp" alt="Suite Junior">
+                        <span>
+                            <h3>Suite Junior</h3>
+                            <p>$1800 la noche</p>
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <a href="eleción3.php">
+                        <img src="/static/img/habitacion4.jpg" alt="Habitación Estándar">
+                        <span>
+                            <h3>Habitación Estándar</h3>
+                            <p>$1200 la noche</p>
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <a href="eleción3.php">
+                        <img src="/static/img/habitacion1.1.png" alt="Aurora">
+                        <span>
+                            <h3>Aurora</h3>
+                            <p>$1300 la noche</p>
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <a href="eleción3.php">
+                        <img src="/static/img/habitacion1.2.png" alt="Loft Ejecutivo">
+                        <span>
+                            <h3>Loft Ejecutivo</h3>
+                            <p>$3100 la noche</p>
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <a href="eleción3.php">
+                        <img src="/static/img/suite201.jpg" alt="Mar de Sueños">
+                        <span>
+                            <h3>Mar de Sueños</h3>
+                            <p>$1600 la noche</p>
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <a href="eleción3.php">
+                        <img src="/static/img/h102.jpg" alt="Suite Presidencial">
+                        <span>
+                            <h3>Suite Presidencial</h3>
+                            <p>$4800 la noche</p>
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <a href="eleción3.php">
+                        <img src="/static/img/ha.1.jpg" alt="Calypso">
+                        <span>
+                            <h3>Calypso</h3>
+                            <p>$2000 la noche</p>
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <a href="eleción3.php">
+                        <img src="/static/img/ha.2.jpg" alt="Atelier Zen">
+                        <span>
+                            <h3>Atelier Zen</h3>
+                            <p>$1900 la noche</p>
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <a href="eleción3.php">
+                        <img src="/static/img/ha.3.jpg" alt="Alba">
+                        <span>
+                            <h3>Alba</h3>
+                            <p>$2700 la noche</p>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <h2 class="sub-title">Actividades</h2>
+            <div class="trending">
+                <div>
+                    <img src="/static/img/agua.jpg" alt="Descanso">
+                    <h3>Descanso</h3>
+                </div>
+                <div>
+                    <img src="/static/img/evento.jpg" alt="Eventos">
+                    <h3>Eventos</h3>
+                </div>
+                <div>
+                    <img src="/static/img/tiburon.jpg" alt="Piscina">
+                    <h3>Piscina</h3> </div>
+                <div>
+                    <img src="/static/img/piscina.jpg" alt="Cenotes">
+                    <h3>Cenotes</h3>
+                </div>
+            </div>
+            <div class="cta">
+                <h3>¿Quieres saber <br> más sobre nosotros?</h3>
+                <p>Si quieres saber más <br> sobre nuestra historia y visión, presiona el botón.</p>
+                <a href="/usuario/reportes" class="cta-btn">Saber Más</a>
+            </div>
+            <div class="about-msg">
+                <h2>Aviso</h2>
+                <p>Este es un proyecto personal que hice, toda la información de precios y ubicaciones es **totalmente ficticia**. <br> ¡Gracias por revisarlo!</p>
+            </div>
+
+            <div class="footer">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <hr>
+                <p>Nayara © 2025, MariaFernanda Landin Cuevas & Ricardo Bernal Guerrero</p>
+            </div>
+        </div>
+        </body>
+</html>

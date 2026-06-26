@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Recepcionista</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <style>
+        /* [Se mantiene todo tu CSS intacto] */
+        :root {
+            --bg-main: #0a1a3b;
+            --bg-panel: #0d2a5c;
+            --accent-blue: #3a8dff;
+            --text-light: #ffffff;
+            --text-muted: #9bb3d1;
+            --green: #3ccf5f;
+            --orange: #ff9f2e;
+            --pink: #ff2ecb;
+            --gray: #aaaaaa;
+            --header-link-color: #a0b3e5;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg-main);
+            font-family: 'Open Sans', sans-serif;
+            min-height: 100vh;
+            width: 100vw;
+            display: flex;
+            overflow: hidden;
+        }
+        
+        .system-monitor {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* ------------------- NAVIGATION BAR ------------------- */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: linear-gradient(180deg, #1f335b, rgba(31,51,91,0.9));
+            border-bottom: 2px solid #142851;
+            flex-shrink: 0;
+        }
+
+        .brand { 
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 22px;
+            background: linear-gradient(90deg, var(--text-light), var(--accent-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo-text { 
+            color: var(--header-link-color); 
+            font-size: 12px; 
+            letter-spacing: 1px; 
+        }
+
+        #main-nav { 
+            display: flex; 
+            gap: 8px; 
+            margin-left: 18px; 
+            align-items: center; 
+        }
+
+        #main-nav a {
+            color: var(--header-link-color);
+            text-decoration: none;
+            padding: 8px 14px;
+            font-weight: 700;
+            font-size: 12px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        #main-nav a.active {
+            background: var(--accent-blue);
+            color: var(--text-light);
+            padding: 8px 18px;
+        }
+
+        .header-info { 
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+            color: var(--header-link-color); 
+            font-size: 13px; 
+        }
+        
+        .header-info .material-icons-outlined { 
+            font-size: 20px; 
+            opacity: 0.9; 
+        }
+
+        /* ------------------- MAIN CONTENT ------------------- */
+        .content-container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        /* ------------------- LEFT PANEL (Reservas) ------------------- */
+        .reservations-panel {
+            flex: 2;
+            background: var(--bg-panel);
+            padding: 20px 25px;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid rgba(255,255,255,0.1);
+            min-height: 0; 
+            overflow: hidden;
+        }
+
+        .panel-header {
+            color: var(--accent-blue);
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 5px;
+            text-transform: uppercase;
+            flex-shrink: 0;
+        }
+
+        /* --- SCROLL RESERVAS PENDIENTES --- */
+        .reservations-list-wrapper {
+            flex-grow: 1; 
+            overflow-y: auto; 
+            min-height: 0;
+            margin-bottom: 15px;
+        }
+        
+        /* --- Tabla --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #0f3878;
+            border-radius: 6px;
+            font-size: 12px;
+            color: white;
+        }
+
+        th {
+            padding: 10px;
+            background: #0d2a5c;
+            text-align: left;
+            font-weight: 600;
+            text-transform: uppercase;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        tr:hover {
+            background: rgba(255,255,255,0.12);
+            cursor: pointer;
+        }
+
+        /* Clase CSS que el JS manipulará para la selección */
+        tr.selected {
+            background: rgba(255,255,255,0.22) !important; 
+        }
+
+        .assign-btn {
+            padding: 14px;
+            background: var(--accent-blue);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            flex-shrink: 0;
+            transition: background 0.3s;
+        }
+
+        /* Estado deshabilitado visualmente */
+        .assign-btn:disabled {
+            background: var(--text-muted);
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+
+        /* ------------------- RIGHT PANEL (Disponibilidad) ------------------- */
+        .availability-panel {
+            flex: 3;
+            background: var(--bg-panel);
+            padding: 20px 25px;
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+            overflow: hidden;
+        }
+
+        /* --- SCROLL DISPONIBILIDAD --- */
+        .scrollable-room-container {
+            flex-grow: 1;
+            overflow-y: auto;
+            min-height: 0;
+            padding-right: 10px;
+            margin-bottom: 15px;
+        }
+
+        .room-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+        }
+
+        .room {
+            padding: 18px 0;
+            border-radius: 6px;
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            box-shadow: inset 0 0 8px rgba(0,0,0,0.4);
+            transition: transform 0.1s, box-shadow 0.1s;
+        }
+
+        .room:active {
+            transform: scale(0.98);
+        }
+
+        /* Estados de habitación (alineados con el CSS del hotel) */
+        .available { background: var(--green); }
+        .occupied { background: var(--orange); }
+        .finalized {background: var(--pink);}
+        .maintenance { background: var(--gray); }
+        
+        /* Clase que el JS manipulará para la selección */
+        .room.selected-hab {
+            box-shadow: 0 0 0 4px var(--accent-blue), inset 0 0 8px rgba(0,0,0,0.6);
+            border: 2px solid var(--text-light);
+            transform: scale(1.03);
+        }
+
+        /* --- Búsqueda y Filtros --- */
+        .search-section {
+            background: rgba(0,0,0,0.25);
+            padding: 15px;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.15);
+            border: none;
+            color: white;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .status-filters {
+            display: flex;
+            gap: 10px;
+        }
+
+        .filter-btn {
+            flex: 1;
+            padding: 10px;
+            font-size: 12px;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+            text-transform: uppercase;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+        
+        .filter-btn:hover, .filter-btn.active-filter {
+            opacity: 1;
+        }
+
+        .available-filter { background: var(--green); }
+        .occupied-filter { background: var(--orange); }
+        .finalized-filter {background: var(--pink);}
+        .cleanup-filter { background: var(--gray); }
+    </style>
+</head>
+
+<body>
+<div class="system-monitor">
+    <header class="navbar">
+        <div style="display:flex; align-items:center;">
+            <div class="brand">
+                <div class="logo">NÁYARA</div>
+                <div class="logo-text">Hotel</div>
+            </div>
+            <nav id="main-nav">
+                <a href="/recepcionista/home" class="nav-item" data-section="reservas">RESERVAS</a>
+                <a href="/recepcionista/checkin" class="nav-item active" data-section="checkin">CHECK-IN</a>
+                <a href="/recepcionista/checkout" class="nav-item" data-section="checkout">CHECK-OUT</a>
+                <a href="/recepcionista/reportes/listado" class="nav-item" data-section="reportes">REPORTES</a>
+                <a href="/logout" class="nav-item" data-section="reportes">SALIR</a>
+            </nav>
+        </div>
+
+        <div class="header-info">
+            <div style="text-align:right;">
+                <div style="font-size:13px; font-weight:700;">{{ nombre }}</div>
+                <div class="date-time">303 23:59 | 29-05-18</div>
+            </div>
+            <span class="material-icons-outlined">search</span>
+        </div>
+    </header>
+
+    <div class="content-container">
+
+        <div class="reservations-panel">
+            <div class="panel-header">RESERVAS PENDIENTES ({{ reservas|length }})</div>
+
+            <div class="reservations-list-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NOMBRE</th>
+                            <th>TIPO HAB.</th>
+                            <th>PRECIO</th>
+                            <th>COD</th>
+                            <th>DIAS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reservas-body">
+                        {# 🛑 CORRECCIÓN: Usar la variable 'reservas' de Python #}
+                        {% if reservas %}
+                            {% for r in reservas %}
+                            {# r[3] es el R.id (codigo_reserva) que se usará en el JS #}
+                            <tr class="reserva-row" data-reserva-id="{{ r[3] }}">
+                                <td>{{ r[0] }}</td> {# Nombre del Huésped #}
+                                <td>{{ r[1] }}</td> {# Tipo de Habitación #}
+                                <td>${{ r[2]|int }}</td> {# Precio #}
+                                <td>{{ r[3] }}</td> {# Código de Reserva (ID) #}
+                                <td>{{ r[4] }}</td> {# Días de Estancia #}
+                            </tr>
+                            {% endfor %}
+                        {% else %}
+                        <tr>
+                            <td colspan="5" style="text-align:center; color:var(--text-muted);">No hay reservas pendientes de Check-in.</td>
+                        </tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+            {# Se inicia deshabilitado y se habilita con JavaScript #}
+            <button class="assign-btn" id="assign-button" disabled>ASIGNAR HAB. / CHECK-IN</button> 
+        </div>
+
+        <div class="availability-panel">
+            <div class="panel-header">DISPONIBILIDAD DE HABITACIONES (Disp: {{ disponibles }} / Ocup: {{ ocupadas }} / Limp: {{ limpieza }})</div>
+
+            <div class="scrollable-room-container">
+                <div class="room-grid" id="room-grid">
+                    {# 🛑 CORRECCIÓN: Lógica para pintar las habitaciones dinámicamente #}
+                    {% for h in habitaciones %}
+                      {% if h[1] == 'disponible' %}
+                      {% set class_status = 'available' %}
+                      {% elif h[1] == 'ocupada' %}
+                      {% set class_status = 'occupied' %}
+                      {% elif h[1] == 'limpieza' %}
+                      {% set class_status = 'maintenance' %}
+                      {% endif %}
+                        <button class="room {{ class_status }}" 
+                                data-hab-numero="{{ h[0] }}"
+                                data-estado="{{ h[1] }}">
+                            {{ h[0] }}
+                        </button>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="search-section">
+                <input class="search-input" id="search-input" placeholder="🔍 Buscar reserva por nombre / ID">
+
+                <div class="status-filters">
+                    <button class="filter-btn available-filter" data-filter-estado="disponible">DISPONIBLES ({{ disponibles }})</button>
+                    <button class="filter-btn occupied-filter" data-filter-estado="ocupada">OCUPADAS ({{ ocupadas }})</button>
+                    <button class="filter-btn finalized-filter" data-filter-estado="Finalizadas">FINALIZADAS ({{ finalizadas }})</button>
+                    <button class="filter-btn cleanup-filter" data-filter-estado="mantenimiento">LIMPIEZA ({{ limpieza }})</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Variables para rastrear la selección actual
+    let selectedReservaId = null;
+    let selectedRoomNumber = null;
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const reservasBody = document.getElementById('reservas-body');
+        const reservasRows = document.querySelectorAll('.reserva-row');
+        const rooms = document.querySelectorAll('.room');
+        const assignButton = document.getElementById('assign-button');
+        const roomGrid = document.getElementById('room-grid');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+
+        // Función para verificar si se puede habilitar el botón de asignación
+        function checkAssignmentReady() {
+            if (selectedReservaId && selectedRoomNumber) {
+                assignButton.disabled = false;
+            } else {
+                assignButton.disabled = true;
+            }
+        }
+
+        // ------------------ LÓGICA DE SELECCIÓN DE RESERVA ------------------
+        reservasRows.forEach(row => {
+            row.addEventListener('click', function () {
+                // 1. Quitar 'selected' de todas las filas
+                reservasRows.forEach(r => r.classList.remove('selected'));
+
+                // 2. Añadir 'selected' a la fila clicada
+                this.classList.add('selected');
+
+                // 3. Almacenar el ID de la reserva seleccionada (R.id)
+                selectedReservaId = this.dataset.reservaId;
+
+                checkAssignmentReady();
+            });
+        });
+
+        // ------------------ LÓGICA DE SELECCIÓN DE HABITACIÓN ------------------
+        rooms.forEach(room => {
+            room.addEventListener('click', function () {
+                const estado = this.dataset.estado;
+                
+                // Solo se puede seleccionar una habitación si está DISPONIBLE ('activa' en tu DB)
+                if (estado === 'activa') {
+                    // 1. Quitar 'selected-hab' de todas las habitaciones
+                    rooms.forEach(r => r.classList.remove('selected-hab'));
+
+                    // 2. Añadir 'selected-hab' a la habitación clicada
+                    this.classList.add('selected-hab');
+
+                    // 3. Almacenar el número de habitación
+                    selectedRoomNumber = this.dataset.habNumero;
+                } else {
+                    // Si intenta seleccionar una ocupada/limpieza
+                    selectedRoomNumber = null;
+                    rooms.forEach(r => r.classList.remove('selected-hab'));
+                    alert(`La habitación ${this.dataset.habNumero} no está disponible para check-in.`);
+                }
+                
+                checkAssignmentReady();
+            });
+        });
+
+
+        // ------------------ LÓGICA BOTÓN ASIGNAR / CHECK-IN ------------------
+        assignButton.addEventListener('click', async function () {
+            if (!selectedReservaId || !selectedRoomNumber) {
+                alert("Por favor, selecciona una Reserva PENDIENTE y una Habitación DISPONIBLE.");
+                return;
+            }
+
+            // Confirmación antes de ejecutar la acción
+            const confirmacion = confirm(`¿Confirmar Check-in de Reserva ${selectedReservaId} a Habitación ${selectedRoomNumber}?`);
+            
+            if (confirmacion) {
+                // LLAMADA A UNA NUEVA RUTA EN PYTHON (Necesitarás implementarla en app.py)
+                const response = await fetch('/recepcionista/checkin/ejecutar', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        reserva_id: selectedReservaId,
+                        habitacion_numero: selectedRoomNumber
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    alert('✅ Check-in realizado con éxito.');
+                    // Recargar la página para actualizar las tablas
+                    window.location.reload(); 
+                } else {
+                    alert('❌ Error al realizar el check-in: ' + result.message);
+                }
+            }
+        });
+        
+        
+        // ------------------ LÓGICA DE FILTROS (Ejemplo) ------------------
+        filterButtons.forEach(button => {
+            button.addEventListener('click', async function() {
+                const estado = this.dataset.filterEstado;
+                
+                // 1. Alternar clase activa visual
+                filterButtons.forEach(b => b.classList.remove('active-filter'));
+                this.classList.add('active-filter');
+
+                // 2. Llamar a la API de Python para filtrar (ya existe en tu app.py)
+                const response = await fetch(`/filtrar_habitaciones/${estado}`);
+                const result = await response.json();
+                
+                if (result.habitaciones) {
+                    // 3. Limpiar y repintar la cuadrícula
+                    roomGrid.innerHTML = ''; 
+                    result.habitaciones.forEach(h => {
+                        const [numero, estado] = h;
+                        
+                        let class_status = '';
+                        if (estado === 'disponible') class_status = 'available';
+                        else if (estado === 'ocupada') class_status = 'occupied';
+                        else if (estado=== 'finalizada') class_status = 'finalized';
+                        else if (estado === 'mantenimiento') class_status = 'maintenance';
+
+                        const newRoom = document.createElement('button');
+                        newRoom.className = `room ${class_status}`;
+                        newRoom.dataset.habNumero = numero;
+                        newRoom.dataset.estado = estado;
+                        newRoom.textContent = numero;
+                        
+                        roomGrid.appendChild(newRoom);
+                    });
+                }
+                
+                // 4. Se necesita re-asignar los listeners de click a las nuevas habitaciones
+                // Esto es avanzado, por ahora lo dejamos con la función de click.
+            });
+        });
+        
+        document.getElementById("search-input").addEventListener("input", async function () {
+    const texto = this.value.trim();
+
+    if (texto === "") return window.location.reload();
+
+    const response = await fetch(`/buscar_reserva2/${texto}`);
+    const result = await response.json();
+
+    const body = document.getElementById("reservas-body");
+    body.innerHTML = "";
+
+    result.reservas.forEach(r => {
+        const row = `
+            <tr class="reserva-row" data-reserva-id="${r[3]}">
+                <td>${r[0]}</td>
+                <td>${r[1]}</td>
+                <td>$${r[2]}</td>
+                <td>${r[3]}</td>
+                <td>${r[4]}</td>
+            </tr>
+        `;
+        body.innerHTML += row;
+    });
+});
+
+        // ------------------ LÓGICA DE BÚSQUEDA (Queda pendiente de implementar la ruta) ------------------
+        // Tendrías que implementar una ruta de Flask que busque la reserva y devuelva los resultados.
+        // La ruta /buscar_reserva ya existe, pero no está bien definida en tu app.py, por ahora la dejamos fuera de JS.
+    });
+
+</script>
+</body>
+</html>
