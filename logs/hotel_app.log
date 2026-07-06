@@ -83,3 +83,45 @@ pyodbc.OperationalError: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL S
 2026-06-26 14:01:23,202 | INFO | Respuesta GET / -> 200
 2026-06-26 14:01:23,252 | INFO | Solicitud GET /static/img/viajerodos.svg
 2026-06-26 14:01:23,278 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-06-26 14:07:31,746 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-06-26 14:07:32,907 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-06-26 14:07:52,808 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-06-26 14:07:53,583 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-06-26 14:08:01,384 | INFO | Solicitud GET /
+2026-06-26 14:08:01,468 | INFO | Respuesta GET / -> 200
+2026-06-26 14:08:01,509 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-06-26 14:08:01,810 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-06-26 14:08:02,407 | INFO | Solicitud GET /favicon.ico
+2026-06-26 14:08:02,418 | INFO | Respuesta GET /favicon.ico -> 404
+2026-06-26 21:27:01,603 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-06-26 21:27:03,005 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-06-26 21:27:34,491 | INFO | Solicitud GET /
+2026-06-26 21:27:34,588 | INFO | Respuesta GET / -> 200
+2026-06-26 21:27:34,630 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-06-26 21:27:35,037 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-06-26 21:27:35,143 | INFO | Solicitud GET /favicon.ico
+2026-06-26 21:27:35,149 | INFO | Respuesta GET /favicon.ico -> 404
+2026-06-27 09:24:43,277 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-06-27 09:24:45,022 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-06-27 09:25:00,109 | INFO | Solicitud GET /
+2026-06-27 09:25:00,210 | INFO | Respuesta GET / -> 200
+2026-06-27 09:25:00,282 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-06-27 09:25:01,960 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-06-27 09:25:02,066 | INFO | Solicitud GET /favicon.ico
+2026-06-27 09:25:02,081 | INFO | Respuesta GET /favicon.ico -> 404
+2026-07-02 13:52:33,032 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-07-02 13:52:35,243 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-07-02 13:53:51,704 | INFO | Solicitud GET /
+2026-07-02 13:53:51,912 | INFO | Respuesta GET / -> 200
+2026-07-02 13:53:52,253 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-02 13:53:52,509 | INFO | Respuesta GET /static/img/viajerodos.svg -> 200
+2026-07-02 13:53:53,113 | INFO | Solicitud GET /favicon.ico
+2026-07-02 13:53:53,119 | INFO | Respuesta GET /favicon.ico -> 404
+2026-07-05 23:15:16,146 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-07-05 23:15:18,310 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-07-05 23:15:54,269 | INFO | Solicitud GET /
+2026-07-05 23:15:54,667 | INFO | Respuesta GET / -> 200
+2026-07-05 23:15:55,106 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-05 23:15:55,864 | INFO | Respuesta GET /static/img/viajerodos.svg -> 200
+2026-07-05 23:15:55,967 | INFO | Solicitud GET /favicon.ico
+2026-07-05 23:15:55,986 | INFO | Respuesta GET /favicon.ico -> 404
