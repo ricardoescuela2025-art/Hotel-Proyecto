@@ -783,7 +783,11 @@ main .recent-orders a{
                     <div class="status">
                         {% set total_reservas = total_reservas | default(0) %}
                         {% set max_reservas = max_reservas | default(100) %}
-                        {% set porcentaje = (total_reservas / max_reservas * 100) | round(0) %}
+                        {% if max_reservas > 0 %}
+    {% set porcentaje = (total_reservas / max_reservas * 100) | round(0) %}
+{% else %}
+    {% set porcentaje = 0 %}
+{% endif %}
                         <div class="info">
                             <h3>Total de Reservas</h3>
                             <h1>{{ total_reservas }}</h1>
@@ -805,8 +809,11 @@ main .recent-orders a{
                         {# Valores por defecto si no vienen desde app.py #}
                         {% set ocupadas = ocupadas | default(0) %}
                         {% set total_habitaciones = total_habitaciones | default(100) %}
-                        {% set porcentaje = (ocupadas / total_habitaciones * 100) | round(0) %}
-
+{% if total_habitaciones > 0 %}
+    {% set porcentaje = (ocupadas / total_habitaciones * 100) | round(0) %}
+{% else %}
+    {% set porcentaje = 0 %}
+{% endif %}
                         <div class="info">
                             <h3>Habitaciones Ocupadas</h3>
                             <h1>{{ ocupadas }}</h1>
@@ -830,8 +837,11 @@ main .recent-orders a{
                         {# Valores por defecto si no vienen desde app.py #}
                         {% set disponibles = disponibles | default(0) %}
                         {% set total_habitaciones = total_habitaciones | default(100) %}
-                        {% set porcentaje_disp = (disponibles / total_habitaciones * 100) | round(0) %}
-
+{% if total_habitaciones > 0 %}
+    {% set porcentaje_disp = (disponibles / total_habitaciones * 100) | round(0) %}
+{% else %}
+    {% set porcentaje_disp = 0 %}
+{% endif %}
                         <div class="info">
                             <h3>Habitaciones Disponibles</h3>
                             <h1>{{ disponibles }}</h1>

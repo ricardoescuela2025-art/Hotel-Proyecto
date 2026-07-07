@@ -34,14 +34,16 @@ def registrar_respuesta(response):
     return response
 
 # ---------------- CONEXIÓN ---------------- #
+
 def obtener_conexion():
     try:
-        logger.debug("Intentando conectar a la base de datos")
+        logger.debug("Intentando conectar a la base de datos...")
         return pyodbc.connect(
             "Driver={ODBC Driver 17 for SQL Server};"
-            "Server=(localdb)\\MSSQLLocalDB;"
+            "Server=LAPTOP-54DLN69G\\SQLEXPRESS01;"
             "Database=ReservasHotel;"
             "Trusted_Connection=yes;"
+            "TrustServerCertificate=yes;"
         )
     except Exception as e:
         logger.exception("Error de conexión a la base de datos")
@@ -71,37 +73,43 @@ def registrar_usuario():
 
     try:
         conn = obtener_conexion()
+
         if conn is None:
-            raise Exception("No se pudo establecer conexión con la base de datos")
+            raise Exception("No se pudo conectar a SQL Server")
 
         cursor = conn.cursor()
+
         cursor.execute("""
-            INSERT INTO Usuarios (nombre, correo, contraseña, telefono, tipo)
-            VALUES (?, ?, ?, ?, 'usuario')
-        """, (nombre, correo, password, telefono))
+            INSERT INTO Usuarios (nombre, correo, contrasena, telefono, tipo)
+            VALUES (?, ?, ?, ?, ?)
+        """, (nombre, correo, password, telefono, "usuario"))
 
         conn.commit()
-        logger.info("Usuario registrado correctamente: %s", correo)
 
         flash("Usuario registrado correctamente", "success")
         return redirect("/")
 
-    except pyodbc.IntegrityError:
-        logger.warning("Correo duplicado al registrar usuario: %s", correo)
-        flash("El correo ya está registrado.", "error")
+    except pyodbc.IntegrityError as e:
+        conn.rollback()
+        logger.exception(e)
+        flash(f"Error de integridad: {e}", "error")
         return redirect("/")
 
     except Exception as e:
-        logger.exception("Error al registrar usuario: %s", correo)
-        flash("Error al registrar usuario.", "error")
+        if conn:
+            conn.rollback()
+
+        logger.exception(e)
+        print("ERROR SQL:", e)
+
+        flash(str(e), "error")
         return redirect("/")
 
     finally:
-        if cursor is not None:
+        if cursor:
             cursor.close()
-        if conn is not None:
+        if conn:
             conn.close()
-
 # ----------------------------- LOGIN ----------------------------- #
 @app.post("/login")
 def iniciar_sesion():

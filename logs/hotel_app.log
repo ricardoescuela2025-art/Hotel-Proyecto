@@ -125,3 +125,264 @@ pyodbc.OperationalError: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL S
 2026-07-05 23:15:55,864 | INFO | Respuesta GET /static/img/viajerodos.svg -> 200
 2026-07-05 23:15:55,967 | INFO | Solicitud GET /favicon.ico
 2026-07-05 23:15:55,986 | INFO | Respuesta GET /favicon.ico -> 404
+2026-07-06 18:34:27,266 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-07-06 18:34:30,611 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-07-06 18:34:41,440 | INFO | Solicitud GET /
+2026-07-06 18:34:42,319 | INFO | Respuesta GET / -> 200
+2026-07-06 18:34:42,625 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-06 18:34:43,299 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-06 18:34:43,583 | INFO | Solicitud GET /favicon.ico
+2026-07-06 18:34:43,590 | INFO | Respuesta GET /favicon.ico -> 404
+2026-07-06 18:35:10,282 | INFO | Solicitud POST /registrar_usuario
+2026-07-06 18:35:10,297 | INFO | Intento de registro para ricardo.guerrero2@gmail.com
+2026-07-06 18:35:11,466 | ERROR | Error al registrar usuario: ricardo.guerrero2@gmail.com
+Traceback (most recent call last):
+  File "c:\Users\A515-55\Desktop\Hotel-Proyecto\app.py", line 75, in registrar_usuario
+    cursor.execute("""
+    ~~~~~~~~~~~~~~^^^^
+        INSERT INTO Usuarios (nombre, correo, contraseña, telefono, tipo)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        VALUES (?, ?, ?, ?, 'usuario')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    """, (nombre, correo, password, telefono))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.ProgrammingError: ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'contraseña'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+2026-07-06 18:35:11,512 | INFO | Respuesta POST /registrar_usuario -> 302
+2026-07-06 18:35:11,528 | INFO | Solicitud GET /
+2026-07-06 18:35:11,534 | INFO | Respuesta GET / -> 200
+2026-07-06 18:35:11,666 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-06 18:35:11,673 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-06 18:36:44,022 | INFO | Solicitud POST /registrar_usuario
+2026-07-06 18:36:44,026 | INFO | Intento de registro para ricardo.guerrero2@gmail.com
+2026-07-06 18:36:44,124 | ERROR | Error al registrar usuario: ricardo.guerrero2@gmail.com
+Traceback (most recent call last):
+  File "c:\Users\A515-55\Desktop\Hotel-Proyecto\app.py", line 75, in registrar_usuario
+    cursor.execute("""
+    ~~~~~~~~~~~~~~^^^^
+        INSERT INTO Usuarios (nombre, correo, contraseña, telefono, tipo)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        VALUES (?, ?, ?, ?, 'usuario')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    """, (nombre, correo, password, telefono))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.ProgrammingError: ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'contraseña'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+2026-07-06 18:36:44,130 | INFO | Respuesta POST /registrar_usuario -> 302
+2026-07-06 18:36:44,147 | INFO | Solicitud GET /
+2026-07-06 18:36:44,163 | INFO | Respuesta GET / -> 200
+2026-07-06 18:36:44,237 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-06 18:36:44,257 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-06 18:39:08,133 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-07-06 18:39:12,962 | INFO | Solicitud GET /
+2026-07-06 18:39:13,015 | INFO | Respuesta GET / -> 200
+2026-07-06 18:39:13,061 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-06 18:39:13,510 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-06 18:39:28,795 | INFO | Solicitud POST /registrar_usuario
+2026-07-06 18:39:28,807 | INFO | Intento de registro para ricardo.guerrero2@gmail.com
+2026-07-06 18:39:29,288 | ERROR | Error al registrar usuario: ricardo.guerrero2@gmail.com
+Traceback (most recent call last):
+  File "c:\Users\A515-55\Desktop\Hotel-Proyecto\app.py", line 80, in registrar_usuario
+    cursor.execute("""
+    ~~~~~~~~~~~~~~^^^^
+        INSERT INTO Usuarios (nombre, correo, contraseña, telefono, tipo)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        VALUES (?, ?, ?, ?, 'usuario')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    """, (nombre, correo, password, telefono))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.ProgrammingError: ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'contraseña'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+2026-07-06 18:39:29,299 | INFO | Respuesta POST /registrar_usuario -> 302
+2026-07-06 18:39:29,314 | INFO | Solicitud GET /
+2026-07-06 18:39:29,324 | INFO | Respuesta GET / -> 200
+2026-07-06 18:39:29,423 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-06 18:39:29,428 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-06 18:42:00,572 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-07-06 18:42:04,420 | INFO | Solicitud GET /
+2026-07-06 18:42:04,470 | INFO | Respuesta GET / -> 200
+2026-07-06 18:42:04,509 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-06 18:42:04,991 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-06 18:42:09,539 | INFO | Solicitud GET /
+2026-07-06 18:42:09,541 | INFO | Respuesta GET / -> 200
+2026-07-06 18:42:09,646 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-06 18:42:09,652 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-06 18:42:22,508 | INFO | Solicitud POST /registrar_usuario
+2026-07-06 18:42:22,517 | INFO | Intento de registro para ricardo.guerrero2@gmail.com
+2026-07-06 18:42:23,048 | ERROR | ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'contraseña'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+Traceback (most recent call last):
+  File "c:\Users\A515-55\Desktop\Hotel-Proyecto\app.py", line 82, in registrar_usuario
+    cursor.execute("""
+    ~~~~~~~~~~~~~~^^^^
+        INSERT INTO Usuarios (nombre, correo, contraseña, telefono, tipo)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        VALUES (?, ?, ?, ?, ?)
+        ^^^^^^^^^^^^^^^^^^^^^^
+    """, (nombre, correo, password, telefono, "usuario"))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.ProgrammingError: ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'contraseña'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+2026-07-06 18:42:23,059 | INFO | Respuesta POST /registrar_usuario -> 302
+2026-07-06 18:42:23,081 | INFO | Solicitud GET /
+2026-07-06 18:42:23,084 | INFO | Respuesta GET / -> 200
+2026-07-06 18:42:23,161 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-06 18:42:23,172 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-06 18:43:00,812 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-07-06 18:43:12,010 | INFO | Solicitud GET /
+2026-07-06 18:43:12,081 | INFO | Respuesta GET / -> 200
+2026-07-06 18:43:12,134 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-06 18:43:12,692 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-06 18:43:25,629 | INFO | Solicitud POST /registrar_usuario
+2026-07-06 18:43:25,646 | INFO | Intento de registro para ricardo.guerrero2@gmail.com
+2026-07-06 18:43:26,029 | INFO | Respuesta POST /registrar_usuario -> 302
+2026-07-06 18:43:26,047 | INFO | Solicitud GET /
+2026-07-06 18:43:26,052 | INFO | Respuesta GET / -> 200
+2026-07-06 18:43:26,158 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-06 18:43:26,161 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-06 18:44:38,430 | INFO | Solicitud POST /login
+2026-07-06 18:44:38,438 | INFO | Intento de login para Ricardo Bernal
+2026-07-06 18:44:38,532 | WARNING | Login fallido por credenciales incorrectas: Ricardo Bernal
+2026-07-06 18:44:38,533 | INFO | Respuesta POST /login -> 302
+2026-07-06 18:44:38,552 | INFO | Solicitud GET /
+2026-07-06 18:44:38,556 | INFO | Respuesta GET / -> 200
+2026-07-06 18:44:38,643 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-06 18:44:38,650 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-06 18:45:00,866 | INFO | Solicitud POST /login
+2026-07-06 18:45:00,889 | INFO | Intento de login para ricardo.guerrero2@gmail.com
+2026-07-06 18:45:00,911 | INFO | Login exitoso para ricardo.guerrero2@gmail.com (usuario)
+2026-07-06 18:45:00,912 | INFO | Respuesta POST /login -> 302
+2026-07-06 18:45:00,926 | INFO | Solicitud GET /habitaciones
+2026-07-06 18:45:00,975 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-06 18:45:01,014 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-06 18:45:01,019 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 200
+2026-07-06 18:48:06,243 | INFO | Solicitud GET /habitaciones
+2026-07-06 18:48:06,346 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-06 18:48:06,368 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-06 18:48:06,382 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-06 18:48:29,891 | INFO | Solicitud POST /login
+2026-07-06 18:48:29,896 | INFO | Intento de login para admin@hotel.com
+2026-07-06 18:48:29,956 | INFO | Login exitoso para admin@hotel.com (admin)
+2026-07-06 18:48:29,957 | INFO | Respuesta POST /login -> 302
+2026-07-06 18:48:29,972 | INFO | Solicitud GET /admin/dashboard
+2026-07-06 18:49:46,401 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-07-06 18:57:22,329 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-07-06 18:57:23,453 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-07-06 18:57:34,399 | INFO | Solicitud GET /
+2026-07-06 18:57:34,618 | INFO | Respuesta GET / -> 200
+2026-07-06 18:57:34,743 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-06 18:57:35,049 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-06 18:57:50,729 | INFO | Solicitud POST /login
+2026-07-06 18:57:50,737 | INFO | Intento de login para admin@hotel.com
+2026-07-06 18:57:51,080 | INFO | Login exitoso para admin@hotel.com (admin)
+2026-07-06 18:57:51,080 | INFO | Respuesta POST /login -> 302
+2026-07-06 18:57:51,090 | INFO | Solicitud GET /admin/dashboard
+2026-07-06 18:57:51,122 | INFO | Respuesta GET /admin/dashboard -> 200
+2026-07-06 18:57:51,146 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-06 18:57:51,148 | INFO | Respuesta GET /static/img/usuario.jpg -> 200
+2026-07-06 18:57:51,149 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-06 18:57:51,164 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-06 18:57:51,166 | INFO | Solicitud GET /static/img/signomas.png
+2026-07-06 18:57:51,172 | INFO | Respuesta GET /static/img/signomas.png -> 200
+2026-07-06 18:58:12,947 | INFO | Solicitud GET /admin/usuarios
+2026-07-06 18:58:13,000 | INFO | Respuesta GET /admin/usuarios -> 200
+2026-07-06 18:58:13,025 | INFO | Solicitud GET /admin/style.css
+2026-07-06 18:58:13,033 | INFO | Respuesta GET /admin/style.css -> 404
+2026-07-06 18:58:13,041 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-06 18:58:13,045 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-06 18:58:13,047 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-06 18:58:13,050 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-06 18:58:29,530 | INFO | Solicitud GET /admin/usuarios/nuevo
+2026-07-06 18:58:29,552 | INFO | Respuesta GET /admin/usuarios/nuevo -> 200
+2026-07-06 18:58:29,576 | INFO | Solicitud GET /admin/usuarios/style.css
+2026-07-06 18:58:29,585 | INFO | Respuesta GET /admin/usuarios/style.css -> 404
+2026-07-06 18:58:29,589 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-06 18:58:29,591 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-06 18:58:29,597 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-06 18:58:29,639 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-06 18:58:47,706 | INFO | Solicitud GET /admin/dashboard
+2026-07-06 18:58:47,734 | INFO | Respuesta GET /admin/dashboard -> 200
+2026-07-06 18:58:47,764 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-06 18:58:47,805 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-06 18:58:47,811 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-06 18:58:47,839 | INFO | Solicitud GET /static/img/signomas.png
+2026-07-06 18:58:47,849 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-06 18:58:47,854 | INFO | Respuesta GET /static/img/signomas.png -> 304
+2026-07-06 18:58:48,688 | INFO | Solicitud GET /admin/habitaciones
+2026-07-06 18:58:48,731 | INFO | Respuesta GET /admin/habitaciones -> 200
+2026-07-06 18:58:48,751 | INFO | Solicitud GET /admin/style.css
+2026-07-06 18:58:48,763 | INFO | Respuesta GET /admin/style.css -> 404
+2026-07-06 18:58:48,796 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-06 18:58:48,803 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-06 18:58:48,804 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-06 18:58:48,812 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-06 18:58:49,680 | INFO | Solicitud GET /admin/usuarios
+2026-07-06 18:58:49,694 | INFO | Respuesta GET /admin/usuarios -> 200
+2026-07-06 18:58:49,717 | INFO | Solicitud GET /admin/style.css
+2026-07-06 18:58:49,721 | INFO | Respuesta GET /admin/style.css -> 404
+2026-07-06 18:58:49,733 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-06 18:58:49,736 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-06 18:58:49,738 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-06 18:58:49,742 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-06 18:58:51,133 | INFO | Solicitud GET /admin/usuarios/nuevo
+2026-07-06 18:58:51,134 | INFO | Respuesta GET /admin/usuarios/nuevo -> 200
+2026-07-06 18:58:51,177 | INFO | Solicitud GET /admin/usuarios/style.css
+2026-07-06 18:58:51,185 | INFO | Respuesta GET /admin/usuarios/style.css -> 404
+2026-07-06 18:58:51,187 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-06 18:58:51,191 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-06 18:58:51,198 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-06 18:58:51,203 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-06 18:59:13,622 | INFO | Solicitud POST /admin/usuarios/guardar
+2026-07-06 18:59:13,700 | INFO | Respuesta POST /admin/usuarios/guardar -> 302
+2026-07-06 18:59:13,716 | INFO | Solicitud GET /admin/usuarios
+2026-07-06 18:59:13,730 | INFO | Respuesta GET /admin/usuarios -> 200
+2026-07-06 18:59:13,774 | INFO | Solicitud GET /admin/style.css
+2026-07-06 18:59:13,780 | INFO | Respuesta GET /admin/style.css -> 404
+2026-07-06 18:59:13,780 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-06 18:59:13,784 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-06 18:59:13,789 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-06 18:59:13,792 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-06 18:59:45,800 | INFO | Solicitud GET /logout
+2026-07-06 18:59:45,800 | INFO | Respuesta GET /logout -> 302
+2026-07-06 18:59:45,820 | INFO | Solicitud GET /
+2026-07-06 18:59:45,837 | INFO | Respuesta GET / -> 200
+2026-07-06 18:59:45,859 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-06 18:59:45,862 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-06 19:00:04,131 | INFO | Solicitud POST /registrar_usuario
+2026-07-06 19:00:04,132 | INFO | Intento de registro para edu123@gmail.com
+2026-07-06 19:00:04,183 | INFO | Respuesta POST /registrar_usuario -> 302
+2026-07-06 19:00:04,190 | INFO | Solicitud GET /
+2026-07-06 19:00:04,194 | INFO | Respuesta GET / -> 200
+2026-07-06 19:00:04,271 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-06 19:00:04,273 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-06 19:00:39,490 | INFO | Solicitud POST /login
+2026-07-06 19:00:39,492 | INFO | Intento de login para ricardo.bernalguerrero2@gmail.com
+2026-07-06 19:00:39,528 | WARNING | Login fallido por credenciales incorrectas: ricardo.bernalguerrero2@gmail.com
+2026-07-06 19:00:39,528 | INFO | Respuesta POST /login -> 302
+2026-07-06 19:00:39,537 | INFO | Solicitud GET /
+2026-07-06 19:00:39,538 | INFO | Respuesta GET / -> 200
+2026-07-06 19:00:39,628 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-06 19:00:39,629 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-06 19:00:52,171 | INFO | Solicitud POST /login
+2026-07-06 19:00:52,172 | INFO | Intento de login para ricardo.guerrero2@gmail.com
+2026-07-06 19:00:52,196 | INFO | Login exitoso para ricardo.guerrero2@gmail.com (usuario)
+2026-07-06 19:00:52,200 | INFO | Respuesta POST /login -> 302
+2026-07-06 19:00:52,209 | INFO | Solicitud GET /habitaciones
+2026-07-06 19:00:52,222 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-06 19:00:52,278 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-06 19:00:52,284 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-06 19:15:16,562 | INFO | Solicitud GET /habitaciones
+2026-07-06 19:15:16,600 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-06 19:15:16,629 | INFO | Solicitud GET /static/img/habitacion1.jpg
+2026-07-06 19:15:16,636 | INFO | Respuesta GET /static/img/habitacion1.jpg -> 404
+2026-07-06 19:15:16,638 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-06 19:15:16,649 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-06 19:15:16,650 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-06 19:15:16,657 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 200
+2026-07-06 19:15:16,663 | INFO | Solicitud GET /static/img/habitacion3.jpg
+2026-07-06 19:15:16,665 | INFO | Respuesta GET /static/img/habitacion3.jpg -> 404
+2026-07-06 19:15:23,043 | INFO | Solicitud GET /habitaciones
+2026-07-06 19:15:23,056 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-06 19:15:23,086 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-06 19:15:23,106 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-06 19:15:23,120 | INFO | Solicitud GET /static/img/habitacion1.jpg
+2026-07-06 19:15:23,130 | INFO | Respuesta GET /static/img/habitacion1.jpg -> 404
+2026-07-06 19:15:23,142 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-06 19:15:23,144 | INFO | Solicitud GET /static/img/habitacion3.jpg
+2026-07-06 19:15:23,147 | INFO | Respuesta GET /static/img/habitacion3.jpg -> 404
+2026-07-06 19:15:23,147 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
