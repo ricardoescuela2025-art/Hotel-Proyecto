@@ -221,12 +221,12 @@ form .btn:hover {
                     <!-- RESERVA Y MONTO PARA CONEXIÓN -->
                     <div class="input-box">
                         <span>ID Reserva :</span>
-                        <input type="number" name="reserva" placeholder="Ej: 12" required>
+                        <input type="number" name="reserva" value="{{ reserva.id if reserva else '' }}" readonly required>
                     </div>
 
                     <div class="input-box">
                         <span>Monto a pagar :</span>
-                        <input type="number" name="monto" placeholder="Ej: 1500" required>
+                        <input type="number" name="monto" value="{{ reserva.precio if reserva else '' }}" readonly required>
                     </div>
 
                 </div>

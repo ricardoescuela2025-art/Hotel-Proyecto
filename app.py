@@ -8,6 +8,32 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 app.secret_key = "super_secreto"
 
+# Algunas habitaciones antiguas quedaron guardadas con nombres de archivo que
+# ya no existen. Conservamos las imágenes cargadas por el usuario y mostramos
+# la foto equivalente mientras se actualizan esos registros.
+CARPETA_IMAGENES = os.path.join(app.static_folder, "img")
+IMAGENES_REEMPLAZO = {
+    "habitacion1.jpg": "hab-deluxe.jpg",
+    "habitacion3.jpg": "h101.jpg",
+}
+
+
+def obtener_ruta_imagen(ruta_guardada):
+    """Devuelve una ruta pública válida para una imagen de habitación."""
+    if not ruta_guardada:
+        return None
+
+    nombre_archivo = os.path.basename(ruta_guardada)
+    ruta_fisica = os.path.join(CARPETA_IMAGENES, nombre_archivo)
+    if os.path.isfile(ruta_fisica):
+        return f"/static/img/{nombre_archivo}"
+
+    nombre_reemplazo = IMAGENES_REEMPLAZO.get(nombre_archivo)
+    if nombre_reemplazo and os.path.isfile(os.path.join(CARPETA_IMAGENES, nombre_reemplazo)):
+        return f"/static/img/{nombre_reemplazo}"
+
+    return ruta_guardada
+
 LOG_DIR = os.path.join(os.path.dirname(__file__), "logs")
 os.makedirs(LOG_DIR, exist_ok=True)
 LOG_FILE = os.path.join(LOG_DIR, "hotel_app.log")
@@ -991,7 +1017,7 @@ def listar_habitaciones():
         "Descripcion": row[2],
         "Estrellas": row[3],
         "Precio": row[4],
-        "Imagen": row[5]
+        "Imagen": obtener_ruta_imagen(row[5])
     })
 
     
@@ -1025,7 +1051,7 @@ def usuario_detalle(id_habitacion):
         "precio": row[3],
         "estado": row[4],
         "descripcion": row[5],
-        "imagen": row[6],
+        "imagen": obtener_ruta_imagen(row[6]),
         "estrellas": row[7],
         "nombre": row[8],
     }
@@ -1100,11 +1126,24 @@ def pago(reserva_id):
 # 1️⃣ CONEXIÓN A SQL SERVER
 # ---------------------------
 def db_connection():
-    return pyodbc.connect(
-        "Driver={ODBC Driver 17 for SQL Server};"
-        "Server=(localdb)\\MSSQLLocalDB;"
-        "Database=ReservasHotel;"
-    )
+    # Pagos debe usar la misma instancia de SQL Server que las reservas.
+    return obtener_conexion()
+
+
+def crear_tabla_pagos_si_no_existe(cursor):
+    """Crea el historial de pagos la primera vez que se procesa un pago."""
+    cursor.execute("""
+        IF OBJECT_ID(N'dbo.Pagos', N'U') IS NULL
+        BEGIN
+            CREATE TABLE dbo.Pagos (
+                id INT IDENTITY(1, 1) PRIMARY KEY,
+                reserva_id INT NOT NULL,
+                monto DECIMAL(10, 2) NOT NULL,
+                metodo NVARCHAR(100) NOT NULL,
+                fecha_pago DATETIME NOT NULL DEFAULT GETDATE()
+            )
+        END
+    """)
 import os
 from datetime import datetime
 from reportlab.pdfgen import canvas
@@ -1220,28 +1259,57 @@ def procesar_pago():
 
     # CONEXIÓN
     conn = db_connection()
-    cursor = conn.cursor()
+    if conn is None:
+        logger.error("No se pudo conectar a SQL Server al procesar un pago.")
+        return render_template(
+            "usuario/pago.html",
+            reserva={"id": reserva_id, "precio": monto},
+            error="No fue posible conectar con la base de datos. Verifica que SQL Server esté iniciado e inténtalo de nuevo."
+        ), 503
 
-    # ✅ VALIDAR SI EXISTE EL ID DE RESERVA
-    cursor.execute("SELECT 1 FROM Reservas WHERE id = ?", (reserva_id,))
-    reserva = cursor.fetchone()
+    try:
+        cursor = conn.cursor()
+        crear_tabla_pagos_si_no_existe(cursor)
 
-    if not reserva:
+        # ✅ VALIDAR SI EXISTE EL ID DE RESERVA
+        cursor.execute("SELECT 1 FROM Reservas WHERE id = ?", (reserva_id,))
+        reserva = cursor.fetchone()
+
+        if not reserva:
+            return render_template(
+                "usuario/pago.html",
+                reserva={"id": reserva_id, "precio": monto},
+                error="La reserva no existe o no está disponible."
+            ), 404
+
+        # INSERTAR PAGO
+        cursor.execute("""
+            INSERT INTO Pagos (reserva_id, monto, metodo)
+            VALUES (?, ?, ?)
+        """, (reserva_id, monto, metodo))
+        conn.commit()
+
+    except pyodbc.Error:
+        logger.exception("Error de base de datos al registrar el pago de la reserva %s", reserva_id)
+        return render_template(
+            "usuario/pago.html",
+            reserva={"id": reserva_id, "precio": monto},
+            error="No se pudo registrar el pago. Inténtalo nuevamente o contacta a recepción."
+        ), 500
+    finally:
         conn.close()
-        return render_template("usuario/pago.html", error="❌ La reserva NO existe o no está disponible.")
-
-    # INSERTAR PAGO
-    cursor.execute("""
-        INSERT INTO Pagos (reserva_id, monto, metodo)
-        VALUES (?, ?, ?)
-    """, (reserva_id, monto, metodo))
-
-    conn.commit()
-    conn.close()
 
     # GENERAR PDF
-    ruta_pdf = generar_pdf(nombre, monto, metodo, reserva_id)
-    return send_file(ruta_pdf, as_attachment=True)
+    try:
+        ruta_pdf = generar_pdf(nombre, monto, metodo, reserva_id)
+        return send_file(ruta_pdf, as_attachment=True)
+    except Exception:
+        logger.exception("El pago de la reserva %s se registró, pero no se pudo generar el PDF", reserva_id)
+        return render_template(
+            "usuario/pago.html",
+            reserva={"id": reserva_id, "precio": monto},
+            error="El pago se registró, pero no fue posible generar el comprobante PDF."
+        ), 500
 
 
 
