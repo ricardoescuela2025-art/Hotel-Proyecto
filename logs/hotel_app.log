@@ -716,3 +716,1034 @@ pyodbc.ProgrammingError: ('42S02', "[42S02] [Microsoft][ODBC Driver 17 for SQL S
 2026-07-19 22:58:31,789 | INFO | Respuesta POST /procesar_pago -> 200
 2026-07-19 23:00:53,684 | INFO | Solicitud GET /
 2026-07-19 23:00:53,686 | INFO | Respuesta GET / -> 200
+2026-07-21 20:14:24,223 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-07-21 20:14:27,481 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-07-21 20:14:50,864 | INFO | Solicitud GET /
+2026-07-21 20:14:50,966 | INFO | Respuesta GET / -> 200
+2026-07-21 20:14:51,004 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:14:52,178 | INFO | Respuesta GET /static/img/viajerodos.svg -> 200
+2026-07-21 20:14:52,797 | INFO | Solicitud GET /favicon.ico
+2026-07-21 20:14:52,801 | INFO | Respuesta GET /favicon.ico -> 404
+2026-07-21 20:15:20,396 | INFO | Solicitud POST /registrar_usuario
+2026-07-21 20:15:20,404 | INFO | Intento de registro para Vicbernal@gmail.com
+2026-07-21 20:15:21,006 | INFO | Respuesta POST /registrar_usuario -> 302
+2026-07-21 20:15:21,022 | INFO | Solicitud GET /
+2026-07-21 20:15:21,023 | INFO | Respuesta GET / -> 200
+2026-07-21 20:15:21,081 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:15:21,083 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:15:46,010 | INFO | Solicitud POST /registrar_usuario
+2026-07-21 20:15:46,035 | INFO | Intento de registro para jessica@gmail.com
+2026-07-21 20:15:46,139 | INFO | Respuesta POST /registrar_usuario -> 302
+2026-07-21 20:15:46,148 | INFO | Solicitud GET /
+2026-07-21 20:15:46,149 | INFO | Respuesta GET / -> 200
+2026-07-21 20:15:46,213 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:15:46,236 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:16:09,950 | INFO | Solicitud POST /registrar_usuario
+2026-07-21 20:16:09,952 | INFO | Intento de registro para Hector@gmail.com
+2026-07-21 20:16:10,010 | INFO | Respuesta POST /registrar_usuario -> 302
+2026-07-21 20:16:10,021 | INFO | Solicitud GET /
+2026-07-21 20:16:10,022 | INFO | Respuesta GET / -> 200
+2026-07-21 20:16:10,098 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:16:10,108 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:16:37,734 | INFO | Solicitud POST /registrar_usuario
+2026-07-21 20:16:37,735 | INFO | Intento de registro para Carmen@gmail.com
+2026-07-21 20:16:37,752 | INFO | Respuesta POST /registrar_usuario -> 302
+2026-07-21 20:16:37,764 | INFO | Solicitud GET /
+2026-07-21 20:16:37,766 | INFO | Respuesta GET / -> 200
+2026-07-21 20:16:37,801 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:16:37,803 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:17:40,489 | INFO | Solicitud POST /registrar_usuario
+2026-07-21 20:17:40,490 | INFO | Intento de registro para Maria@gmail.com
+2026-07-21 20:17:40,528 | INFO | Respuesta POST /registrar_usuario -> 302
+2026-07-21 20:17:40,540 | INFO | Solicitud GET /
+2026-07-21 20:17:40,543 | INFO | Respuesta GET / -> 200
+2026-07-21 20:17:40,579 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:17:40,580 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:18:09,894 | INFO | Solicitud POST /registrar_usuario
+2026-07-21 20:18:09,895 | INFO | Intento de registro para Claudia@gmail.com
+2026-07-21 20:18:09,902 | INFO | Respuesta POST /registrar_usuario -> 302
+2026-07-21 20:18:09,916 | INFO | Solicitud GET /
+2026-07-21 20:18:09,921 | INFO | Respuesta GET / -> 200
+2026-07-21 20:18:09,951 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:18:09,972 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:18:30,364 | INFO | Solicitud POST /registrar_usuario
+2026-07-21 20:18:30,365 | INFO | Intento de registro para Ivan@gmail.com
+2026-07-21 20:18:30,370 | INFO | Respuesta POST /registrar_usuario -> 302
+2026-07-21 20:18:30,396 | INFO | Solicitud GET /
+2026-07-21 20:18:30,399 | INFO | Respuesta GET / -> 200
+2026-07-21 20:18:30,426 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:18:30,487 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:18:59,244 | INFO | Solicitud POST /registrar_usuario
+2026-07-21 20:18:59,245 | INFO | Intento de registro para Edgar@gmail.com
+2026-07-21 20:18:59,251 | INFO | Respuesta POST /registrar_usuario -> 302
+2026-07-21 20:18:59,271 | INFO | Solicitud GET /
+2026-07-21 20:18:59,272 | INFO | Respuesta GET / -> 200
+2026-07-21 20:18:59,324 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:18:59,364 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:19:18,941 | INFO | Solicitud POST /registrar_usuario
+2026-07-21 20:19:18,942 | INFO | Intento de registro para Max@gmail.com
+2026-07-21 20:19:18,949 | INFO | Respuesta POST /registrar_usuario -> 302
+2026-07-21 20:19:18,962 | INFO | Solicitud GET /
+2026-07-21 20:19:18,964 | INFO | Respuesta GET / -> 200
+2026-07-21 20:19:19,005 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:19:19,007 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:19:44,930 | INFO | Solicitud POST /registrar_usuario
+2026-07-21 20:19:44,931 | INFO | Intento de registro para Bneja@gmail.com
+2026-07-21 20:19:44,939 | INFO | Respuesta POST /registrar_usuario -> 302
+2026-07-21 20:19:44,958 | INFO | Solicitud GET /
+2026-07-21 20:19:44,960 | INFO | Respuesta GET / -> 200
+2026-07-21 20:19:45,071 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:19:45,097 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:20:30,993 | INFO | Solicitud POST /registrar_usuario
+2026-07-21 20:20:30,994 | INFO | Intento de registro para Diana@gmail.com
+2026-07-21 20:20:31,000 | INFO | Respuesta POST /registrar_usuario -> 302
+2026-07-21 20:20:31,019 | INFO | Solicitud GET /
+2026-07-21 20:20:31,024 | INFO | Respuesta GET / -> 200
+2026-07-21 20:20:31,066 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:20:31,070 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:21:04,428 | INFO | Solicitud POST /registrar_usuario
+2026-07-21 20:21:04,429 | INFO | Intento de registro para Mariana@gmail.com
+2026-07-21 20:21:04,458 | INFO | Respuesta POST /registrar_usuario -> 302
+2026-07-21 20:21:04,467 | INFO | Solicitud GET /
+2026-07-21 20:21:04,468 | INFO | Respuesta GET / -> 200
+2026-07-21 20:21:04,547 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:21:04,550 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:21:29,567 | INFO | Solicitud POST /registrar_usuario
+2026-07-21 20:21:29,568 | INFO | Intento de registro para Batman@gmail.com
+2026-07-21 20:21:29,573 | INFO | Respuesta POST /registrar_usuario -> 302
+2026-07-21 20:21:29,585 | INFO | Solicitud GET /
+2026-07-21 20:21:29,587 | INFO | Respuesta GET / -> 200
+2026-07-21 20:21:29,630 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:21:29,635 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:22:02,129 | INFO | Solicitud POST /registrar_usuario
+2026-07-21 20:22:02,130 | INFO | Intento de registro para Superman@gmail.com
+2026-07-21 20:22:02,138 | INFO | Respuesta POST /registrar_usuario -> 302
+2026-07-21 20:22:02,155 | INFO | Solicitud GET /
+2026-07-21 20:22:02,156 | INFO | Respuesta GET / -> 200
+2026-07-21 20:22:02,208 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:22:02,212 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:22:27,705 | INFO | Solicitud POST /registrar_usuario
+2026-07-21 20:22:27,707 | INFO | Intento de registro para Thor@gmail.com
+2026-07-21 20:22:27,715 | INFO | Respuesta POST /registrar_usuario -> 302
+2026-07-21 20:22:27,727 | INFO | Solicitud GET /
+2026-07-21 20:22:27,733 | INFO | Respuesta GET / -> 200
+2026-07-21 20:22:27,783 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:22:27,784 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:23:06,475 | INFO | Solicitud POST /registrar_usuario
+2026-07-21 20:23:06,483 | INFO | Intento de registro para Jean@gmail.com
+2026-07-21 20:23:06,575 | INFO | Respuesta POST /registrar_usuario -> 302
+2026-07-21 20:23:06,581 | INFO | Solicitud GET /
+2026-07-21 20:23:06,582 | INFO | Respuesta GET / -> 200
+2026-07-21 20:23:06,662 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:23:06,663 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:23:24,840 | INFO | Solicitud POST /login
+2026-07-21 20:23:24,841 | INFO | Intento de login para admin@hotel.com
+2026-07-21 20:23:24,869 | INFO | Login exitoso para admin@hotel.com (admin)
+2026-07-21 20:23:24,870 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:23:24,878 | INFO | Solicitud GET /admin/dashboard
+2026-07-21 20:23:24,982 | INFO | Respuesta GET /admin/dashboard -> 200
+2026-07-21 20:23:25,009 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:23:25,009 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-21 20:23:25,012 | INFO | Solicitud GET /static/img/signomas.png
+2026-07-21 20:23:25,015 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 200
+2026-07-21 20:23:25,016 | INFO | Respuesta GET /static/img/usuario.jpg -> 200
+2026-07-21 20:23:25,017 | INFO | Respuesta GET /static/img/signomas.png -> 200
+2026-07-21 20:23:31,309 | INFO | Solicitud GET /admin/usuarios
+2026-07-21 20:23:31,326 | INFO | Respuesta GET /admin/usuarios -> 200
+2026-07-21 20:23:31,350 | INFO | Solicitud GET /admin/style.css
+2026-07-21 20:23:31,357 | INFO | Respuesta GET /admin/style.css -> 404
+2026-07-21 20:23:31,360 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:23:31,367 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-21 20:23:31,371 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-21 20:23:31,373 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:23:41,357 | INFO | Solicitud GET /logout
+2026-07-21 20:23:41,358 | INFO | Respuesta GET /logout -> 302
+2026-07-21 20:23:41,369 | INFO | Solicitud GET /
+2026-07-21 20:23:41,376 | INFO | Respuesta GET / -> 200
+2026-07-21 20:23:41,400 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:23:41,405 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:23:51,161 | INFO | Solicitud POST /login
+2026-07-21 20:23:51,161 | INFO | Intento de login para recep@hotel.com
+2026-07-21 20:23:51,165 | INFO | Login exitoso para recep@hotel.com (recepcionista)
+2026-07-21 20:23:51,165 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:23:51,177 | INFO | Solicitud GET /recepcionista/home
+2026-07-21 20:23:51,191 | INFO | Respuesta GET /recepcionista/home -> 200
+2026-07-21 20:23:51,231 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:23:51,232 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:23:51,298 | INFO | Solicitud GET /api/llegadas
+2026-07-21 20:23:51,308 | INFO | Respuesta GET /api/llegadas -> 200
+2026-07-21 20:23:56,731 | INFO | Solicitud GET /recepcionista/checkin
+2026-07-21 20:23:56,777 | INFO | Respuesta GET /recepcionista/checkin -> 200
+2026-07-21 20:24:05,886 | INFO | Solicitud GET /recepcionista/checkout
+2026-07-21 20:24:05,910 | INFO | Respuesta GET /recepcionista/checkout -> 200
+2026-07-21 20:24:11,965 | INFO | Solicitud GET /recepcionista/reportes/listado
+2026-07-21 20:24:12,012 | INFO | Respuesta GET /recepcionista/reportes/listado -> 200
+2026-07-21 20:24:17,381 | INFO | Solicitud GET /logout
+2026-07-21 20:24:17,381 | INFO | Respuesta GET /logout -> 302
+2026-07-21 20:24:17,392 | INFO | Solicitud GET /
+2026-07-21 20:24:17,394 | INFO | Respuesta GET / -> 200
+2026-07-21 20:24:17,412 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:24:17,440 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:24:24,925 | INFO | Solicitud POST /login
+2026-07-21 20:24:24,928 | INFO | Intento de login para ricardo.guerrero2@gmail.com
+2026-07-21 20:24:24,976 | INFO | Login exitoso para ricardo.guerrero2@gmail.com (usuario)
+2026-07-21 20:24:24,977 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:24:24,983 | INFO | Solicitud GET /habitaciones
+2026-07-21 20:24:25,011 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-21 20:24:25,083 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:24:25,084 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:24:25,086 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:24:25,088 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:24:25,088 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 200
+2026-07-21 20:24:25,089 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:24:25,090 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 200
+2026-07-21 20:24:25,092 | INFO | Respuesta GET /static/img/h101.jpg -> 200
+2026-07-21 20:24:33,284 | INFO | Solicitud GET /usuario/reportes
+2026-07-21 20:24:33,306 | INFO | Respuesta GET /usuario/reportes -> 200
+2026-07-21 20:24:33,323 | INFO | Solicitud GET /static/img/piscina.jpg
+2026-07-21 20:24:33,351 | INFO | Respuesta GET /static/img/piscina.jpg -> 200
+2026-07-21 20:24:33,375 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:24:33,398 | INFO | Solicitud GET /static/img/agua.jpg
+2026-07-21 20:24:33,424 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:24:33,434 | INFO | Solicitud GET /static/img/tiburon.jpg
+2026-07-21 20:24:33,434 | INFO | Respuesta GET /static/img/agua.jpg -> 200
+2026-07-21 20:24:33,460 | INFO | Solicitud GET /static/img/evento.jpg
+2026-07-21 20:24:33,474 | INFO | Respuesta GET /static/img/tiburon.jpg -> 200
+2026-07-21 20:24:33,476 | INFO | Respuesta GET /static/img/evento.jpg -> 200
+2026-07-21 20:24:33,478 | INFO | Solicitud GET /static/img/mihotel.jpeg
+2026-07-21 20:24:33,496 | INFO | Respuesta GET /static/img/mihotel.jpeg -> 200
+2026-07-21 20:24:59,722 | INFO | Solicitud POST /enviar_reporte
+2026-07-21 20:24:59,771 | INFO | Respuesta POST /enviar_reporte -> 200
+2026-07-21 20:25:16,792 | INFO | Solicitud POST /login
+2026-07-21 20:25:16,793 | INFO | Intento de login para recep@hotel.com
+2026-07-21 20:25:16,800 | INFO | Login exitoso para recep@hotel.com (recepcionista)
+2026-07-21 20:25:16,802 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:25:16,816 | INFO | Solicitud GET /recepcionista/home
+2026-07-21 20:25:16,819 | INFO | Respuesta GET /recepcionista/home -> 200
+2026-07-21 20:25:16,885 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:25:16,902 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:25:16,904 | INFO | Solicitud GET /api/llegadas
+2026-07-21 20:25:16,953 | INFO | Respuesta GET /api/llegadas -> 200
+2026-07-21 20:25:18,998 | INFO | Solicitud GET /recepcionista/reportes/listado
+2026-07-21 20:25:19,027 | INFO | Respuesta GET /recepcionista/reportes/listado -> 200
+2026-07-21 20:25:19,048 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-21 20:25:19,054 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-21 20:25:25,432 | INFO | Solicitud GET /recepcionista/checkin
+2026-07-21 20:25:25,450 | INFO | Respuesta GET /recepcionista/checkin -> 200
+2026-07-21 20:25:30,003 | INFO | Solicitud GET /recepcionista/checkout
+2026-07-21 20:25:30,018 | INFO | Respuesta GET /recepcionista/checkout -> 200
+2026-07-21 20:25:39,705 | INFO | Solicitud GET /logout
+2026-07-21 20:25:39,706 | INFO | Respuesta GET /logout -> 302
+2026-07-21 20:25:39,716 | INFO | Solicitud GET /
+2026-07-21 20:25:39,718 | INFO | Respuesta GET / -> 200
+2026-07-21 20:25:39,749 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:25:39,761 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:27:12,200 | INFO | Solicitud POST /login
+2026-07-21 20:27:12,201 | INFO | Intento de login para edu123@gmail.com
+2026-07-21 20:27:12,235 | INFO | Login exitoso para edu123@gmail.com (usuario)
+2026-07-21 20:27:12,235 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:27:12,248 | INFO | Solicitud GET /habitaciones
+2026-07-21 20:27:12,259 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-21 20:27:12,286 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:27:12,288 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:27:12,289 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:27:12,301 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:27:12,306 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:27:12,316 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:27:12,320 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:27:12,323 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:27:15,918 | INFO | Solicitud GET /usuario/detalle/2
+2026-07-21 20:27:15,936 | INFO | Respuesta GET /usuario/detalle/2 -> 200
+2026-07-21 20:27:15,958 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:27:15,967 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:27:15,974 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:27:15,986 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:27:41,639 | INFO | Solicitud POST /reservar/2
+2026-07-21 20:27:41,670 | INFO | Respuesta POST /reservar/2 -> 302
+2026-07-21 20:27:41,676 | INFO | Solicitud GET /pago/5
+2026-07-21 20:27:41,698 | INFO | Respuesta GET /pago/5 -> 200
+2026-07-21 20:27:41,718 | INFO | Solicitud GET /static/img/images.png
+2026-07-21 20:27:41,723 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:27:41,724 | INFO | Respuesta GET /static/img/images.png -> 200
+2026-07-21 20:27:41,727 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:28:56,998 | INFO | Solicitud POST /procesar_pago
+2026-07-21 20:28:57,759 | INFO | Respuesta POST /procesar_pago -> 200
+2026-07-21 20:29:30,010 | INFO | Solicitud POST /login
+2026-07-21 20:29:30,012 | INFO | Intento de login para recep@hotel.com
+2026-07-21 20:29:30,026 | INFO | Login exitoso para recep@hotel.com (recepcionista)
+2026-07-21 20:29:30,027 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:29:30,036 | INFO | Solicitud GET /recepcionista/home
+2026-07-21 20:29:30,036 | INFO | Respuesta GET /recepcionista/home -> 200
+2026-07-21 20:29:30,061 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:29:30,063 | INFO | Solicitud GET /api/llegadas
+2026-07-21 20:29:30,064 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:29:30,136 | INFO | Respuesta GET /api/llegadas -> 200
+2026-07-21 20:29:33,500 | INFO | Solicitud GET /recepcionista/checkin
+2026-07-21 20:29:33,521 | INFO | Respuesta GET /recepcionista/checkin -> 200
+2026-07-21 20:29:36,100 | INFO | Solicitud GET /recepcionista/checkout
+2026-07-21 20:29:36,112 | INFO | Respuesta GET /recepcionista/checkout -> 200
+2026-07-21 20:29:37,383 | INFO | Solicitud GET /recepcionista/checkin
+2026-07-21 20:29:37,410 | INFO | Respuesta GET /recepcionista/checkin -> 200
+2026-07-21 20:29:45,131 | INFO | Solicitud GET /recepcionista/checkout
+2026-07-21 20:29:45,144 | INFO | Respuesta GET /recepcionista/checkout -> 200
+2026-07-21 20:30:00,582 | INFO | Solicitud GET /logout
+2026-07-21 20:30:00,582 | INFO | Respuesta GET /logout -> 302
+2026-07-21 20:30:00,591 | INFO | Solicitud GET /
+2026-07-21 20:30:00,592 | INFO | Respuesta GET / -> 200
+2026-07-21 20:30:00,613 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:30:00,615 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:30:09,045 | INFO | Solicitud GET /
+2026-07-21 20:30:09,078 | INFO | Respuesta GET / -> 200
+2026-07-21 20:30:09,248 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:30:09,279 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:30:17,658 | INFO | Solicitud POST /login
+2026-07-21 20:30:17,658 | INFO | Intento de login para recep@hotel.com
+2026-07-21 20:30:17,663 | INFO | Login exitoso para recep@hotel.com (recepcionista)
+2026-07-21 20:30:17,663 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:30:17,676 | INFO | Solicitud GET /recepcionista/home
+2026-07-21 20:30:17,677 | INFO | Respuesta GET /recepcionista/home -> 200
+2026-07-21 20:30:17,722 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:30:17,723 | INFO | Solicitud GET /api/llegadas
+2026-07-21 20:30:17,724 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:30:17,742 | INFO | Respuesta GET /api/llegadas -> 200
+2026-07-21 20:30:34,965 | INFO | Solicitud POST /login
+2026-07-21 20:30:34,966 | INFO | Intento de login para tono1234@gmail.com
+2026-07-21 20:30:34,987 | WARNING | Login fallido por credenciales incorrectas: tono1234@gmail.com
+2026-07-21 20:30:34,988 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:30:35,001 | INFO | Solicitud GET /
+2026-07-21 20:30:35,002 | INFO | Respuesta GET / -> 200
+2026-07-21 20:30:35,053 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:30:35,057 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:30:55,403 | INFO | Solicitud POST /login
+2026-07-21 20:30:55,404 | INFO | Intento de login para tono1234@gmail.com
+2026-07-21 20:30:55,427 | INFO | Login exitoso para tono1234@gmail.com (usuario)
+2026-07-21 20:30:55,427 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:30:55,433 | INFO | Solicitud GET /habitaciones
+2026-07-21 20:30:55,436 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-21 20:30:55,486 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:30:55,497 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:30:55,498 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:30:55,501 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:30:55,504 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:30:55,504 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:30:55,506 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:30:55,508 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:30:58,867 | INFO | Solicitud GET /usuario/detalle/3
+2026-07-21 20:30:58,873 | INFO | Respuesta GET /usuario/detalle/3 -> 200
+2026-07-21 20:30:58,899 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:30:58,909 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:30:58,914 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:30:58,917 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:31:18,314 | INFO | Solicitud POST /reservar/3
+2026-07-21 20:31:18,332 | INFO | Respuesta POST /reservar/3 -> 302
+2026-07-21 20:31:18,342 | INFO | Solicitud GET /pago/6
+2026-07-21 20:31:18,349 | INFO | Respuesta GET /pago/6 -> 200
+2026-07-21 20:31:18,381 | INFO | Solicitud GET /static/img/images.png
+2026-07-21 20:31:18,383 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:31:18,384 | INFO | Respuesta GET /static/img/images.png -> 304
+2026-07-21 20:31:18,385 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:31:57,658 | INFO | Solicitud POST /procesar_pago
+2026-07-21 20:31:57,698 | INFO | Respuesta POST /procesar_pago -> 200
+2026-07-21 20:32:04,805 | INFO | Solicitud GET /recepcionista/home
+2026-07-21 20:32:04,805 | INFO | Respuesta GET /recepcionista/home -> 302
+2026-07-21 20:32:04,814 | INFO | Solicitud GET /
+2026-07-21 20:32:04,815 | INFO | Respuesta GET / -> 200
+2026-07-21 20:32:04,840 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:32:04,842 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:32:12,403 | INFO | Solicitud POST /login
+2026-07-21 20:32:12,404 | INFO | Intento de login para recep@hotel.com
+2026-07-21 20:32:12,409 | INFO | Login exitoso para recep@hotel.com (recepcionista)
+2026-07-21 20:32:12,409 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:32:12,423 | INFO | Solicitud GET /recepcionista/home
+2026-07-21 20:32:12,424 | INFO | Respuesta GET /recepcionista/home -> 200
+2026-07-21 20:32:12,448 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:32:12,450 | INFO | Solicitud GET /api/llegadas
+2026-07-21 20:32:12,451 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:32:12,475 | INFO | Respuesta GET /api/llegadas -> 200
+2026-07-21 20:32:19,105 | INFO | Solicitud GET /recepcionista/checkin
+2026-07-21 20:32:19,125 | INFO | Respuesta GET /recepcionista/checkin -> 200
+2026-07-21 20:32:21,603 | INFO | Solicitud GET /recepcionista/checkout
+2026-07-21 20:32:21,619 | INFO | Respuesta GET /recepcionista/checkout -> 200
+2026-07-21 20:32:34,869 | INFO | Solicitud GET /recepcionista/home
+2026-07-21 20:32:34,870 | INFO | Respuesta GET /recepcionista/home -> 200
+2026-07-21 20:32:34,897 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:32:34,899 | INFO | Solicitud GET /api/llegadas
+2026-07-21 20:32:34,900 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:32:34,965 | INFO | Respuesta GET /api/llegadas -> 200
+2026-07-21 20:32:42,940 | INFO | Solicitud GET /
+2026-07-21 20:32:42,941 | INFO | Respuesta GET / -> 200
+2026-07-21 20:32:59,192 | INFO | Solicitud POST /login
+2026-07-21 20:32:59,193 | INFO | Intento de login para Vicbernal@gmail.com
+2026-07-21 20:32:59,197 | INFO | Login exitoso para Vicbernal@gmail.com (usuario)
+2026-07-21 20:32:59,198 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:32:59,209 | INFO | Solicitud GET /habitaciones
+2026-07-21 20:32:59,217 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-21 20:32:59,264 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:32:59,271 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:32:59,279 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:32:59,282 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:32:59,283 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:32:59,288 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:32:59,292 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:32:59,310 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:33:01,630 | INFO | Solicitud GET /usuario/detalle/1
+2026-07-21 20:33:01,636 | INFO | Respuesta GET /usuario/detalle/1 -> 200
+2026-07-21 20:33:01,660 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:33:01,666 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:33:01,670 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:33:01,676 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:33:16,544 | INFO | Solicitud POST /reservar/1
+2026-07-21 20:33:16,560 | INFO | Respuesta POST /reservar/1 -> 302
+2026-07-21 20:33:16,568 | INFO | Solicitud GET /pago/7
+2026-07-21 20:33:16,573 | INFO | Respuesta GET /pago/7 -> 200
+2026-07-21 20:33:16,594 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:33:16,596 | INFO | Solicitud GET /static/img/images.png
+2026-07-21 20:33:16,597 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:33:16,600 | INFO | Respuesta GET /static/img/images.png -> 304
+2026-07-21 20:33:25,396 | INFO | Solicitud GET /recepcionista/checkin
+2026-07-21 20:33:25,399 | INFO | Respuesta GET /recepcionista/checkin -> 302
+2026-07-21 20:33:25,410 | INFO | Solicitud GET /
+2026-07-21 20:33:25,412 | INFO | Respuesta GET / -> 200
+2026-07-21 20:33:25,486 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:33:25,491 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:33:32,273 | INFO | Solicitud POST /login
+2026-07-21 20:33:32,274 | INFO | Intento de login para recep@hotel.com
+2026-07-21 20:33:32,278 | INFO | Login exitoso para recep@hotel.com (recepcionista)
+2026-07-21 20:33:32,279 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:33:32,290 | INFO | Solicitud GET /recepcionista/home
+2026-07-21 20:33:32,291 | INFO | Respuesta GET /recepcionista/home -> 200
+2026-07-21 20:33:32,315 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:33:32,322 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:33:32,325 | INFO | Solicitud GET /api/llegadas
+2026-07-21 20:33:32,335 | INFO | Respuesta GET /api/llegadas -> 200
+2026-07-21 20:33:35,372 | INFO | Solicitud GET /recepcionista/checkin
+2026-07-21 20:33:35,388 | INFO | Respuesta GET /recepcionista/checkin -> 200
+2026-07-21 20:33:41,304 | INFO | Solicitud GET /recepcionista/checkout
+2026-07-21 20:33:41,315 | INFO | Respuesta GET /recepcionista/checkout -> 200
+2026-07-21 20:34:02,270 | INFO | Solicitud GET /logout
+2026-07-21 20:34:02,271 | INFO | Respuesta GET /logout -> 302
+2026-07-21 20:34:02,282 | INFO | Solicitud GET /
+2026-07-21 20:34:02,285 | INFO | Respuesta GET / -> 200
+2026-07-21 20:34:02,305 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:34:02,307 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:34:22,313 | INFO | Solicitud POST /login
+2026-07-21 20:34:22,314 | INFO | Intento de login para jessica@gmail.com
+2026-07-21 20:34:22,332 | INFO | Login exitoso para jessica@gmail.com (usuario)
+2026-07-21 20:34:22,332 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:34:22,342 | INFO | Solicitud GET /habitaciones
+2026-07-21 20:34:22,347 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-21 20:34:22,379 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:34:22,382 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:34:22,394 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:34:22,397 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:34:22,401 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:34:22,406 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:34:22,407 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:34:22,416 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:34:25,668 | INFO | Solicitud GET /usuario/detalle/3
+2026-07-21 20:34:25,673 | INFO | Respuesta GET /usuario/detalle/3 -> 200
+2026-07-21 20:34:25,697 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:34:25,711 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:34:25,715 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:34:25,719 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:34:37,896 | INFO | Solicitud POST /reservar/3
+2026-07-21 20:34:37,909 | INFO | Respuesta POST /reservar/3 -> 302
+2026-07-21 20:34:37,916 | INFO | Solicitud GET /pago/8
+2026-07-21 20:34:37,921 | INFO | Respuesta GET /pago/8 -> 200
+2026-07-21 20:34:37,938 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:34:37,941 | INFO | Solicitud GET /static/img/images.png
+2026-07-21 20:34:37,942 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:34:37,944 | INFO | Respuesta GET /static/img/images.png -> 304
+2026-07-21 20:34:48,717 | INFO | Solicitud POST /login
+2026-07-21 20:34:48,720 | INFO | Intento de login para Hector@gmail.com
+2026-07-21 20:34:48,744 | INFO | Login exitoso para Hector@gmail.com (usuario)
+2026-07-21 20:34:48,745 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:34:48,756 | INFO | Solicitud GET /habitaciones
+2026-07-21 20:34:48,772 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-21 20:34:48,863 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:34:48,870 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:34:48,875 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:34:48,880 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:34:48,887 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:34:48,892 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:34:48,899 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:34:48,906 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:34:51,631 | INFO | Solicitud GET /usuario/detalle/2
+2026-07-21 20:34:51,643 | INFO | Respuesta GET /usuario/detalle/2 -> 200
+2026-07-21 20:34:51,690 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:34:51,693 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:34:51,695 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:34:51,724 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:35:11,829 | INFO | Solicitud POST /reservar/2
+2026-07-21 20:35:11,848 | INFO | Respuesta POST /reservar/2 -> 302
+2026-07-21 20:35:11,856 | INFO | Solicitud GET /pago/9
+2026-07-21 20:35:11,860 | INFO | Respuesta GET /pago/9 -> 200
+2026-07-21 20:35:11,884 | INFO | Solicitud GET /static/img/images.png
+2026-07-21 20:35:11,885 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:35:11,888 | INFO | Respuesta GET /static/img/images.png -> 304
+2026-07-21 20:35:11,889 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:35:27,546 | INFO | Solicitud POST /login
+2026-07-21 20:35:27,548 | INFO | Intento de login para Carmen@gmail.com
+2026-07-21 20:35:27,557 | INFO | Login exitoso para Carmen@gmail.com (usuario)
+2026-07-21 20:35:27,561 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:35:27,572 | INFO | Solicitud GET /habitaciones
+2026-07-21 20:35:27,581 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-21 20:35:27,607 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:35:27,614 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:35:27,616 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:35:27,622 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:35:27,627 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:35:27,641 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:35:27,644 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:35:27,652 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:36:43,883 | INFO | Solicitud GET /usuario/detalle/2
+2026-07-21 20:36:43,928 | INFO | Respuesta GET /usuario/detalle/2 -> 200
+2026-07-21 20:36:43,945 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:36:43,947 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:36:43,948 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:36:43,950 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:36:58,317 | INFO | Solicitud POST /reservar/2
+2026-07-21 20:36:58,342 | INFO | Respuesta POST /reservar/2 -> 302
+2026-07-21 20:36:58,350 | INFO | Solicitud GET /pago/10
+2026-07-21 20:36:58,354 | INFO | Respuesta GET /pago/10 -> 200
+2026-07-21 20:36:58,372 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:36:58,374 | INFO | Solicitud GET /static/img/images.png
+2026-07-21 20:36:58,375 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:36:58,376 | INFO | Respuesta GET /static/img/images.png -> 304
+2026-07-21 20:37:09,947 | INFO | Solicitud POST /login
+2026-07-21 20:37:09,947 | INFO | Intento de login para recep@hotel.com
+2026-07-21 20:37:09,951 | INFO | Login exitoso para recep@hotel.com (recepcionista)
+2026-07-21 20:37:09,951 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:37:09,964 | INFO | Solicitud GET /recepcionista/home
+2026-07-21 20:37:09,967 | INFO | Respuesta GET /recepcionista/home -> 200
+2026-07-21 20:37:09,988 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:37:09,991 | INFO | Solicitud GET /api/llegadas
+2026-07-21 20:37:09,993 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:37:10,029 | INFO | Respuesta GET /api/llegadas -> 200
+2026-07-21 20:37:21,400 | INFO | Solicitud GET /recepcionista/checkin
+2026-07-21 20:37:21,445 | INFO | Respuesta GET /recepcionista/checkin -> 200
+2026-07-21 20:37:22,965 | INFO | Solicitud GET /recepcionista/checkout
+2026-07-21 20:37:22,976 | INFO | Respuesta GET /recepcionista/checkout -> 200
+2026-07-21 20:37:43,451 | INFO | Solicitud GET /logout
+2026-07-21 20:37:43,452 | INFO | Respuesta GET /logout -> 302
+2026-07-21 20:37:43,462 | INFO | Solicitud GET /
+2026-07-21 20:37:43,464 | INFO | Respuesta GET / -> 200
+2026-07-21 20:37:43,483 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:37:43,485 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:37:55,335 | INFO | Solicitud POST /login
+2026-07-21 20:37:55,336 | INFO | Intento de login para Maria@gmail.com
+2026-07-21 20:37:55,340 | INFO | Login exitoso para Maria@gmail.com (usuario)
+2026-07-21 20:37:55,341 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:37:55,353 | INFO | Solicitud GET /habitaciones
+2026-07-21 20:37:55,358 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-21 20:37:55,420 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:37:55,421 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:37:55,423 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:37:55,424 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:37:55,424 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:37:55,429 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:37:55,438 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:37:55,447 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:37:56,999 | INFO | Solicitud GET /usuario/detalle/1
+2026-07-21 20:37:57,003 | INFO | Respuesta GET /usuario/detalle/1 -> 200
+2026-07-21 20:37:57,026 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:37:57,039 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:37:57,044 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:37:57,049 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:38:16,885 | INFO | Solicitud POST /reservar/1
+2026-07-21 20:38:16,899 | INFO | Respuesta POST /reservar/1 -> 302
+2026-07-21 20:38:16,907 | INFO | Solicitud GET /pago/11
+2026-07-21 20:38:16,911 | INFO | Respuesta GET /pago/11 -> 200
+2026-07-21 20:38:16,937 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:38:16,940 | INFO | Solicitud GET /static/img/images.png
+2026-07-21 20:38:16,941 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:38:16,942 | INFO | Respuesta GET /static/img/images.png -> 304
+2026-07-21 20:38:34,211 | INFO | Solicitud POST /login
+2026-07-21 20:38:34,212 | INFO | Intento de login para Claudia@gmail.com
+2026-07-21 20:38:34,217 | INFO | Login exitoso para Claudia@gmail.com (usuario)
+2026-07-21 20:38:34,217 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:38:34,227 | INFO | Solicitud GET /habitaciones
+2026-07-21 20:38:34,234 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-21 20:38:34,256 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:38:34,257 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:38:34,267 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:38:34,296 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:38:34,298 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:38:34,298 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:38:34,300 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:38:34,301 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:38:36,683 | INFO | Solicitud GET /usuario/detalle/3
+2026-07-21 20:38:36,687 | INFO | Respuesta GET /usuario/detalle/3 -> 200
+2026-07-21 20:38:36,720 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:38:36,725 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:38:36,731 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:38:36,733 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:38:56,474 | INFO | Solicitud POST /reservar/3
+2026-07-21 20:38:56,485 | INFO | Respuesta POST /reservar/3 -> 302
+2026-07-21 20:38:56,495 | INFO | Solicitud GET /pago/12
+2026-07-21 20:38:56,500 | INFO | Respuesta GET /pago/12 -> 200
+2026-07-21 20:38:56,527 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:38:56,530 | INFO | Solicitud GET /static/img/images.png
+2026-07-21 20:38:56,531 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:38:56,544 | INFO | Respuesta GET /static/img/images.png -> 304
+2026-07-21 20:39:14,410 | INFO | Solicitud POST /login
+2026-07-21 20:39:14,410 | INFO | Intento de login para Ivan@gmail.com
+2026-07-21 20:39:14,427 | INFO | Login exitoso para Ivan@gmail.com (usuario)
+2026-07-21 20:39:14,428 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:39:14,435 | INFO | Solicitud GET /habitaciones
+2026-07-21 20:39:14,440 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-21 20:39:14,475 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:39:14,479 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:39:14,481 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:39:14,483 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:39:14,502 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:39:14,504 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:39:14,505 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:39:14,510 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:39:15,733 | INFO | Solicitud GET /usuario/detalle/1
+2026-07-21 20:39:15,735 | INFO | Respuesta GET /usuario/detalle/1 -> 200
+2026-07-21 20:39:15,755 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:39:15,773 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:39:15,774 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:39:15,777 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:39:45,191 | INFO | Solicitud POST /reservar/1
+2026-07-21 20:39:45,203 | INFO | Respuesta POST /reservar/1 -> 302
+2026-07-21 20:39:45,215 | INFO | Solicitud GET /pago/13
+2026-07-21 20:39:45,221 | INFO | Respuesta GET /pago/13 -> 200
+2026-07-21 20:39:45,239 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:39:45,241 | INFO | Solicitud GET /static/img/images.png
+2026-07-21 20:39:45,243 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:39:45,244 | INFO | Respuesta GET /static/img/images.png -> 304
+2026-07-21 20:40:09,100 | INFO | Solicitud POST /login
+2026-07-21 20:40:09,102 | INFO | Intento de login para Edgar@gmail.com
+2026-07-21 20:40:09,114 | INFO | Login exitoso para Edgar@gmail.com (usuario)
+2026-07-21 20:40:09,115 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:40:09,126 | INFO | Solicitud GET /habitaciones
+2026-07-21 20:40:09,140 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-21 20:40:09,167 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:40:09,203 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:40:09,206 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:40:09,206 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:40:09,207 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:40:09,208 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:40:09,213 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:40:09,221 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:40:20,504 | INFO | Solicitud GET /usuario/detalle/2
+2026-07-21 20:40:20,507 | INFO | Respuesta GET /usuario/detalle/2 -> 200
+2026-07-21 20:40:20,546 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:40:20,553 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:40:20,556 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:40:20,561 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:40:41,260 | INFO | Solicitud POST /reservar/2
+2026-07-21 20:40:41,274 | INFO | Respuesta POST /reservar/2 -> 302
+2026-07-21 20:40:41,283 | INFO | Solicitud GET /pago/14
+2026-07-21 20:40:41,287 | INFO | Respuesta GET /pago/14 -> 200
+2026-07-21 20:40:41,310 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:40:41,312 | INFO | Solicitud GET /static/img/images.png
+2026-07-21 20:40:41,313 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:40:41,314 | INFO | Respuesta GET /static/img/images.png -> 304
+2026-07-21 20:40:57,460 | INFO | Solicitud POST /login
+2026-07-21 20:40:57,462 | INFO | Intento de login para Max@gmail.com
+2026-07-21 20:40:57,491 | INFO | Login exitoso para Max@gmail.com (usuario)
+2026-07-21 20:40:57,492 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:40:57,501 | INFO | Solicitud GET /habitaciones
+2026-07-21 20:40:57,508 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-21 20:40:57,546 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:40:57,550 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:40:57,551 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:40:57,555 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:40:57,556 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:40:57,567 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:40:57,568 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:40:57,594 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:40:59,417 | INFO | Solicitud GET /usuario/detalle/2
+2026-07-21 20:40:59,422 | INFO | Respuesta GET /usuario/detalle/2 -> 200
+2026-07-21 20:40:59,451 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:40:59,462 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:40:59,464 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:40:59,466 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:41:17,899 | INFO | Solicitud POST /reservar/2
+2026-07-21 20:41:17,904 | INFO | Respuesta POST /reservar/2 -> 302
+2026-07-21 20:41:17,914 | INFO | Solicitud GET /pago/15
+2026-07-21 20:41:17,918 | INFO | Respuesta GET /pago/15 -> 200
+2026-07-21 20:41:17,941 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:41:17,943 | INFO | Solicitud GET /static/img/images.png
+2026-07-21 20:41:17,944 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:41:17,946 | INFO | Respuesta GET /static/img/images.png -> 304
+2026-07-21 20:41:44,150 | INFO | Solicitud POST /login
+2026-07-21 20:41:44,150 | INFO | Intento de login para Bneja@gmail.com
+2026-07-21 20:41:44,157 | INFO | Login exitoso para Bneja@gmail.com (usuario)
+2026-07-21 20:41:44,157 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:41:44,169 | INFO | Solicitud GET /habitaciones
+2026-07-21 20:41:44,173 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-21 20:41:44,205 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:41:44,209 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:41:44,214 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:41:44,216 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:41:44,218 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:41:44,245 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:41:44,246 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:41:44,248 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:45:14,114 | INFO | Solicitud GET /usuario/detalle/1
+2026-07-21 20:45:14,149 | INFO | Respuesta GET /usuario/detalle/1 -> 200
+2026-07-21 20:45:14,172 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:45:14,178 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:45:14,183 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:45:14,187 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:45:37,341 | INFO | Solicitud POST /reservar/1
+2026-07-21 20:45:37,349 | INFO | Respuesta POST /reservar/1 -> 302
+2026-07-21 20:45:37,357 | INFO | Solicitud GET /pago/16
+2026-07-21 20:45:37,363 | INFO | Respuesta GET /pago/16 -> 200
+2026-07-21 20:45:37,384 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:45:37,387 | INFO | Solicitud GET /static/img/images.png
+2026-07-21 20:45:37,388 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:45:37,389 | INFO | Respuesta GET /static/img/images.png -> 304
+2026-07-21 20:45:49,169 | INFO | Solicitud POST /login
+2026-07-21 20:45:49,170 | INFO | Intento de login para Diana@gmail.com
+2026-07-21 20:45:49,176 | INFO | Login exitoso para Diana@gmail.com (usuario)
+2026-07-21 20:45:49,176 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:45:49,187 | INFO | Solicitud GET /habitaciones
+2026-07-21 20:45:49,192 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-21 20:45:49,229 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:45:49,253 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:45:49,254 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:45:49,256 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:45:49,257 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:45:49,259 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:45:49,260 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:45:49,262 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:45:52,114 | INFO | Solicitud GET /usuario/detalle/2
+2026-07-21 20:45:52,119 | INFO | Respuesta GET /usuario/detalle/2 -> 200
+2026-07-21 20:45:52,146 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:45:52,156 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:45:52,157 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:45:52,159 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:46:07,888 | INFO | Solicitud POST /reservar/2
+2026-07-21 20:46:07,903 | INFO | Respuesta POST /reservar/2 -> 302
+2026-07-21 20:46:07,911 | INFO | Solicitud GET /pago/17
+2026-07-21 20:46:07,917 | INFO | Respuesta GET /pago/17 -> 200
+2026-07-21 20:46:07,938 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:46:07,940 | INFO | Solicitud GET /static/img/images.png
+2026-07-21 20:46:07,941 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:46:07,941 | INFO | Respuesta GET /static/img/images.png -> 304
+2026-07-21 20:46:27,010 | INFO | Solicitud POST /login
+2026-07-21 20:46:27,011 | INFO | Intento de login para Mariana@gmail.com
+2026-07-21 20:46:27,018 | INFO | Login exitoso para Mariana@gmail.com (usuario)
+2026-07-21 20:46:27,018 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:46:27,035 | INFO | Solicitud GET /habitaciones
+2026-07-21 20:46:27,038 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-21 20:46:27,106 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:46:27,113 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:46:27,114 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:46:27,115 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:46:27,119 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:46:27,121 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:46:27,125 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:46:27,135 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:46:29,833 | INFO | Solicitud GET /usuario/detalle/3
+2026-07-21 20:46:29,838 | INFO | Respuesta GET /usuario/detalle/3 -> 200
+2026-07-21 20:46:29,857 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:46:29,874 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:46:29,875 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:46:29,879 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:46:46,564 | INFO | Solicitud POST /reservar/3
+2026-07-21 20:46:46,568 | INFO | Respuesta POST /reservar/3 -> 302
+2026-07-21 20:46:46,579 | INFO | Solicitud GET /pago/18
+2026-07-21 20:46:46,581 | INFO | Respuesta GET /pago/18 -> 200
+2026-07-21 20:46:46,600 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:46:46,603 | INFO | Solicitud GET /static/img/images.png
+2026-07-21 20:46:46,603 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:46:46,605 | INFO | Respuesta GET /static/img/images.png -> 304
+2026-07-21 20:47:01,641 | INFO | Solicitud POST /login
+2026-07-21 20:47:01,642 | INFO | Intento de login para Batman@gmail.com
+2026-07-21 20:47:01,648 | INFO | Login exitoso para Batman@gmail.com (usuario)
+2026-07-21 20:47:01,648 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:47:01,658 | INFO | Solicitud GET /habitaciones
+2026-07-21 20:47:01,663 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-21 20:47:01,683 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:47:01,685 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:47:01,692 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:47:01,697 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:47:01,700 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:47:01,729 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:47:01,731 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:47:01,733 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:47:08,251 | INFO | Solicitud GET /usuario/detalle/3
+2026-07-21 20:47:08,258 | INFO | Respuesta GET /usuario/detalle/3 -> 200
+2026-07-21 20:47:08,284 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:47:08,294 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:47:08,295 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:47:08,298 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:47:34,364 | INFO | Solicitud POST /reservar/3
+2026-07-21 20:47:34,376 | INFO | Respuesta POST /reservar/3 -> 302
+2026-07-21 20:47:34,384 | INFO | Solicitud GET /pago/19
+2026-07-21 20:47:34,388 | INFO | Respuesta GET /pago/19 -> 200
+2026-07-21 20:47:34,412 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:47:34,413 | INFO | Solicitud GET /static/img/images.png
+2026-07-21 20:47:34,414 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:47:34,415 | INFO | Respuesta GET /static/img/images.png -> 304
+2026-07-21 20:47:47,670 | INFO | Solicitud POST /login
+2026-07-21 20:47:47,670 | INFO | Intento de login para Superman@gmail.com
+2026-07-21 20:47:47,675 | INFO | Login exitoso para Superman@gmail.com (usuario)
+2026-07-21 20:47:47,675 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:47:47,686 | INFO | Solicitud GET /habitaciones
+2026-07-21 20:47:47,691 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-21 20:47:47,723 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:47:47,726 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:47:47,727 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:47:47,729 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:47:47,731 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:47:47,735 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:47:47,735 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:47:47,756 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:47:50,552 | INFO | Solicitud GET /usuario/detalle/1
+2026-07-21 20:47:50,557 | INFO | Respuesta GET /usuario/detalle/1 -> 200
+2026-07-21 20:47:50,577 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:47:50,591 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:47:50,591 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:47:50,595 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:48:10,108 | INFO | Solicitud POST /reservar/1
+2026-07-21 20:48:10,112 | INFO | Respuesta POST /reservar/1 -> 302
+2026-07-21 20:48:10,119 | INFO | Solicitud GET /pago/20
+2026-07-21 20:48:10,121 | INFO | Respuesta GET /pago/20 -> 200
+2026-07-21 20:48:10,149 | INFO | Solicitud GET /static/img/images.png
+2026-07-21 20:48:10,152 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:48:10,152 | INFO | Respuesta GET /static/img/images.png -> 304
+2026-07-21 20:48:10,154 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:48:21,286 | INFO | Solicitud POST /login
+2026-07-21 20:48:21,287 | INFO | Intento de login para Thor@gmail.com
+2026-07-21 20:48:21,293 | INFO | Login exitoso para Thor@gmail.com (usuario)
+2026-07-21 20:48:21,293 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:48:21,305 | INFO | Solicitud GET /habitaciones
+2026-07-21 20:48:21,311 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-21 20:48:21,334 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:48:21,336 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:48:21,337 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:48:21,372 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:48:21,374 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:48:21,375 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:48:21,376 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:48:21,377 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:48:23,089 | INFO | Solicitud GET /usuario/detalle/1
+2026-07-21 20:48:23,106 | INFO | Respuesta GET /usuario/detalle/1 -> 200
+2026-07-21 20:48:23,127 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:48:23,135 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:48:23,136 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:48:23,138 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:48:44,651 | INFO | Solicitud POST /reservar/1
+2026-07-21 20:48:44,658 | INFO | Respuesta POST /reservar/1 -> 302
+2026-07-21 20:48:44,668 | INFO | Solicitud GET /pago/21
+2026-07-21 20:48:44,674 | INFO | Respuesta GET /pago/21 -> 200
+2026-07-21 20:48:44,700 | INFO | Solicitud GET /static/img/images.png
+2026-07-21 20:48:44,703 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:48:44,704 | INFO | Respuesta GET /static/img/images.png -> 304
+2026-07-21 20:48:44,705 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:48:59,394 | INFO | Solicitud POST /login
+2026-07-21 20:48:59,395 | INFO | Intento de login para Jean@gmail.com
+2026-07-21 20:48:59,396 | INFO | Login exitoso para Jean@gmail.com (usuario)
+2026-07-21 20:48:59,397 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:48:59,408 | INFO | Solicitud GET /habitaciones
+2026-07-21 20:48:59,412 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-21 20:48:59,440 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:48:59,449 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:48:59,454 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:48:59,457 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:48:59,459 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:48:59,473 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:48:59,477 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:48:59,479 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:49:01,030 | INFO | Solicitud GET /usuario/detalle/1
+2026-07-21 20:49:01,032 | INFO | Respuesta GET /usuario/detalle/1 -> 200
+2026-07-21 20:49:01,057 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:49:01,058 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:49:01,060 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:49:01,083 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:49:18,961 | INFO | Solicitud POST /reservar/1
+2026-07-21 20:49:18,970 | INFO | Respuesta POST /reservar/1 -> 302
+2026-07-21 20:49:18,979 | INFO | Solicitud GET /pago/22
+2026-07-21 20:49:18,986 | INFO | Respuesta GET /pago/22 -> 200
+2026-07-21 20:49:19,008 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:49:19,030 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:49:19,032 | INFO | Solicitud GET /static/img/images.png
+2026-07-21 20:49:19,044 | INFO | Respuesta GET /static/img/images.png -> 304
+2026-07-21 20:49:41,689 | INFO | Solicitud POST /registrar_usuario
+2026-07-21 20:49:41,690 | INFO | Intento de registro para Cap@gmail.com
+2026-07-21 20:49:41,704 | INFO | Respuesta POST /registrar_usuario -> 302
+2026-07-21 20:49:41,712 | INFO | Solicitud GET /
+2026-07-21 20:49:41,714 | INFO | Respuesta GET / -> 200
+2026-07-21 20:49:41,752 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:49:41,754 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:50:03,899 | INFO | Solicitud POST /login
+2026-07-21 20:50:03,900 | INFO | Intento de login para Cap@gmail.com
+2026-07-21 20:50:03,904 | INFO | Login exitoso para Cap@gmail.com (usuario)
+2026-07-21 20:50:03,905 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:50:03,915 | INFO | Solicitud GET /habitaciones
+2026-07-21 20:50:03,921 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-21 20:50:03,966 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:50:03,970 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:50:03,971 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:50:03,990 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:50:03,991 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:50:03,993 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:50:04,001 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:50:04,002 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:50:06,278 | INFO | Solicitud GET /usuario/detalle/1
+2026-07-21 20:50:06,281 | INFO | Respuesta GET /usuario/detalle/1 -> 200
+2026-07-21 20:50:06,313 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:50:06,320 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:50:06,320 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:50:06,324 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:50:28,462 | INFO | Solicitud POST /reservar/1
+2026-07-21 20:50:28,472 | INFO | Respuesta POST /reservar/1 -> 302
+2026-07-21 20:50:28,479 | INFO | Solicitud GET /pago/23
+2026-07-21 20:50:28,485 | INFO | Respuesta GET /pago/23 -> 200
+2026-07-21 20:50:28,502 | INFO | Solicitud GET /static/img/images.png
+2026-07-21 20:50:28,504 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:50:28,505 | INFO | Respuesta GET /static/img/images.png -> 304
+2026-07-21 20:50:28,506 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:50:48,978 | INFO | Solicitud POST /login
+2026-07-21 20:50:48,979 | INFO | Intento de login para recep@hotel.com
+2026-07-21 20:50:48,985 | INFO | Login exitoso para recep@hotel.com (recepcionista)
+2026-07-21 20:50:48,985 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:50:48,994 | INFO | Solicitud GET /recepcionista/home
+2026-07-21 20:50:48,995 | INFO | Respuesta GET /recepcionista/home -> 200
+2026-07-21 20:50:49,012 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:50:49,018 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:50:49,019 | INFO | Solicitud GET /api/llegadas
+2026-07-21 20:50:49,028 | INFO | Respuesta GET /api/llegadas -> 200
+2026-07-21 20:50:56,525 | INFO | Solicitud GET /recepcionista/checkout
+2026-07-21 20:50:56,539 | INFO | Respuesta GET /recepcionista/checkout -> 200
+2026-07-21 20:51:04,840 | INFO | Solicitud GET /recepcionista/home
+2026-07-21 20:51:04,842 | INFO | Respuesta GET /recepcionista/home -> 200
+2026-07-21 20:51:04,869 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:51:04,870 | INFO | Solicitud GET /api/llegadas
+2026-07-21 20:51:04,873 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:51:04,885 | INFO | Respuesta GET /api/llegadas -> 200
+2026-07-21 20:51:10,147 | INFO | Solicitud GET /api/salidas
+2026-07-21 20:51:10,167 | INFO | Respuesta GET /api/salidas -> 200
+2026-07-21 20:51:19,710 | INFO | Solicitud GET /api/salidas
+2026-07-21 20:51:19,712 | INFO | Respuesta GET /api/salidas -> 200
+2026-07-21 20:51:21,162 | INFO | Solicitud GET /api/llegadas
+2026-07-21 20:51:21,164 | INFO | Respuesta GET /api/llegadas -> 200
+2026-07-21 20:51:26,782 | INFO | Solicitud GET /recepcionista/checkin
+2026-07-21 20:51:26,799 | INFO | Respuesta GET /recepcionista/checkin -> 200
+2026-07-21 20:51:33,954 | INFO | Solicitud GET /recepcionista/checkout
+2026-07-21 20:51:33,963 | INFO | Respuesta GET /recepcionista/checkout -> 200
+2026-07-21 20:51:43,148 | INFO | Solicitud GET /recepcionista/checkin
+2026-07-21 20:51:43,163 | INFO | Respuesta GET /recepcionista/checkin -> 200
+2026-07-21 20:51:45,557 | INFO | Solicitud GET /logout
+2026-07-21 20:51:45,558 | INFO | Respuesta GET /logout -> 302
+2026-07-21 20:51:45,567 | INFO | Solicitud GET /
+2026-07-21 20:51:45,568 | INFO | Respuesta GET / -> 200
+2026-07-21 20:51:45,585 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:51:45,586 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-21 20:51:58,918 | INFO | Solicitud POST /login
+2026-07-21 20:51:58,918 | INFO | Intento de login para Superman@gmail.com
+2026-07-21 20:51:58,922 | INFO | Login exitoso para Superman@gmail.com (usuario)
+2026-07-21 20:51:58,922 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:51:58,930 | INFO | Solicitud GET /habitaciones
+2026-07-21 20:51:58,936 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-21 20:51:58,999 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:51:59,002 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:51:59,004 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:51:59,005 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:51:59,010 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:51:59,012 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:51:59,015 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:51:59,020 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:52:01,711 | INFO | Solicitud GET /usuario/reportes
+2026-07-21 20:52:01,714 | INFO | Respuesta GET /usuario/reportes -> 200
+2026-07-21 20:52:01,745 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:52:01,746 | INFO | Solicitud GET /static/img/piscina.jpg
+2026-07-21 20:52:01,748 | INFO | Solicitud GET /static/img/agua.jpg
+2026-07-21 20:52:01,752 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:52:01,754 | INFO | Solicitud GET /static/img/tiburon.jpg
+2026-07-21 20:52:01,755 | INFO | Respuesta GET /static/img/piscina.jpg -> 304
+2026-07-21 20:52:01,757 | INFO | Solicitud GET /static/img/evento.jpg
+2026-07-21 20:52:01,760 | INFO | Respuesta GET /static/img/agua.jpg -> 304
+2026-07-21 20:52:01,771 | INFO | Respuesta GET /static/img/tiburon.jpg -> 304
+2026-07-21 20:52:01,776 | INFO | Solicitud GET /static/img/mihotel.jpeg
+2026-07-21 20:52:01,788 | INFO | Respuesta GET /static/img/evento.jpg -> 304
+2026-07-21 20:52:01,804 | INFO | Respuesta GET /static/img/mihotel.jpeg -> 304
+2026-07-21 20:52:19,921 | INFO | Solicitud POST /enviar_reporte
+2026-07-21 20:52:19,940 | INFO | Respuesta POST /enviar_reporte -> 200
+2026-07-21 20:52:40,828 | INFO | Solicitud POST /login
+2026-07-21 20:52:40,830 | INFO | Intento de login para Thor@gmail.com
+2026-07-21 20:52:40,835 | INFO | Login exitoso para Thor@gmail.com (usuario)
+2026-07-21 20:52:40,835 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:52:40,846 | INFO | Solicitud GET /habitaciones
+2026-07-21 20:52:40,852 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-21 20:52:40,888 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:52:40,890 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:52:40,892 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:52:40,894 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:52:40,898 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:52:40,909 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:52:40,910 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:52:40,922 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:52:42,728 | INFO | Solicitud GET /usuario/reportes
+2026-07-21 20:52:42,732 | INFO | Respuesta GET /usuario/reportes -> 200
+2026-07-21 20:52:42,754 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:52:42,765 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:52:42,771 | INFO | Solicitud GET /static/img/piscina.jpg
+2026-07-21 20:52:42,773 | INFO | Solicitud GET /static/img/mihotel.jpeg
+2026-07-21 20:52:42,797 | INFO | Respuesta GET /static/img/piscina.jpg -> 304
+2026-07-21 20:52:42,803 | INFO | Respuesta GET /static/img/mihotel.jpeg -> 304
+2026-07-21 20:52:42,803 | INFO | Solicitud GET /static/img/agua.jpg
+2026-07-21 20:52:42,806 | INFO | Solicitud GET /static/img/tiburon.jpg
+2026-07-21 20:52:42,811 | INFO | Solicitud GET /static/img/evento.jpg
+2026-07-21 20:52:42,814 | INFO | Respuesta GET /static/img/tiburon.jpg -> 304
+2026-07-21 20:52:42,816 | INFO | Respuesta GET /static/img/agua.jpg -> 304
+2026-07-21 20:52:42,818 | INFO | Respuesta GET /static/img/evento.jpg -> 304
+2026-07-21 20:52:59,449 | INFO | Solicitud POST /enviar_reporte
+2026-07-21 20:52:59,462 | INFO | Respuesta POST /enviar_reporte -> 200
+2026-07-21 20:53:09,220 | INFO | Solicitud POST /login
+2026-07-21 20:53:09,220 | INFO | Intento de login para Cap@gmail.com
+2026-07-21 20:53:09,226 | INFO | Login exitoso para Cap@gmail.com (usuario)
+2026-07-21 20:53:09,226 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:53:09,235 | INFO | Solicitud GET /habitaciones
+2026-07-21 20:53:09,238 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-21 20:53:09,274 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:53:09,276 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-21 20:53:09,277 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-21 20:53:09,279 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-21 20:53:09,279 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:53:09,279 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-21 20:53:09,282 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-21 20:53:09,283 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-21 20:53:10,317 | INFO | Solicitud GET /usuario/reportes
+2026-07-21 20:53:10,318 | INFO | Respuesta GET /usuario/reportes -> 200
+2026-07-21 20:53:10,339 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:53:10,352 | INFO | Solicitud GET /static/img/piscina.jpg
+2026-07-21 20:53:10,353 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:53:10,389 | INFO | Solicitud GET /static/img/mihotel.jpeg
+2026-07-21 20:53:10,392 | INFO | Respuesta GET /static/img/piscina.jpg -> 304
+2026-07-21 20:53:10,394 | INFO | Respuesta GET /static/img/mihotel.jpeg -> 304
+2026-07-21 20:53:10,399 | INFO | Solicitud GET /static/img/agua.jpg
+2026-07-21 20:53:10,400 | INFO | Solicitud GET /static/img/tiburon.jpg
+2026-07-21 20:53:10,403 | INFO | Solicitud GET /static/img/evento.jpg
+2026-07-21 20:53:10,405 | INFO | Respuesta GET /static/img/agua.jpg -> 304
+2026-07-21 20:53:10,409 | INFO | Respuesta GET /static/img/tiburon.jpg -> 304
+2026-07-21 20:53:10,409 | INFO | Respuesta GET /static/img/evento.jpg -> 304
+2026-07-21 20:53:37,930 | INFO | Solicitud POST /enviar_reporte
+2026-07-21 20:53:37,952 | INFO | Respuesta POST /enviar_reporte -> 200
+2026-07-21 20:53:47,663 | INFO | Solicitud POST /login
+2026-07-21 20:53:47,664 | INFO | Intento de login para recep@hotel.com
+2026-07-21 20:53:47,670 | INFO | Login exitoso para recep@hotel.com (recepcionista)
+2026-07-21 20:53:47,671 | INFO | Respuesta POST /login -> 302
+2026-07-21 20:53:47,679 | INFO | Solicitud GET /recepcionista/home
+2026-07-21 20:53:47,680 | INFO | Respuesta GET /recepcionista/home -> 200
+2026-07-21 20:53:47,699 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-21 20:53:47,702 | INFO | Solicitud GET /api/llegadas
+2026-07-21 20:53:47,703 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-21 20:53:47,712 | INFO | Respuesta GET /api/llegadas -> 200
+2026-07-21 20:53:50,126 | INFO | Solicitud GET /recepcionista/reportes/listado
+2026-07-21 20:53:50,145 | INFO | Respuesta GET /recepcionista/reportes/listado -> 200
+2026-07-21 20:53:50,161 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-21 20:53:50,162 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-21 20:54:22,522 | INFO | Solicitud GET /logout
+2026-07-21 20:54:22,522 | INFO | Respuesta GET /logout -> 302
+2026-07-21 20:54:22,532 | INFO | Solicitud GET /
+2026-07-21 20:54:22,536 | INFO | Respuesta GET / -> 200
+2026-07-21 20:54:22,559 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-21 20:54:22,570 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
