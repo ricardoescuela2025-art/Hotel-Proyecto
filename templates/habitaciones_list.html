@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="icon" type="image/jpeg" href="{{ url_for('static', filename='img/nayarane.jpeg') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
@@ -567,6 +568,7 @@ main .recent-orders a{
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .right-section .reminders .add-reminder:hover{
@@ -926,12 +928,10 @@ main .recent-orders a{
 
             
 
-                <div class="notification add-reminder">
-                <a href="/admin/habitaciones/nueva" class="btn-nuevo" style="font-weight:600; font-size:1rem; color:inherit;">
+                <a href="/admin/habitaciones/nueva" class="notification add-reminder btn-nuevo" aria-label="Crear una habitacion nueva" style="font-weight:600; font-size:1rem; color:inherit;">
                     <span class="material-icons-sharp">king_bed</span>
                     <span>Habitación Nueva</span>
                 </a>
-                </div>
 
             
 

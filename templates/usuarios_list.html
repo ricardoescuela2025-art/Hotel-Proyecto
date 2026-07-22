@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="icon" type="image/jpeg" href="{{ url_for('static', filename='img/nayarane.jpeg') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
@@ -559,15 +560,16 @@
         background-color: var(--color-danger);
     }
 
-    .right-section .reminders .add-reminder{
-        background-color: var(--color-white);
-        border: 2px dashed var(--color-primary);
-        color: var(--color-primary);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-    }
+.right-section .reminders .add-reminder{
+    background-color: var(--color-white);
+    border: 2px dashed var(--color-primary);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+}
 
     .right-section .reminders .add-reminder:hover{
         background-color: var(--color-primary);
@@ -772,25 +774,25 @@
             </div>
 
             <div class="sidebar">
-                <a href="#">
+                <a href="/admin/dashboard">
                     <span class="material-icons-sharp">
                         dashboard
                     </span>
                     <h3>Inicio</h3>
                 </a>
-                <a href="#" class="active">
+                <a href="/admin/usuarios" class="active">
                     <span class="material-icons-sharp">
                         person_outline
                     </span>
                     <h3>Usuarios</h3>
                 </a>
-                <a href="#">
+                <a href="/admin/habitaciones">
                     <span class="material-icons-sharp">
                         confirmation_number
                     </span>
-                    <h3>Facturas</h3>
+                    <h3>Habitaciones</h3>
                 </a>
-                <a href="#">
+                <a href="/admin/reportes">
                     <span class="material-icons-sharp">
                         report_gmailerrorred
                     </span>
@@ -925,12 +927,10 @@
 
             
 
-                <div class="notification add-reminder">
-                <a href="/admin/usuarios/nuevo" class="btn-nuevo" style="font-weight:600; font-size:1rem; color:inherit;">
+                <a href="/admin/usuarios/nuevo" class="notification add-reminder btn-nuevo" aria-label="Crear un usuario nuevo" style="font-weight:600; font-size:1rem; color:inherit;">
                     <span class="material-icons-sharp">person_add</span>
                     <span>Nuevo Usuario</span>
                 </a>
-                </div>
 
             
 
