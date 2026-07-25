@@ -2110,3 +2110,192 @@ pyodbc.ProgrammingError: ('42S02', "[42S02] [Microsoft][ODBC Driver 17 for SQL S
 2026-07-22 02:59:35,189 | INFO | Respuesta GET / -> 200
 2026-07-22 02:59:35,220 | INFO | Solicitud GET /static/img/viajerodos.svg
 2026-07-22 02:59:35,225 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-22 21:24:41,677 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-07-22 21:24:43,313 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-07-22 21:24:59,397 | INFO | Solicitud GET /
+2026-07-22 21:25:00,209 | INFO | Respuesta GET / -> 200
+2026-07-22 21:25:00,645 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-22 21:25:01,225 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-22 21:25:16,097 | INFO | Solicitud POST /login
+2026-07-22 21:25:16,105 | INFO | Intento de login para edu123@gmail.com
+2026-07-22 21:25:39,707 | INFO | Login exitoso para edu123@gmail.com (usuario)
+2026-07-22 21:25:39,709 | INFO | Respuesta POST /login -> 302
+2026-07-22 21:25:39,745 | INFO | Solicitud GET /habitaciones
+2026-07-22 21:25:39,817 | INFO | Respuesta GET /habitaciones -> 200
+2026-07-22 21:25:39,903 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-22 21:25:39,908 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-22 21:25:39,946 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-22 21:25:39,953 | INFO | Solicitud GET /static/img/h101.jpg
+2026-07-22 21:25:39,957 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-22 21:25:39,962 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-07-22 21:25:39,967 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-07-22 21:25:39,977 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-07-22 21:26:22,560 | INFO | Solicitud GET /usuario/detalle/1
+2026-07-22 21:26:22,590 | INFO | Respuesta GET /usuario/detalle/1 -> 200
+2026-07-22 21:26:22,625 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-22 21:26:22,635 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-22 21:26:22,643 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-07-22 21:26:22,654 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-07-22 21:26:36,190 | INFO | Solicitud POST /reservar/1
+2026-07-22 21:26:36,239 | INFO | Respuesta POST /reservar/1 -> 302
+2026-07-22 21:26:36,248 | INFO | Solicitud GET /pago/24
+2026-07-22 21:26:36,275 | INFO | Respuesta GET /pago/24 -> 200
+2026-07-22 21:26:36,306 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-22 21:26:36,312 | INFO | Solicitud GET /static/img/images.png
+2026-07-22 21:26:36,314 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-22 21:26:36,315 | INFO | Respuesta GET /static/img/images.png -> 304
+2026-07-22 21:26:45,160 | INFO | Solicitud GET /
+2026-07-22 21:26:45,163 | INFO | Respuesta GET / -> 200
+2026-07-25 13:28:11,717 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-07-25 13:28:13,068 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-07-25 13:28:21,519 | INFO | Solicitud GET /
+2026-07-25 13:28:21,757 | INFO | Respuesta GET / -> 200
+2026-07-25 13:28:21,861 | INFO | Solicitud GET /static/img/viajerodos.svg
+2026-07-25 13:28:22,253 | INFO | Respuesta GET /static/img/viajerodos.svg -> 304
+2026-07-25 13:29:35,630 | INFO | Solicitud POST /login
+2026-07-25 13:29:35,641 | INFO | Intento de login para admin@hotel.com
+2026-07-25 13:29:37,211 | INFO | Login exitoso para admin@hotel.com (admin)
+2026-07-25 13:29:37,211 | INFO | Respuesta POST /login -> 302
+2026-07-25 13:29:37,222 | INFO | Solicitud GET /admin/dashboard
+2026-07-25 13:29:37,332 | INFO | Respuesta GET /admin/dashboard -> 200
+2026-07-25 13:29:37,352 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-25 13:29:37,356 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-25 13:29:37,368 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-25 13:29:37,372 | INFO | Solicitud GET /static/img/signomas.png
+2026-07-25 13:29:37,374 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-25 13:29:37,392 | INFO | Respuesta GET /static/img/signomas.png -> 304
+2026-07-25 13:29:39,984 | INFO | Solicitud GET /admin/usuarios
+2026-07-25 13:29:40,020 | INFO | Respuesta GET /admin/usuarios -> 200
+2026-07-25 13:29:40,038 | INFO | Solicitud GET /admin/style.css
+2026-07-25 13:29:40,045 | INFO | Respuesta GET /admin/style.css -> 404
+2026-07-25 13:29:40,048 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-25 13:29:40,051 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-25 13:29:40,058 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-25 13:29:40,061 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-25 13:29:41,965 | INFO | Solicitud GET /admin/usuarios/nuevo
+2026-07-25 13:29:41,986 | INFO | Respuesta GET /admin/usuarios/nuevo -> 200
+2026-07-25 13:29:42,006 | INFO | Solicitud GET /admin/usuarios/style.css
+2026-07-25 13:29:42,009 | INFO | Respuesta GET /admin/usuarios/style.css -> 404
+2026-07-25 13:29:42,017 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-25 13:29:42,026 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-25 13:29:42,027 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-25 13:29:42,030 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-25 13:30:08,925 | INFO | Solicitud POST /admin/usuarios/guardar
+2026-07-25 13:30:08,961 | INFO | Respuesta POST /admin/usuarios/guardar -> 302
+2026-07-25 13:30:08,970 | INFO | Solicitud GET /admin/usuarios
+2026-07-25 13:30:08,977 | INFO | Respuesta GET /admin/usuarios -> 200
+2026-07-25 13:30:09,006 | INFO | Solicitud GET /admin/style.css
+2026-07-25 13:30:09,008 | INFO | Respuesta GET /admin/style.css -> 404
+2026-07-25 13:30:09,009 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-25 13:30:09,020 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-25 13:30:09,022 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-25 13:30:09,037 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-25 13:32:58,390 | INFO | Solicitud GET /admin/usuarios/nuevo
+2026-07-25 13:32:58,392 | INFO | Respuesta GET /admin/usuarios/nuevo -> 200
+2026-07-25 13:32:58,430 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-25 13:32:58,432 | INFO | Solicitud GET /admin/usuarios/style.css
+2026-07-25 13:32:58,434 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-25 13:32:58,436 | INFO | Respuesta GET /admin/usuarios/style.css -> 404
+2026-07-25 13:32:58,438 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-25 13:32:58,447 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-25 13:33:08,197 | INFO | Solicitud POST /admin/usuarios/guardar
+2026-07-25 13:33:08,225 | INFO | Respuesta POST /admin/usuarios/guardar -> 302
+2026-07-25 13:33:08,231 | INFO | Solicitud GET /admin/usuarios
+2026-07-25 13:33:08,239 | INFO | Respuesta GET /admin/usuarios -> 200
+2026-07-25 13:33:08,261 | INFO | Solicitud GET /admin/style.css
+2026-07-25 13:33:08,263 | INFO | Respuesta GET /admin/style.css -> 404
+2026-07-25 13:33:08,267 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-25 13:33:08,272 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-25 13:33:08,276 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-25 13:33:08,277 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-25 13:34:05,142 | INFO | Solicitud GET /admin/usuarios/nuevo
+2026-07-25 13:34:05,144 | INFO | Respuesta GET /admin/usuarios/nuevo -> 200
+2026-07-25 13:34:05,178 | INFO | Solicitud GET /admin/usuarios/style.css
+2026-07-25 13:34:05,189 | INFO | Respuesta GET /admin/usuarios/style.css -> 404
+2026-07-25 13:34:05,191 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-25 13:34:05,194 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-25 13:34:05,198 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-25 13:34:05,216 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-25 13:36:49,689 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-07-25 13:38:43,973 | INFO | Solicitud GET /admin/usuarios/nuevo
+2026-07-25 13:38:43,991 | INFO | Respuesta GET /admin/usuarios/nuevo -> 200
+2026-07-25 13:38:44,018 | INFO | Solicitud GET /admin/usuarios/style.css
+2026-07-25 13:38:44,035 | INFO | Respuesta GET /admin/usuarios/style.css -> 404
+2026-07-25 13:38:44,054 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-25 13:38:44,061 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-25 13:38:44,327 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-25 13:38:44,333 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-25 13:38:44,347 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-25 13:38:44,349 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-25 13:38:45,988 | INFO | Solicitud GET /admin/usuarios/nuevo
+2026-07-25 13:38:45,989 | INFO | Respuesta GET /admin/usuarios/nuevo -> 200
+2026-07-25 13:38:46,017 | INFO | Solicitud GET /admin/usuarios/style.css
+2026-07-25 13:38:46,029 | INFO | Respuesta GET /admin/usuarios/style.css -> 404
+2026-07-25 13:38:46,059 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-25 13:38:46,070 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-25 13:38:46,074 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-25 13:38:46,084 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-25 13:38:46,136 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-25 13:38:46,139 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-25 13:38:56,794 | INFO | Solicitud POST /admin/usuarios/guardar
+2026-07-25 13:38:57,051 | INFO | Usuario agregado por administrador: Juanito@hotel.com
+2026-07-25 13:38:57,052 | INFO | Respuesta POST /admin/usuarios/guardar -> 302
+2026-07-25 13:38:57,063 | INFO | Solicitud GET /admin/usuarios
+2026-07-25 13:38:57,097 | INFO | Respuesta GET /admin/usuarios -> 200
+2026-07-25 13:38:57,131 | INFO | Solicitud GET /admin/style.css
+2026-07-25 13:38:57,132 | INFO | Respuesta GET /admin/style.css -> 404
+2026-07-25 13:38:57,133 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-25 13:38:57,144 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-25 13:38:57,151 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-25 13:38:57,152 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-25 13:39:14,645 | INFO | Solicitud GET /admin/usuarios
+2026-07-25 13:39:14,653 | INFO | Respuesta GET /admin/usuarios -> 200
+2026-07-25 13:39:14,677 | INFO | Solicitud GET /admin/style.css
+2026-07-25 13:39:14,682 | INFO | Respuesta GET /admin/style.css -> 404
+2026-07-25 13:39:14,689 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-25 13:39:14,697 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-25 13:39:14,698 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-25 13:39:14,701 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-25 13:39:14,750 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-25 13:39:14,751 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-25 13:39:16,377 | INFO | Solicitud GET /admin/usuarios/nuevo
+2026-07-25 13:39:16,378 | INFO | Respuesta GET /admin/usuarios/nuevo -> 200
+2026-07-25 13:39:16,413 | INFO | Solicitud GET /admin/usuarios/style.css
+2026-07-25 13:39:16,415 | INFO | Respuesta GET /admin/usuarios/style.css -> 404
+2026-07-25 13:39:16,416 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-25 13:39:16,418 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-25 13:39:16,447 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-25 13:39:16,450 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-25 13:39:33,719 | INFO | Solicitud POST /admin/usuarios/guardar
+2026-07-25 13:39:33,725 | INFO | Usuario agregado por administrador: Juanita@hotel.com
+2026-07-25 13:39:33,728 | INFO | Respuesta POST /admin/usuarios/guardar -> 302
+2026-07-25 13:39:33,742 | INFO | Solicitud GET /admin/usuarios
+2026-07-25 13:39:33,756 | INFO | Respuesta GET /admin/usuarios -> 200
+2026-07-25 13:39:33,788 | INFO | Solicitud GET /admin/style.css
+2026-07-25 13:39:33,790 | INFO | Respuesta GET /admin/style.css -> 404
+2026-07-25 13:39:33,791 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-25 13:39:33,796 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-25 13:39:33,815 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-25 13:39:33,817 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-25 13:39:53,440 | INFO | Solicitud GET /admin/habitaciones
+2026-07-25 13:39:53,461 | INFO | Respuesta GET /admin/habitaciones -> 200
+2026-07-25 13:39:53,487 | INFO | Solicitud GET /admin/style.css
+2026-07-25 13:39:53,493 | INFO | Respuesta GET /admin/style.css -> 404
+2026-07-25 13:39:53,499 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-25 13:39:53,515 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-25 13:39:53,517 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-25 13:39:53,518 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-25 13:39:59,396 | INFO | Solicitud GET /admin/reportes
+2026-07-25 13:39:59,444 | INFO | Respuesta GET /admin/reportes -> 200
+2026-07-25 13:39:59,461 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-25 13:39:59,464 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-25 13:39:59,466 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-25 13:39:59,473 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-25 13:40:05,573 | INFO | Solicitud GET /admin/dashboard
+2026-07-25 13:40:05,603 | INFO | Respuesta GET /admin/dashboard -> 200
+2026-07-25 13:40:05,621 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-07-25 13:40:05,625 | INFO | Solicitud GET /static/img/usuario.jpg
+2026-07-25 13:40:05,627 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-07-25 13:40:05,631 | INFO | Solicitud GET /static/img/signomas.png
+2026-07-25 13:40:05,632 | INFO | Respuesta GET /static/img/usuario.jpg -> 304
+2026-07-25 13:40:05,637 | INFO | Respuesta GET /static/img/signomas.png -> 304

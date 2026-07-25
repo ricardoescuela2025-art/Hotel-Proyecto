@@ -265,6 +265,44 @@ def admin_guardar_usuario():
     contraseña = request.form["contraseña"]
     tipo = request.form["tipo"]
 
+    # La columna de SQL Server se llama "contrasena" (sin caracteres especiales).
+    # Aceptamos el nombre de campo actual del formulario y lo guardamos con el
+    # nombre real de la columna para evitar que el INSERT falle silenciosamente.
+    contrasena = next(
+        (valor for campo, valor in request.form.items() if campo.startswith("contra")),
+        "",
+    )
+    conn = None
+    cursor = None
+    try:
+        if not all((nombre.strip(), correo.strip(), contrasena, tipo)):
+            raise ValueError("Completa todos los campos para guardar el usuario.")
+
+        conn = obtener_conexion()
+        if conn is None:
+            raise RuntimeError("No fue posible conectar con la base de datos.")
+
+        cursor = conn.cursor()
+        cursor.execute(
+            "INSERT INTO Usuarios (nombre, correo, contrasena, tipo) VALUES (?,?,?,?)",
+            (nombre.strip(), correo.strip(), contrasena, tipo),
+        )
+        conn.commit()
+        logger.info("Usuario agregado por administrador: %s", correo)
+        flash("Usuario agregado correctamente.", "success")
+    except Exception as e:
+        if conn:
+            conn.rollback()
+        logger.exception("Error al agregar usuario: %s", correo)
+        flash(f"Error al agregar el usuario: {e}", "error")
+    finally:
+        if cursor:
+            cursor.close()
+        if conn:
+            conn.close()
+
+    return redirect("/admin/usuarios")
+
     try:
         conn = obtener_conexion()
         cursor = conn.cursor()

@@ -810,6 +810,15 @@
 
         <!-- Main Content -->
         <main>
+            {% with mensajes = get_flashed_messages(with_categories=true) %}
+                {% if mensajes %}
+                    {% for categoria, mensaje in mensajes %}
+                        <div role="alert" style="margin-bottom: 1rem; padding: 1rem; border-radius: var(--border-radius-2); background: {{ '#d4edda' if categoria == 'success' else '#f8d7da' }}; color: {{ '#155724' if categoria == 'success' else '#721c24' }};">
+                            {{ mensaje }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
            
             <!-- End of Analyses -->
 
