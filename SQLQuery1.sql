@@ -36,6 +36,10 @@ CREATE TABLE Reservas (
     FOREIGN KEY (habitacion_id) REFERENCES Habitaciones(id)
 );
 
+-- Acelera la comprobación de cruces de fechas al crear una reserva.
+CREATE INDEX IX_Reservas_Habitacion_Fechas
+ON Reservas (habitacion_id, fecha_entrada, fecha_salida, estado);
+
 
 CREATE TABLE Reportes (
     id INT IDENTITY(1,1) PRIMARY KEY,

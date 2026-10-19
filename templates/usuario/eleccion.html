@@ -467,6 +467,13 @@ nav.navbar-white .fa-bars{
     margin-bottom: 30px;
 }
 
+.promo-banner{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:18px 0 24px;padding:18px 22px;border-radius:12px;background:#0b123d;color:#fff}
+.promo-banner strong{display:block;font-size:20px;margin-bottom:5px}
+.promo-banner span{font-size:14px;color:#e2e6ff}
+.promo-banner a{background:#fff;color:#0b123d;text-decoration:none;padding:10px 17px;border-radius:22px;font-weight:700;white-space:nowrap}
+.promo-tag{display:inline-block;background:#df2419;color:#fff;padding:5px 8px;border-radius:5px;font-size:12px;font-weight:700;margin:5px 0}
+.old-price{font-size:13px;color:#73798b;font-weight:400}
+
 .house{
     display: flex;
     justify-content: space-between;
@@ -862,6 +869,7 @@ nav.navbar-white .fa-bars{
             <img src="/static/img/nayarane.jpeg" alt="logo">
             <ul class="nav-links">
                 <li><a href="/usuario/reservar" class="active">Inicio</a></li>
+                <li><a href="/promociones">Promociones</a></li>
                 <li><a href="/usuario/reportes">Reportes</a></li>
             </ul>
             <i class="fa-solid fa-bars" onclick="togglebtn()"></i>
@@ -871,6 +879,10 @@ nav.navbar-white .fa-bars{
                 <div class="left-col">
                     <p>Hay tantas opciones</p>
                     <h1>recomendaciones</h1>
+                    <div class="promo-banner">
+                        <div><strong>Ofertas especiales: 15% OFF</strong><span>Descuento aplicado a las tarifas por noche de las habitaciones disponibles.</span></div>
+                        <a href="/promociones">Ver todas las ofertas</a>
+                    </div>
                     {% for h in habitaciones %}
                     <div class="house">
                         <div class="house-img">

@@ -4,6 +4,7 @@ import os
 import logging
 from logging.handlers import RotatingFileHandler
 from werkzeug.utils import secure_filename
+from datetime import datetime
 
 app = Flask(__name__)
 app.secret_key = "super_secreto"
@@ -78,6 +79,47 @@ def obtener_conexion():
 # Para rutas que usaban 'conectar()'
 def conectar():
     return obtener_conexion()
+
+
+def fechas_reserva_validas(fecha_entrada, fecha_salida):
+    """Valida las fechas recibidas desde los formularios de reserva."""
+    try:
+        entrada = datetime.strptime(fecha_entrada, "%Y-%m-%d").date()
+        salida = datetime.strptime(fecha_salida, "%Y-%m-%d").date()
+    except (TypeError, ValueError):
+        return False
+
+    # La salida es el día en que se libera la habitación, por lo que debe ser
+    # posterior a la entrada. Así dos estancias consecutivas sí son posibles.
+    return entrada < salida
+
+
+def crear_reserva_si_disponible(conn, usuario_id, habitacion_id,
+                                fecha_entrada, fecha_salida):
+    """Crea una reserva sólo si no se cruza con otra de la habitación.
+
+    Los bloqueos se mantienen hasta el commit para que dos solicitudes que
+    lleguen a la vez no puedan superar la validación al mismo tiempo.
+    """
+    cursor = conn.cursor()
+    cursor.execute("""
+        SELECT TOP 1 id
+        FROM Reservas WITH (UPDLOCK, HOLDLOCK)
+        WHERE habitacion_id = ?
+          AND estado IN ('activa', 'pendiente')
+          AND fecha_entrada < ?
+          AND fecha_salida > ?
+    """, (habitacion_id, fecha_salida, fecha_entrada))
+
+    if cursor.fetchone():
+        return None
+
+    cursor.execute("""
+        INSERT INTO Reservas (usuario_id, habitacion_id, fecha_entrada, fecha_salida, estado)
+        OUTPUT INSERTED.id
+        VALUES (?, ?, ?, ?, 'activa')
+    """, (usuario_id, habitacion_id, fecha_entrada, fecha_salida))
+    return cursor.fetchone()[0]
 
 
 # ----------------------------- LOGIN PAGE ----------------------------- #
@@ -517,14 +559,20 @@ def recepcionista_guardar_reserva():
     fecha_entrada = request.form["fecha_entrada"]
     fecha_salida = request.form["fecha_salida"]
 
+    if not fechas_reserva_validas(fecha_entrada, fecha_salida):
+        return "La fecha de salida debe ser posterior a la fecha de entrada.", 400
+
     logger.info("Creando reserva para usuario %s en habitación %s", usuario_id, habitacion_id)
     conn = obtener_conexion()
     cursor = conn.cursor()
 
-    cursor.execute("""
-        INSERT INTO Reservas (usuario_id, habitacion_id, fecha_entrada, fecha_salida, estado)
-        VALUES (?,?,?,?, 'activa')
-    """, (usuario_id, habitacion_id, fecha_entrada, fecha_salida))
+    reserva_id = crear_reserva_si_disponible(
+        conn, usuario_id, habitacion_id, fecha_entrada, fecha_salida
+    )
+    if reserva_id is None:
+        conn.rollback()
+        conn.close()
+        return "La habitación ya está reservada para las fechas seleccionadas.", 409
     conn.commit()
 
     cursor.execute("UPDATE Habitaciones SET estado='ocupada' WHERE id=?", (habitacion_id,))
@@ -995,6 +1043,27 @@ def usuario_reservar():
                            habitaciones=habitaciones)
 
 
+@app.get("/promociones")
+def promociones():
+    """Muestra las habitaciones y tarifas reales con descuento promocional."""
+    conn = obtener_conexion()
+    cursor = conn.cursor()
+    # Las ofertas se muestran para todas las habitaciones registradas. El estado
+    # de disponibilidad se valida después al consultar fechas de reserva.
+    cursor.execute("SELECT id, nombre, descripcion, precio, imagen FROM Habitaciones ORDER BY id")
+    ofertas = []
+    for row in cursor.fetchall():
+        precio = float(row[3])
+        descuento = 15
+        ofertas.append({
+            "id": row[0], "nombre": row[1], "detalle": row[2] or "Disfruta una estancia cómoda",
+            "foto": obtener_ruta_imagen(row[4]), "precio": precio, "descuento": descuento,
+            "precio_oferta": round(precio * (100 - descuento) / 100, 2)
+        })
+    conn.close()
+    return render_template("usuario/promociones.html", ofertas=ofertas)
+
+
 @app.post("/usuario/reservar/guardar")
 def usuario_guardar_reserva():
     if session.get("tipo") != "usuario":
@@ -1005,13 +1074,19 @@ def usuario_guardar_reserva():
     fecha_salida = request.form["fecha_salida"]
     usuario_id = session["id"]
 
+    if not fechas_reserva_validas(fecha_entrada, fecha_salida):
+        return "La fecha de salida debe ser posterior a la fecha de entrada.", 400
+
     conn = obtener_conexion()
     cursor = conn.cursor()
 
-    cursor.execute("""
-        INSERT INTO Reservas (usuario_id, habitacion_id, fecha_entrada, fecha_salida, estado)
-        VALUES (?,?,?,?, 'activa')
-    """, (usuario_id, habitacion_id, fecha_entrada, fecha_salida))
+    reserva_id = crear_reserva_si_disponible(
+        conn, usuario_id, habitacion_id, fecha_entrada, fecha_salida
+    )
+    if reserva_id is None:
+        conn.rollback()
+        conn.close()
+        return "La habitación ya está reservada para las fechas seleccionadas.", 409
     conn.commit()
 
     cursor.execute("UPDATE Habitaciones SET estado='ocupada' WHERE id=?", (habitacion_id,))
@@ -1105,20 +1180,21 @@ def reservar(id):
     fecha_entrada = request.form["fecha_entrada"]
     fecha_salida = request.form["fecha_salida"]
 
+    if not fechas_reserva_validas(fecha_entrada, fecha_salida):
+        return "La fecha de salida debe ser posterior a la fecha de entrada.", 400
+
     try:
         conn = obtener_conexion()
         cursor = conn.cursor()
 
-        # Insertar la reserva
-        cursor.execute("""
-            INSERT INTO Reservas (usuario_id, habitacion_id, fecha_entrada, fecha_salida, estado)
-            VALUES (?, ?, ?, ?, 'activa')
-        """, (usuario_id, id, fecha_entrada, fecha_salida))
+        reserva_id = crear_reserva_si_disponible(
+            conn, usuario_id, id, fecha_entrada, fecha_salida
+        )
+        if reserva_id is None:
+            conn.rollback()
+            conn.close()
+            return "La habitación ya está reservada para las fechas seleccionadas.", 409
         conn.commit()
-
-        # Conseguir el ID generado
-        cursor.execute("SELECT @@IDENTITY")
-        reserva_id = cursor.fetchone()[0]
 
         # Actualizar habitación a ocupada
         cursor.execute("UPDATE Habitaciones SET estado='ocupada' WHERE id=?", (id,))
