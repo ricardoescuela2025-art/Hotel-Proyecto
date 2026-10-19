@@ -227,7 +227,8 @@ form .btn:hover {
 
                     <div class="input-box">
                         <span>Monto a pagar :</span>
-                        <input type="number" name="monto" value="{{ reserva.precio if reserva else '' }}" readonly required>
+                        <input type="number" step="0.01" name="monto" value="{{ reserva.precio if reserva else '' }}" readonly required>
+                        {% if reserva and reserva.promocion %}<small style="color:#267a58">Descuento promocional del 15% aplicado.</small>{% endif %}
                     </div>
 
                 </div>

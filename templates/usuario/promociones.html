@@ -7,6 +7,26 @@
   <title>Promociones | Hotel GP</title>
   <style>
     *{box-sizing:border-box}body{margin:0;background:#f4f6fb;color:#10183d;font-family:Arial, sans-serif}.promo{max-width:1240px;margin:24px auto;padding:34px 24px 28px;background:#0b123d;border-radius:18px;color:#fff}.top{display:flex;justify-content:space-between;align-items:center;gap:18px;margin:0 12px 26px}.eyebrow{margin:0 0 8px;color:#aeb9ff;font-size:12px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase}h1{font:700 clamp(28px,4vw,44px)/1.1 Georgia,serif;margin:0 0 10px}.intro{margin:0;color:#e2e6ff;line-height:1.5}.reserve{background:#fff;color:#0b123d;padding:12px 24px;border-radius:30px;text-decoration:none;font-weight:bold;white-space:nowrap}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.card{overflow:hidden;border-radius:15px;background:#fff;color:#111936;box-shadow:0 6px 20px #0002}.photo{height:205px;position:relative;background:#dce4f2}.photo img{width:100%;height:100%;object-fit:cover}.tag{position:absolute;left:12px;top:12px;background:#e52316;color:#fff;border-radius:5px;padding:7px 9px;font-size:12px;font-weight:bold}.body{padding:16px}.body h2{margin:0 0 7px;font-size:18px}.body p{margin:0 0 14px;color:#667085;font-size:14px}.price{font-size:24px;font-weight:800}.price small{font-size:13px;font-weight:400;color:#667085}.old{display:block;margin-top:4px;color:#667085;font-size:13px}.old s{margin-left:5px}.note{margin-top:12px;color:#267a58;font-size:12px}.card-link{display:block;margin-top:15px;padding:11px;text-align:center;text-decoration:none;background:#101944;color:white;border-radius:8px;font-weight:bold}.foot{text-align:center;color:#d7dcfa;font-size:12px;margin:22px 0 0}.back{display:inline-block;margin:0 0 0 12px;color:#fff;text-decoration:none;font-size:14px}@media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:540px){.promo{margin:0;padding:24px 14px;border-radius:0}.top{align-items:flex-start;flex-direction:column}.grid{grid-template-columns:1fr}.photo{height:230px}}
+    .experience{margin:44px 0 0;padding:28px;background:#fff;color:#10183d;border-radius:16px}
+    .experience-head{text-align:center;max-width:650px;margin:0 auto 24px}
+    .experience-head h2{font:700 30px Georgia,serif;margin:0 0 8px}
+    .experience-head p{color:#667085;margin:0;line-height:1.5}
+    .features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .feature{display:flex;align-items:center;gap:16px;overflow:hidden;background:#f5f7fb;border-radius:12px}
+    .feature img{width:42%;height:170px;object-fit:cover}
+    .feature div{padding:14px 14px 14px 0}
+    .feature h3{margin:0 0 7px;font-size:18px}
+    .feature p{margin:0;color:#667085;line-height:1.45;font-size:14px}
+    .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px}
+    .step{padding:18px;border:1px solid #e4e8f1;border-radius:12px}
+    .step b{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#0b123d;color:white;margin-bottom:9px}
+    .step h3{font-size:16px;margin:0 0 6px}
+    .step p{font-size:13px;color:#667085;line-height:1.45;margin:0}
+    .bottom-cta{margin-top:24px;text-align:center;padding:20px;background:#eef1fb;border-radius:12px}
+    .bottom-cta p{margin:0 0 12px;font-weight:700}
+    .bottom-cta a{display:inline-block;background:#0b123d;color:#fff;text-decoration:none;padding:11px 22px;border-radius:24px;font-weight:700}
+    @media(max-width:650px){.features,.steps{grid-template-columns:1fr}.feature img{height:155px}}
+    @media(max-width:540px){.experience{padding:20px 14px}.feature{display:block}.feature img{width:100%;height:190px}.feature div{padding:14px}}
   </style>
 </head>
 <body>
@@ -33,12 +53,35 @@
           <div class="price">${{ "{:,.2f}".format(oferta.precio_oferta) }} <small>MXN / noche</small></div>
           <span class="old">Precio regular: <s>${{ "{:,.2f}".format(oferta.precio) }} MXN</s></span>
           <div class="note">✓ Impuestos incluidos</div>
-          <a class="card-link" href="/usuario/detalle/{{ oferta.id }}">Consultar disponibilidad</a>
+          <a class="card-link" href="/usuario/detalle/{{ oferta.id }}?promocion=1">Consultar disponibilidad</a>
         </div>
       </article>
       {% else %}
       <p style="grid-column:1/-1;background:white;color:#10183d;padding:24px;border-radius:12px">No hay habitaciones registradas para mostrar ofertas.</p>
       {% endfor %}
+    </section>
+    <section class="experience" aria-labelledby="hotel-experience-title">
+      <div class="experience-head">
+        <p class="eyebrow" style="color:#4f5d9b">Hotel GP</p>
+        <h2 id="hotel-experience-title">Más para disfrutar durante tu estancia</h2>
+        <p>Conoce algunos de los espacios y opciones para hacer más cómoda tu visita.</p>
+      </div>
+      <div class="features">
+        <article class="feature">
+          <img src="{{ url_for('static', filename='img/mihotel.jpeg') }}" alt="Recepción del hotel" loading="lazy">
+          <div><h3>Te damos la bienvenida</h3><p>Consulta las opciones de hospedaje y encuentra la estancia que se adapta a tu viaje.</p></div>
+        </article>
+        <article class="feature">
+          <img src="{{ url_for('static', filename='img/piscina.jpg') }}" alt="Área de agua para relajarse" loading="lazy">
+          <div><h3>Un momento para relajarte</h3><p>Disfruta el ambiente de descanso y aprovecha tu visita para desconectarte.</p></div>
+        </article>
+      </div>
+      <div class="steps" aria-label="Pasos para reservar">
+        <article class="step"><b>1</b><h3>Elige tu habitación</h3><p>Revisa las opciones y compara las tarifas promocionales.</p></article>
+        <article class="step"><b>2</b><h3>Consulta disponibilidad</h3><p>Abre la habitación que te interesa y revisa sus detalles.</p></article>
+        <article class="step"><b>3</b><h3>Completa tu reserva</h3><p>Sigue los pasos para confirmar los datos de tu estancia.</p></article>
+      </div>
+      <div class="bottom-cta"><p>¿Listo para planear tu próxima estancia?</p><a href="/habitaciones">Ver habitaciones</a></div>
     </section>
     <p class="foot">Tarifas promocionales calculadas desde los precios configurados en el hotel.</p>
   </main>

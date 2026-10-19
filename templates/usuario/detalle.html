@@ -893,10 +893,16 @@ nav.navbar-white .fa-bars{
             <div class="small details">
                 <h2>Habitación {{ habitacion.numero }}/ 1 Baño / Wifi / {{ habitacion.estado }} / {{ habitacion.tipo }}</h2>
                 <p>{{ habitacion.descripcion }}</p>
+                {% if habitacion.promocion %}
+                <p style="display:inline-block;background:#e52316;color:#fff;padding:5px 9px;border-radius:5px;font-weight:bold">15% OFF · Oferta aplicada</p>
+                <h4>${{ "%.2f"|format(habitacion.precio) }}/ día <small style="color:#777;font-weight:normal">Antes: <s>${{ "%.2f"|format(habitacion.precio_regular) }}</s></small></h4>
+                {% else %}
                 <h4>${{ "%.2f"|format(habitacion.precio) }}/ día</h4>
+                {% endif %}
             </div>
             <hr class="line">
             <form class="check-form" method="POST" action="{{ url_for('reservar', id=habitacion.id) }}">
+                {% if habitacion.promocion %}<input type="hidden" name="promocion" value="1">{% endif %}
                 <div>
                     <label>Habitaciones</label>
                     <input type="number" name="habitaciones" required placeholder="1">

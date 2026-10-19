@@ -1157,11 +1157,16 @@ def usuario_detalle(id_habitacion):
     if not row:
         return "Habitación no encontrada", 404
 
+    precio_regular = float(row[3])
+    es_promocion = request.args.get("promocion") == "1"
+    precio_mostrar = round(precio_regular * 0.85, 2) if es_promocion else precio_regular
     habitacion = {
         "id": row[0],
         "numero": row[1],
         "tipo": row[2],
-        "precio": row[3],
+        "precio": precio_mostrar,
+        "precio_regular": precio_regular,
+        "promocion": es_promocion,
         "estado": row[4],
         "descripcion": row[5],
         "imagen": obtener_ruta_imagen(row[6]),
@@ -1203,6 +1208,11 @@ def reservar(id):
         conn.close()
 
         # Ir a la página de pago
+        if request.form.get("promocion") == "1":
+            ofertas_reservas = dict(session.get("promociones_reservas", {}))
+            ofertas_reservas[str(reserva_id)] = True
+            session["promociones_reservas"] = ofertas_reservas
+
         return redirect(url_for("pago", reserva_id=reserva_id))
 
     except Exception as e:
@@ -1226,10 +1236,15 @@ def pago(reserva_id):
     if not reserva:
         return "Reserva no encontrada", 404
 
+    es_promocion = str(reserva_id) in session.get("promociones_reservas", {})
+    precio = float(reserva[2])
+    if es_promocion:
+        precio = round(precio * 0.85, 2)
     data = {
         "id": reserva[0],
         "habitacion": reserva[1],
-        "precio": reserva[2],
+        "precio": precio,
+        "promocion": es_promocion,
         "entrada": reserva[3],
         "salida": reserva[4],
     }
@@ -1386,7 +1401,12 @@ def procesar_pago():
         crear_tabla_pagos_si_no_existe(cursor)
 
         # ✅ VALIDAR SI EXISTE EL ID DE RESERVA
-        cursor.execute("SELECT 1 FROM Reservas WHERE id = ?", (reserva_id,))
+        cursor.execute("""
+            SELECT H.precio
+            FROM Reservas R
+            INNER JOIN Habitaciones H ON R.habitacion_id = H.id
+            WHERE R.id = ?
+        """, (reserva_id,))
         reserva = cursor.fetchone()
 
         if not reserva:
@@ -1396,12 +1416,22 @@ def procesar_pago():
                 error="La reserva no existe o no está disponible."
             ), 404
 
+        monto_calculado = float(reserva[0])
+        if str(reserva_id) in session.get("promociones_reservas", {}):
+            monto_calculado = round(monto_calculado * 0.85, 2)
+        # El importe se calcula en el servidor para conservar el precio de
+        # oferta y evitar depender del valor enviado por el formulario.
+        monto = f"{monto_calculado:.2f}"
+
         # INSERTAR PAGO
         cursor.execute("""
             INSERT INTO Pagos (reserva_id, monto, metodo)
             VALUES (?, ?, ?)
         """, (reserva_id, monto, metodo))
         conn.commit()
+        ofertas_reservas = dict(session.get("promociones_reservas", {}))
+        ofertas_reservas.pop(str(reserva_id), None)
+        session["promociones_reservas"] = ofertas_reservas
 
     except pyodbc.Error:
         logger.exception("Error de base de datos al registrar el pago de la reserva %s", reserva_id)
