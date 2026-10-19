@@ -25,6 +25,13 @@
     .bottom-cta{margin-top:24px;text-align:center;padding:20px;background:#eef1fb;border-radius:12px}
     .bottom-cta p{margin:0 0 12px;font-weight:700}
     .bottom-cta a{display:inline-block;background:#0b123d;color:#fff;text-decoration:none;padding:11px 22px;border-radius:24px;font-weight:700}
+    .date-search{display:flex;align-items:end;gap:14px;flex-wrap:wrap;margin:0 0 22px;padding:18px;background:#fff;color:#10183d;border-radius:13px}
+    .date-search label{display:block;font-size:13px;font-weight:700;margin-bottom:7px}
+    .date-search input{min-width:190px;padding:11px;border:1px solid #ccd2e0;border-radius:8px;font:inherit}
+    .date-search button{border:0;background:#e52316;color:#fff;padding:12px 18px;border-radius:8px;font-weight:700;cursor:pointer}
+    .conditions{margin:0 0 22px;color:#e2e6ff;font-size:13px;line-height:1.55}
+    .results-note{grid-column:1/-1;margin:0 0 2px;color:#fff;font-size:14px}
+    .date-error{flex-basis:100%;margin:0;color:#b42318;font-size:13px}
     @media(max-width:650px){.features,.steps{grid-template-columns:1fr}.feature img{height:155px}}
     @media(max-width:540px){.experience{padding:20px 14px}.feature{display:block}.feature img{width:100%;height:190px}.feature div{padding:14px}}
   </style>
@@ -40,7 +47,15 @@
       </div>
       <a class="reserve" href="/habitaciones">Ver habitaciones</a>
     </header>
+    <form class="date-search" method="get" action="/promociones">
+      <div><label for="fecha-entrada">Fecha de entrada</label><input id="fecha-entrada" type="date" name="fecha_entrada" value="{{ fecha_entrada }}" required></div>
+      <div><label for="fecha-salida">Fecha de salida</label><input id="fecha-salida" type="date" name="fecha_salida" value="{{ fecha_salida }}" required></div>
+      <button type="submit">Consultar ofertas</button>
+      {% if error_fechas %}<p class="date-error">{{ error_fechas }}</p>{% endif %}
+    </form>
+    <p class="conditions"><strong>Condiciones:</strong> el 15% de descuento se aplica a las habitaciones destacadas sobre su tarifa regular por noche. La selección de ofertas puede variar según el periodo elegido; la disponibilidad se consulta para esas fechas y puede cambiar hasta completar la reserva.</p>
     <section class="grid" aria-label="Habitaciones en promoción">
+      {% if fechas_consultadas and not error_fechas %}<p class="results-note">Ofertas destacadas del {{ fecha_entrada }} al {{ fecha_salida }}: {{ ofertas|length }}</p>{% endif %}
       {% for oferta in ofertas %}
       <article class="card">
         <div class="photo">
@@ -53,11 +68,11 @@
           <div class="price">${{ "{:,.2f}".format(oferta.precio_oferta) }} <small>MXN / noche</small></div>
           <span class="old">Precio regular: <s>${{ "{:,.2f}".format(oferta.precio) }} MXN</s></span>
           <div class="note">✓ Impuestos incluidos</div>
-          <a class="card-link" href="/usuario/detalle/{{ oferta.id }}?promocion=1">Consultar disponibilidad</a>
+          <a class="card-link" href="{{ url_for('usuario_detalle', id_habitacion=oferta.id, promocion=1, fecha_entrada=fecha_entrada or None, fecha_salida=fecha_salida or None) }}">Consultar disponibilidad</a>
         </div>
       </article>
       {% else %}
-      <p style="grid-column:1/-1;background:white;color:#10183d;padding:24px;border-radius:12px">No hay habitaciones registradas para mostrar ofertas.</p>
+      <p style="grid-column:1/-1;background:white;color:#10183d;padding:24px;border-radius:12px">{% if fechas_consultadas and not error_fechas %}No hay habitaciones disponibles para esas fechas. Prueba con otras fechas.{% else %}No hay habitaciones registradas para mostrar ofertas.{% endif %}</p>
       {% endfor %}
     </section>
     <section class="experience" aria-labelledby="hotel-experience-title">

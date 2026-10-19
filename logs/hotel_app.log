@@ -3068,3 +3068,138 @@ pyodbc.ProgrammingError: ('42S02', "[42S02] [Microsoft][ODBC Driver 17 for SQL S
 2026-10-18 23:55:45,143 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
 2026-10-18 23:55:45,144 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
 2026-10-18 23:55:45,149 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-10-18 23:58:37,138 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-10-19 00:00:05,127 | INFO | Solicitud GET /habitaciones
+2026-10-19 00:00:05,589 | INFO | Respuesta GET /habitaciones -> 200
+2026-10-19 00:00:05,610 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-10-19 00:00:05,612 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-10-19 00:00:05,808 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-10-19 00:00:05,814 | INFO | Solicitud GET /static/img/h101.jpg
+2026-10-19 00:00:05,897 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-10-19 00:00:05,913 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-10-19 00:00:06,050 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-10-19 00:00:06,066 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-10-19 00:00:06,097 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-10-19 00:00:06,106 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-10-19 00:00:08,993 | INFO | Solicitud GET /habitaciones
+2026-10-19 00:00:09,004 | INFO | Respuesta GET /habitaciones -> 200
+2026-10-19 00:00:09,039 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-10-19 00:00:09,069 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-10-19 00:00:09,071 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-10-19 00:00:09,073 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-10-19 00:00:09,094 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-10-19 00:00:09,098 | INFO | Solicitud GET /static/img/h101.jpg
+2026-10-19 00:00:09,107 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-10-19 00:00:09,127 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-10-19 00:00:09,165 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-10-19 00:00:09,174 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-10-19 00:00:10,737 | INFO | Solicitud GET /promociones
+2026-10-19 00:00:10,756 | INFO | Respuesta GET /promociones -> 200
+2026-10-19 00:00:10,774 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-10-19 00:00:10,777 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-10-19 00:00:10,779 | INFO | Solicitud GET /static/img/h101.jpg
+2026-10-19 00:00:10,782 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-10-19 00:00:10,791 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-10-19 00:00:10,794 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-10-19 00:00:11,022 | INFO | Solicitud GET /static/img/piscina.jpg
+2026-10-19 00:00:11,023 | INFO | Solicitud GET /static/img/mihotel.jpeg
+2026-10-19 00:00:11,026 | INFO | Respuesta GET /static/img/piscina.jpg -> 304
+2026-10-19 00:00:11,027 | INFO | Respuesta GET /static/img/mihotel.jpeg -> 304
+2026-10-19 00:00:42,290 | INFO | Solicitud GET /promociones
+2026-10-19 00:00:42,422 | INFO | Respuesta GET /promociones -> 200
+2026-10-19 00:00:42,440 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-10-19 00:00:42,449 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-10-19 00:00:42,454 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-10-19 00:00:42,469 | INFO | Solicitud GET /static/img/h101.jpg
+2026-10-19 00:00:42,477 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-10-19 00:00:42,486 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-10-19 00:00:42,488 | INFO | Solicitud GET /static/img/mihotel.jpeg
+2026-10-19 00:00:42,490 | INFO | Solicitud GET /static/img/piscina.jpg
+2026-10-19 00:00:42,518 | INFO | Respuesta GET /static/img/mihotel.jpeg -> 304
+2026-10-19 00:00:42,527 | INFO | Respuesta GET /static/img/piscina.jpg -> 304
+2026-10-19 00:01:13,104 | INFO | Solicitud GET /promociones
+2026-10-19 00:01:13,119 | INFO | Respuesta GET /promociones -> 200
+2026-10-19 00:01:13,143 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-10-19 00:01:13,159 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-10-19 00:01:13,160 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-10-19 00:01:13,163 | INFO | Solicitud GET /static/img/h101.jpg
+2026-10-19 00:01:13,164 | INFO | Solicitud GET /static/img/mihotel.jpeg
+2026-10-19 00:01:13,165 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-10-19 00:01:13,188 | INFO | Solicitud GET /static/img/piscina.jpg
+2026-10-19 00:01:13,193 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-10-19 00:01:13,218 | INFO | Respuesta GET /static/img/mihotel.jpeg -> 304
+2026-10-19 00:01:13,226 | INFO | Respuesta GET /static/img/piscina.jpg -> 304
+2026-10-19 00:01:14,751 | INFO | Solicitud GET /promociones
+2026-10-19 00:01:14,765 | INFO | Respuesta GET /promociones -> 200
+2026-10-19 00:01:14,789 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-10-19 00:01:14,800 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-10-19 00:01:14,802 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-10-19 00:01:14,805 | INFO | Solicitud GET /static/img/h101.jpg
+2026-10-19 00:01:14,811 | INFO | Solicitud GET /static/img/mihotel.jpeg
+2026-10-19 00:01:14,812 | INFO | Solicitud GET /static/img/piscina.jpg
+2026-10-19 00:01:14,845 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-10-19 00:01:14,848 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-10-19 00:01:14,858 | INFO | Respuesta GET /static/img/mihotel.jpeg -> 304
+2026-10-19 00:01:14,860 | INFO | Respuesta GET /static/img/piscina.jpg -> 304
+2026-10-19 00:03:18,899 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-10-19 00:03:38,438 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-10-19 00:04:09,613 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-10-19 00:04:12,369 | INFO | Sistema de logs inicializado para el proyecto Hotel
+2026-10-19 00:04:16,795 | INFO | Solicitud GET /habitaciones
+2026-10-19 00:04:17,270 | INFO | Respuesta GET /habitaciones -> 200
+2026-10-19 00:04:17,291 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-10-19 00:04:17,298 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-10-19 00:04:17,448 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-10-19 00:04:17,459 | INFO | Solicitud GET /static/img/h101.jpg
+2026-10-19 00:04:17,623 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-10-19 00:04:17,632 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-10-19 00:04:17,779 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-10-19 00:04:17,787 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-10-19 00:04:17,804 | INFO | Solicitud GET /static/img/nayarane.jpeg
+2026-10-19 00:04:17,809 | INFO | Respuesta GET /static/img/nayarane.jpeg -> 304
+2026-10-19 00:04:19,119 | INFO | Solicitud GET /promociones
+2026-10-19 00:04:19,151 | INFO | Respuesta GET /promociones -> 200
+2026-10-19 00:04:19,180 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-10-19 00:04:19,190 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-10-19 00:04:19,192 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-10-19 00:04:19,225 | INFO | Solicitud GET /static/img/h101.jpg
+2026-10-19 00:04:19,226 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-10-19 00:04:19,245 | INFO | Solicitud GET /static/img/mihotel.jpeg
+2026-10-19 00:04:19,247 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-10-19 00:04:19,298 | INFO | Solicitud GET /static/img/piscina.jpg
+2026-10-19 00:04:19,306 | INFO | Respuesta GET /static/img/mihotel.jpeg -> 304
+2026-10-19 00:04:19,317 | INFO | Respuesta GET /static/img/piscina.jpg -> 304
+2026-10-19 00:04:26,650 | INFO | Solicitud GET /promociones
+2026-10-19 00:04:26,670 | INFO | Respuesta GET /promociones -> 200
+2026-10-19 00:04:26,692 | INFO | Solicitud GET /static/img/h101.jpg
+2026-10-19 00:04:26,698 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-10-19 00:04:26,708 | INFO | Solicitud GET /static/img/mihotel.jpeg
+2026-10-19 00:04:26,709 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-10-19 00:04:26,713 | INFO | Solicitud GET /static/img/piscina.jpg
+2026-10-19 00:04:26,714 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-10-19 00:04:26,715 | INFO | Respuesta GET /static/img/mihotel.jpeg -> 304
+2026-10-19 00:04:26,724 | INFO | Respuesta GET /static/img/piscina.jpg -> 304
+2026-10-19 00:04:38,565 | INFO | Solicitud GET /promociones
+2026-10-19 00:04:38,576 | INFO | Respuesta GET /promociones -> 200
+2026-10-19 00:04:38,604 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-10-19 00:04:38,612 | INFO | Solicitud GET /static/img/h101.jpg
+2026-10-19 00:04:38,613 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-10-19 00:04:38,614 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-10-19 00:04:38,618 | INFO | Solicitud GET /static/img/mihotel.jpeg
+2026-10-19 00:04:38,621 | INFO | Solicitud GET /static/img/piscina.jpg
+2026-10-19 00:04:38,623 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-10-19 00:04:38,625 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-10-19 00:04:38,649 | INFO | Respuesta GET /static/img/piscina.jpg -> 304
+2026-10-19 00:04:38,651 | INFO | Respuesta GET /static/img/mihotel.jpeg -> 304
+2026-10-19 00:05:05,745 | INFO | Solicitud GET /promociones
+2026-10-19 00:05:05,757 | INFO | Respuesta GET /promociones -> 200
+2026-10-19 00:05:05,782 | INFO | Solicitud GET /static/img/hab-deluxe.jpg
+2026-10-19 00:05:05,792 | INFO | Solicitud GET /static/img/habitacion2.jpg
+2026-10-19 00:05:05,794 | INFO | Solicitud GET /static/img/h101.jpg
+2026-10-19 00:05:05,795 | INFO | Respuesta GET /static/img/hab-deluxe.jpg -> 304
+2026-10-19 00:05:05,802 | INFO | Solicitud GET /static/img/mihotel.jpeg
+2026-10-19 00:05:05,802 | INFO | Respuesta GET /static/img/habitacion2.jpg -> 304
+2026-10-19 00:05:05,803 | INFO | Solicitud GET /static/img/piscina.jpg
+2026-10-19 00:05:05,806 | INFO | Respuesta GET /static/img/h101.jpg -> 304
+2026-10-19 00:05:05,826 | INFO | Respuesta GET /static/img/mihotel.jpeg -> 304
+2026-10-19 00:05:05,845 | INFO | Respuesta GET /static/img/piscina.jpg -> 304

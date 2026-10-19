@@ -1046,11 +1046,31 @@ def usuario_reservar():
 @app.get("/promociones")
 def promociones():
     """Muestra las habitaciones y tarifas reales con descuento promocional."""
+    fecha_entrada = request.args.get("fecha_entrada", "")
+    fecha_salida = request.args.get("fecha_salida", "")
+    fechas_consultadas = bool(fecha_entrada or fecha_salida)
+    error_fechas = None
     conn = obtener_conexion()
     cursor = conn.cursor()
-    # Las ofertas se muestran para todas las habitaciones registradas. El estado
-    # de disponibilidad se valida después al consultar fechas de reserva.
-    cursor.execute("SELECT id, nombre, descripcion, precio, imagen FROM Habitaciones ORDER BY id")
+    if fechas_consultadas:
+        if not fecha_entrada or not fecha_salida or not fechas_reserva_validas(fecha_entrada, fecha_salida):
+            error_fechas = "Selecciona fechas válidas; la salida debe ser posterior a la entrada."
+            cursor.execute("SELECT id, nombre, descripcion, precio, imagen FROM Habitaciones WHERE 1 = 0")
+        else:
+            cursor.execute("""
+                SELECT H.id, H.nombre, H.descripcion, H.precio, H.imagen
+                FROM Habitaciones H
+                WHERE NOT EXISTS (
+                    SELECT 1 FROM Reservas R
+                    WHERE R.habitacion_id = H.id
+                      AND R.estado IN ('activa', 'pendiente')
+                      AND R.fecha_entrada < ?
+                      AND R.fecha_salida > ?
+                )
+                ORDER BY H.id
+            """, (fecha_salida, fecha_entrada))
+    else:
+        cursor.execute("SELECT id, nombre, descripcion, precio, imagen FROM Habitaciones ORDER BY id")
     ofertas = []
     for row in cursor.fetchall():
         precio = float(row[3])
@@ -1060,8 +1080,19 @@ def promociones():
             "foto": obtener_ruta_imagen(row[4]), "precio": precio, "descuento": descuento,
             "precio_oferta": round(precio * (100 - descuento) / 100, 2)
         })
+    if fechas_consultadas and not error_fechas and len(ofertas) > 1:
+        entrada = datetime.strptime(fecha_entrada, "%Y-%m-%d").date()
+        salida = datetime.strptime(fecha_salida, "%Y-%m-%d").date()
+        cantidad_destacadas = min(len(ofertas), 2 + ((entrada.toordinal() + salida.toordinal()) % 2))
+        desplazamiento = (entrada.toordinal() + salida.toordinal()) % len(ofertas)
+        ofertas = ofertas[desplazamiento:] + ofertas[:desplazamiento]
+        ofertas = ofertas[:cantidad_destacadas]
     conn.close()
-    return render_template("usuario/promociones.html", ofertas=ofertas)
+    return render_template(
+        "usuario/promociones.html", ofertas=ofertas,
+        fecha_entrada=fecha_entrada, fecha_salida=fecha_salida,
+        fechas_consultadas=fechas_consultadas, error_fechas=error_fechas
+    )
 
 
 @app.post("/usuario/reservar/guardar")
@@ -1167,6 +1198,8 @@ def usuario_detalle(id_habitacion):
         "precio": precio_mostrar,
         "precio_regular": precio_regular,
         "promocion": es_promocion,
+        "fecha_entrada": request.args.get("fecha_entrada", ""),
+        "fecha_salida": request.args.get("fecha_salida", ""),
         "estado": row[4],
         "descripcion": row[5],
         "imagen": obtener_ruta_imagen(row[6]),

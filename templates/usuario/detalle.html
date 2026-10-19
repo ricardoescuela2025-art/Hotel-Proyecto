@@ -909,11 +909,11 @@ nav.navbar-white .fa-bars{
                 </div>
                 <div>
                     <label>Fecha de entrada</label>
-                    <input type="date" name="fecha_entrada" required>
+                    <input type="date" name="fecha_entrada" value="{{ habitacion.fecha_entrada }}" required>
                 </div>
                 <div>
                     <label>Fecha de salida</label>
-                    <input type="date" name="fecha_salida" required>
+                    <input type="date" name="fecha_salida" value="{{ habitacion.fecha_salida }}" required>
                 </div>
 
                 <button type="submit">Reservar</button>
