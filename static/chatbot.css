@@ -1,0 +1,27 @@
+.hotel-chat, .hotel-chat * { box-sizing: border-box; }
+.hotel-chat { --chat-primary: #4f46e5; --chat-ink: #172033; --chat-muted: #64748b; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; position: fixed; right: 24px; bottom: 24px; z-index: 10000; color: var(--chat-ink); }
+.hotel-chat button, .hotel-chat input { font: inherit; }
+.hotel-chat__launcher { display: flex; align-items: center; gap: 9px; border: 0; border-radius: 999px; padding: 14px 19px; color: #fff; background: linear-gradient(135deg, #6d28d9, #4f46e5); box-shadow: 0 8px 28px #312e8160; font-weight: 650; cursor: pointer; transition: transform .2s, box-shadow .2s; }
+.hotel-chat__launcher:hover { transform: translateY(-2px); box-shadow: 0 12px 30px #312e8170; }
+.hotel-chat__launcher span:first-child { font-size: 20px; }
+.hotel-chat__panel { position: absolute; right: 0; bottom: 66px; display: flex; flex-direction: column; width: min(370px, calc(100vw - 32px)); height: min(510px, calc(100vh - 115px)); overflow: hidden; border: 1px solid #e2e8f0; border-radius: 20px; background: #fff; box-shadow: 0 18px 60px #17203330; }
+.hotel-chat__panel[hidden] { display: none; }
+.hotel-chat__header { display: flex; align-items: center; gap: 11px; padding: 16px; color: #fff; background: linear-gradient(120deg, #312e81, #6d28d9 65%, #4f46e5); }
+.hotel-chat__avatar { display: grid; width: 38px; height: 38px; place-items: center; border-radius: 50%; color: #4f46e5; background: #fff; font-weight: 800; }
+.hotel-chat__header strong, .hotel-chat__header small { display: block; }
+.hotel-chat__header small { margin-top: 2px; color: #e0e7ff; font-size: 12px; }
+.hotel-chat__close { margin-left: auto; border: 0; color: #fff; background: transparent; font-size: 27px; cursor: pointer; }
+.hotel-chat__messages { display: flex; flex: 1; flex-direction: column; align-items: flex-start; gap: 12px; overflow-y: auto; padding: 17px 14px; background: #f8fafc; }
+.hotel-chat__bubble { max-width: 88%; padding: 11px 13px; border-radius: 15px; font-size: 14px; line-height: 1.5; overflow-wrap: anywhere; }
+.hotel-chat__bubble--bot { border: 1px solid #e2e8f0; border-bottom-left-radius: 5px; background: #fff; }
+.hotel-chat__bubble--user { align-self: flex-end; border-bottom-right-radius: 5px; color: #fff; background: #4f46e5; }
+.hotel-chat__quick { display: flex; flex-wrap: wrap; gap: 7px; }
+.hotel-chat__quick button { padding: 7px 10px; border: 1px solid #c7d2fe; border-radius: 999px; color: #4338ca; background: #eef2ff; font-size: 12px; cursor: pointer; }
+.hotel-chat__quick button:hover { background: #e0e7ff; }
+.hotel-chat__form { display: flex; gap: 8px; padding: 12px; border-top: 1px solid #e2e8f0; background: #fff; }
+.hotel-chat__form input { min-width: 0; flex: 1; padding: 11px 13px; border: 1px solid #cbd5e1; border-radius: 999px; outline: none; }
+.hotel-chat__form input:focus { border-color: #6366f1; box-shadow: 0 0 0 3px #6366f126; }
+.hotel-chat__form button { width: 42px; height: 42px; flex: 0 0 42px; border: 0; border-radius: 50%; color: #fff; background: #4f46e5; cursor: pointer; }
+.hotel-chat__sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+@media (max-width: 480px) { .hotel-chat { right: 14px; bottom: 14px; } .hotel-chat__launcher { padding: 12px 15px; } .hotel-chat__panel { bottom: 60px; height: min(500px, calc(100dvh - 95px)); } }
+@media (prefers-reduced-motion: reduce) { .hotel-chat__launcher { transition: none; } }

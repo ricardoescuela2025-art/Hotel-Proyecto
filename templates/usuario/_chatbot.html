@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='chatbot.css') }}">
+<section class="hotel-chat" aria-label="Asistente de ayuda">
+  <button class="hotel-chat__launcher" type="button" aria-label="Abrir asistente de ayuda" aria-expanded="false" aria-controls="hotel-chat-panel">
+    <span aria-hidden="true">✦</span><span class="hotel-chat__launcher-label">¿Necesitas ayuda?</span>
+  </button>
+  <div class="hotel-chat__panel" id="hotel-chat-panel" role="dialog" aria-label="Asistente Nayara" aria-modal="false" hidden>
+    <header class="hotel-chat__header">
+      <div class="hotel-chat__avatar" aria-hidden="true">N</div>
+      <div><strong>Asistente Nayara</strong><small>Ayuda del hotel</small></div>
+      <button class="hotel-chat__close" type="button" aria-label="Cerrar chat">×</button>
+    </header>
+    <div class="hotel-chat__messages" role="log" aria-live="polite" aria-relevant="additions">
+      <div class="hotel-chat__bubble hotel-chat__bubble--bot">¡Hola! 👋 Puedo ayudarte con habitaciones, reservas, promociones y pagos. ¿Qué necesitas?</div>
+      <div class="hotel-chat__quick" aria-label="Preguntas frecuentes">
+        <button type="button" data-question="¿Cómo reservo una habitación?">Reservar</button>
+        <button type="button" data-question="¿Hay promociones?">Promociones</button>
+        <button type="button" data-question="¿Cómo pago?">Pagos</button>
+      </div>
+    </div>
+    <form class="hotel-chat__form">
+      <label class="hotel-chat__sr-only" for="hotel-chat-input">Escribe tu pregunta</label>
+      <input id="hotel-chat-input" name="message" type="text" maxlength="300" placeholder="Escribe tu pregunta…" autocomplete="off" required>
+      <button type="submit" aria-label="Enviar mensaje">➤</button>
+    </form>
+  </div>
+</section>
+<script src="{{ url_for('static', filename='chatbot.js') }}" defer></script>
